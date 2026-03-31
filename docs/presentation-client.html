@@ -870,39 +870,39 @@
   ─────────────────────────────────────── */
   @media print {
     @page {
-      size: A4 portrait;
+      size: A4 landscape;
       margin: 0;
     }
 
     * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
 
     /* Contenu imprimable */
-    html, body { width: 210mm; background: #fff; }
+    html, body { width: 297mm; background: #fff; }
 
-    /* Cover = exactement 1 page A4 */
+    /* Cover = exactement 1 page A4 paysage */
     .cover {
-      width: 210mm;
-      height: 297mm;
-      padding: 40mm 18mm 20mm;
+      width: 297mm;
+      height: 210mm;
+      padding: 22mm 22mm 16mm;
       page-break-after: always;
       break-after: page;
       display: grid;
       grid-template-rows: auto 1fr auto;
     }
 
-    .cover-h1 { font-size: 52px; }
-    .cover-lead { font-size: 15px; }
+    .cover-h1 { font-size: 44px; }
+    .cover-lead { font-size: 14px; }
 
     /* Pages contenu */
     .page {
       max-width: 100%;
-      width: 210mm;
-      padding: 10mm 16mm 8mm;
+      width: 297mm;
+      padding: 10mm 20mm 2mm;
       margin: 0;
     }
 
-    /* Pas de padding-top cumulé entre pages consécutives */
-    .page + .page { padding-top: 0; }
+    /* Pas de padding-top cumulé entre pages consécutives (hr.sep entre eux → ~ et non +) */
+    .page ~ .page { padding-top: 0; }
 
     /* Sauts de page forcés */
     .page-break {
@@ -914,6 +914,7 @@
 
     /* Titres restent avec leur contenu */
     .s-head, .s-title, .s-lead { break-after: avoid; }
+    .s-lead { break-inside: avoid; page-break-inside: avoid; }
     .cat-label { break-after: avoid; }
 
     /* Éléments à ne JAMAIS couper */
@@ -931,71 +932,74 @@
     .tip-box         { break-inside: avoid; page-break-inside: avoid; }
     .strategy        { break-inside: avoid; page-break-inside: avoid; }
 
-    /* Grilles : forcer 1 colonne si manque de place */
-    .criteria   { grid-template-columns: 1fr 1fr; }
-    .strategy   { grid-template-columns: repeat(3, 1fr); }
+    /* ── Grilles générales ── */
+    .criteria   { grid-template-columns: 1fr 1fr; gap: 7px; margin-bottom: 18px; }
+    .strategy   { grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 20px; }
 
-    /* Tableau : empêcher les coupures de noms de domaine */
+    /* ── Liste domaines : 2 colonnes en paysage ── */
+    .dlist      { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; margin-bottom: 14px; }
+    .cat-label  { column-span: all; break-after: avoid; margin-bottom: 6px; }
+    .drow       { break-inside: avoid; page-break-inside: avoid; padding: 7px 10px; }
+    .drow-name  { font-size: 12px; }
+    .drow-desc  { font-size: 10px; margin-top: 1px; }
+    .drow-badges { gap: 4px; margin-top: 4px; }
+    .badge      { font-size: 9px; padding: 2px 6px; }
+    .score      { font-size: 11px; }
+
+    /* ── Tableau comparatif ── */
     .ctable td:first-child { white-space: nowrap; font-size: 11px; }
     .ctable th:first-child { white-space: nowrap; }
-    .ctable th { font-size: 10px; padding: 10px 10px; }
-    .ctable td { font-size: 11px; padding: 10px 10px; }
+    .ctable th { font-size: 10px; padding: 8px 10px; }
+    .ctable td { font-size: 11px; padding: 8px 10px; }
     .score-pill { font-size: 10px; padding: 3px 7px; }
-    .ctable { margin-bottom: 16px; }
+    .ctable { margin-bottom: 14px; }
 
-    /* Réduction agressive des marges entre sections */
-    .s-head { margin-bottom: 4px; }
-    .rec { margin-bottom: 16px; }
-    .cta-block { margin-bottom: 12px; }
-    .tip-box { margin-bottom: 16px; }
+    /* ── Titres de section ── */
+    .s-head { margin-bottom: 3px; }
+    .s-title { font-size: 24px; margin-bottom: 3px; }
+    .s-lead  { font-size: 12px; margin-bottom: 14px; }
 
-    /* Page contact : remonter le bloc vers le haut */
-    .page:last-of-type { padding-top: 6mm; }
-
-    /* Garder catégorie avec au moins 2 lignes de son contenu */
-    .cat-label  { break-after: avoid; }
-    .dlist      { break-inside: auto; }
-    .dlist .drow:first-child { break-before: avoid; }
-
-    /* Top 5 : winner sur toute la largeur, 2 cards/ligne */
-    .top5 { grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px; }
+    /* ── Top 5 ── */
+    .top5 { grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
     .t5card.winner { grid-column: 1 / -1; }
+    .t5card    { padding: 14px; }
+    .t5-domain { font-size: 18px; }
+    .t5card.winner .t5-domain { font-size: 24px; }
+    .t5-desc   { font-size: 11px; margin-bottom: 8px; }
 
-    /* Réduire les espacements pour gagner de la place */
-    .s-title   { font-size: 26px; margin-bottom: 6px; }
-    .s-lead    { font-size: 13px; margin-bottom: 24px; }
-    .drow      { padding: 10px 14px; }
-    .drow-desc { font-size: 11px; }
-    .step      { padding: 14px 16px; }
-    .rec       { padding: 28px 32px; }
-    .rec-domain { font-size: 40px; }
-    .rec-why   { font-size: 13px; margin-bottom: 20px; }
-    .rec-kpis  { gap: 10px; }
-    .rec-kpi   { padding: 12px; }
-    .rec-kpi-val { font-size: 20px; }
-    .cta-block { padding: 24px 28px; gap: 28px; margin-bottom: 24px; }
-    .cta-title { font-size: 20px; }
-    .cta-body  { font-size: 13px; margin-bottom: 16px; }
-    .doc-footer { padding: 14px 16mm; }
+    /* ── Recommandation ── */
+    .rec       { padding: 22px 26px; margin-bottom: 14px; }
+    .rec-domain { font-size: 36px; }
+    .rec-why   { font-size: 12px; margin-bottom: 14px; }
+    .rec-kpis  { gap: 8px; }
+    .rec-kpi   { padding: 10px; }
+    .rec-kpi-val { font-size: 18px; }
 
-    /* Grille critères sans surplus */
-    .criteria  { margin-bottom: 24px; gap: 8px; }
-    .crit      { padding: 10px 12px; }
+    /* ── Étapes : 2 colonnes en paysage ── */
+    .steps     { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 20px; }
+    .step      { break-inside: avoid; page-break-inside: avoid; padding: 10px 14px; }
+    .step-title { font-size: 13px; }
+    .step-desc  { font-size: 11px; }
+
+    /* ── Stratégie ── */
+    .strat     { padding: 14px; }
+    .strat-d   { font-size: 14px; }
+    .strat-note { font-size: 11px; }
+
+    /* ── Critères ── */
+    .crit      { padding: 9px 11px; }
     .crit-text { font-size: 11px; }
 
-    /* Réduction marges sections */
-    .s-title   { font-size: 24px; margin-bottom: 4px; }
-    .s-lead    { font-size: 12px; margin-bottom: 18px; }
-    .steps     { gap: 8px; margin-bottom: 28px; }
-    .strategy  { gap: 12px; margin-bottom: 28px; }
-    .top5      { gap: 10px; margin-bottom: 24px; }
-    .dlist     { gap: 6px; margin-bottom: 24px; }
-    .t5card    { padding: 18px; }
-    .t5-domain { font-size: 20px; }
-    .t5card.winner .t5-domain { font-size: 26px; }
-    .t5-desc   { font-size: 12px; margin-bottom: 10px; }
+    /* ── Bloc contact ── */
+    .cta-block { padding: 22px 26px; gap: 26px; margin-bottom: 20px; }
+    .cta-title { font-size: 20px; }
+    .cta-body  { font-size: 13px; margin-bottom: 14px; }
 
-    /* Hover désactivé */
+    /* ── Espacements globaux ── */
+    .tip-box { margin-bottom: 14px; }
+    .doc-footer { padding: 12px 16mm; }
+
+    /* ── Hover désactivé ── */
     .drow:hover { border-color: var(--border); }
 
     /* Footer en bas de dernière page */
@@ -1117,7 +1121,7 @@
 <!-- ═══════════════════════════════════
      PAGE 3 — LISTING COMPLET 1/2
 ═══════════════════════════════════ -->
-<div class="page">
+<div class="page page-break">
 
   <div class="s-head">
     <div class="s-index">02 — Listing complet</div>
@@ -1595,8 +1599,25 @@
 
   </div>
 
+
+</div>
+
+<hr class="sep">
+
+<!-- ═══════════════════════════════════
+     PAGE 6 — RECOMMANDATION + SUITE
+═══════════════════════════════════ -->
+<div class="page">
+
+  <div class="s-head">
+    <div class="s-index">04 — Notre verdict</div>
+    <div class="s-divider"></div>
+  </div>
+  <h2 class="s-title">Recommandation &<br><em>stratégie domaine</em></h2>
+  <p class="s-lead">Notre recommandation finale, validée sur l'ensemble des critères SEO, image, évolutivité et protection de marque.</p>
+
   <!-- Tableau comparatif -->
-  <h3 style="font-size:18px;font-weight:700;color:var(--ink);margin-bottom:14px;letter-spacing:-.3px;">Tableau comparatif des 5 finalistes</h3>
+  <h3 style="font-size:16px;font-weight:700;color:var(--ink);margin-bottom:12px;letter-spacing:-.3px;">Tableau comparatif des 5 finalistes</h3>
   <table class="ctable">
     <thead>
       <tr>
@@ -1657,22 +1678,6 @@
       </tr>
     </tbody>
   </table>
-
-</div>
-
-<hr class="sep">
-
-<!-- ═══════════════════════════════════
-     PAGE 6 — RECOMMANDATION + SUITE
-═══════════════════════════════════ -->
-<div class="page">
-
-  <div class="s-head">
-    <div class="s-index">04 — Notre verdict</div>
-    <div class="s-divider"></div>
-  </div>
-  <h2 class="s-title">Recommandation &<br><em>stratégie domaine</em></h2>
-  <p class="s-lead">Notre recommandation finale, validée sur l'ensemble des critères SEO, image, évolutivité et protection de marque.</p>
 
   <div class="rec">
     <div class="rec-eyebrow">Domaine principal recommandé</div>
