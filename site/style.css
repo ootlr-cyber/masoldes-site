@@ -3882,3 +3882,184 @@ button { font-family: inherit; }
     .pdp-add-cart { min-width: 200px; }
     .pdp-reviews-summary { flex-direction: column; text-align: center; }
 }
+
+
+/* ===== MOBILE FIXES ===== */
+@media (max-width: 768px) {
+    /* Top bar: constrain height and hide overflow */
+    .top-bar {
+        height: 28px;
+        font-size: 10px;
+    }
+    .top-bar-track {
+        gap: 40px;
+    }
+
+    /* Member bar: stack vertically */
+    .member-bar {
+        padding: 8px 0;
+    }
+    .member-bar .container {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+    .member-bar-text {
+        font-size: 12px;
+    }
+    .member-bar .btn {
+        padding: 5px 12px;
+        font-size: 11px;
+    }
+
+    /* Header: ensure search and nav are hidden */
+    .search-bar {
+        display: none !important;
+    }
+    .nav-categories {
+        display: none !important;
+    }
+    .mobile-toggle {
+        display: flex !important;
+    }
+    .header-main {
+        gap: 8px;
+        height: 56px;
+    }
+    .header-actions {
+        gap: 0;
+    }
+    .header-action {
+        padding: 4px 6px;
+    }
+    .header-action i {
+        font-size: 16px;
+    }
+    .header-action small {
+        display: none;
+    }
+    .logo {
+        font-size: 16px;
+    }
+    .logo i {
+        font-size: 15px;
+    }
+
+    /* Mobile menu: adjust top position */
+    .mobile-menu {
+        top: 56px;
+    }
+
+    /* Trust strip enhanced: 2 columns on tablet, better spacing */
+    .trust-strip-enhanced {
+        padding: 12px 0;
+    }
+    .trust-strip-enhanced .container {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+    .trust-enhanced-item {
+        padding: 6px;
+        gap: 8px;
+    }
+    .trust-icon-box {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+    .trust-enhanced-item h4 {
+        font-size: 11px;
+    }
+    .trust-enhanced-item p {
+        font-size: 9px;
+    }
+
+    /* Hero: more compact */
+    .hero-banner {
+        height: 280px;
+    }
+    .hero-slide-content h1 {
+        font-size: 22px;
+    }
+    .hero-slide-content p {
+        font-size: 13px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .hero-tag {
+        font-size: 11px;
+    }
+
+    /* Sections: tighter padding */
+    .section {
+        padding: 24px 0;
+    }
+    .section-head h2 {
+        font-size: 20px;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Top bar: even smaller */
+    .top-bar {
+        height: 24px;
+        font-size: 9px;
+    }
+    .top-bar-track {
+        gap: 30px;
+    }
+
+    /* Trust strip: single column */
+    .trust-strip-enhanced .container {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+    .trust-enhanced-item {
+        padding: 4px 8px;
+    }
+
+    /* Hero: compact */
+    .hero-banner {
+        height: 240px;
+    }
+    .hero-slide-content h1 {
+        font-size: 20px;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    /* Category cards: single column */
+    .cat-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    /* Product grid: single column */
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    /* Container: tighter padding */
+    .container {
+        padding: 0 16px;
+    }
+
+    /* Section heads */
+    .section-head h2 {
+        font-size: 18px;
+    }
+}
