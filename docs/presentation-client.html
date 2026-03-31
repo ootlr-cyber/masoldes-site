@@ -897,9 +897,12 @@
     .page {
       max-width: 100%;
       width: 210mm;
-      padding: 14mm 18mm 10mm;
+      padding: 10mm 16mm 8mm;
       margin: 0;
     }
+
+    /* Pas de padding-top cumulé entre pages consécutives */
+    .page + .page { padding-top: 0; }
 
     /* Sauts de page forcés */
     .page-break {
@@ -925,10 +928,29 @@
     .ctable          { break-inside: avoid; page-break-inside: avoid; }
     .ctable tr       { break-inside: avoid; page-break-inside: avoid; }
     .doc-footer      { break-inside: avoid; page-break-inside: avoid; }
+    .tip-box         { break-inside: avoid; page-break-inside: avoid; }
+    .strategy        { break-inside: avoid; page-break-inside: avoid; }
 
     /* Grilles : forcer 1 colonne si manque de place */
     .criteria   { grid-template-columns: 1fr 1fr; }
     .strategy   { grid-template-columns: repeat(3, 1fr); }
+
+    /* Tableau : empêcher les coupures de noms de domaine */
+    .ctable td:first-child { white-space: nowrap; font-size: 11px; }
+    .ctable th:first-child { white-space: nowrap; }
+    .ctable th { font-size: 10px; padding: 10px 10px; }
+    .ctable td { font-size: 11px; padding: 10px 10px; }
+    .score-pill { font-size: 10px; padding: 3px 7px; }
+    .ctable { margin-bottom: 16px; }
+
+    /* Réduction agressive des marges entre sections */
+    .s-head { margin-bottom: 4px; }
+    .rec { margin-bottom: 16px; }
+    .cta-block { margin-bottom: 12px; }
+    .tip-box { margin-bottom: 16px; }
+
+    /* Page contact : remonter le bloc vers le haut */
+    .page:last-of-type { padding-top: 6mm; }
 
     /* Garder catégorie avec au moins 2 lignes de son contenu */
     .cat-label  { break-after: avoid; }
@@ -945,17 +967,33 @@
     .drow      { padding: 10px 14px; }
     .drow-desc { font-size: 11px; }
     .step      { padding: 14px 16px; }
-    .rec       { padding: 32px 36px; }
-    .rec-domain { font-size: 44px; }
-    .rec-why   { font-size: 13px; margin-bottom: 24px; }
-    .cta-block { padding: 28px 32px; gap: 32px; }
-    .cta-title { font-size: 22px; }
-    .doc-footer { padding: 16px 18mm; }
+    .rec       { padding: 28px 32px; }
+    .rec-domain { font-size: 40px; }
+    .rec-why   { font-size: 13px; margin-bottom: 20px; }
+    .rec-kpis  { gap: 10px; }
+    .rec-kpi   { padding: 12px; }
+    .rec-kpi-val { font-size: 20px; }
+    .cta-block { padding: 24px 28px; gap: 28px; margin-bottom: 24px; }
+    .cta-title { font-size: 20px; }
+    .cta-body  { font-size: 13px; margin-bottom: 16px; }
+    .doc-footer { padding: 14px 16mm; }
 
     /* Grille critères sans surplus */
-    .criteria  { margin-bottom: 28px; }
-    .crit      { padding: 12px 14px; }
-    .crit-text { font-size: 12px; }
+    .criteria  { margin-bottom: 24px; gap: 8px; }
+    .crit      { padding: 10px 12px; }
+    .crit-text { font-size: 11px; }
+
+    /* Réduction marges sections */
+    .s-title   { font-size: 24px; margin-bottom: 4px; }
+    .s-lead    { font-size: 12px; margin-bottom: 18px; }
+    .steps     { gap: 8px; margin-bottom: 28px; }
+    .strategy  { gap: 12px; margin-bottom: 28px; }
+    .top5      { gap: 10px; margin-bottom: 24px; }
+    .dlist     { gap: 6px; margin-bottom: 24px; }
+    .t5card    { padding: 18px; }
+    .t5-domain { font-size: 20px; }
+    .t5card.winner .t5-domain { font-size: 26px; }
+    .t5-desc   { font-size: 12px; margin-bottom: 10px; }
 
     /* Hover désactivé */
     .drow:hover { border-color: var(--border); }
@@ -1489,7 +1527,7 @@
 <!-- ═══════════════════════════════════
      PAGE 5 — TOP 5 + TABLEAU
 ═══════════════════════════════════ -->
-<div class="page page-break">
+<div class="page">
 
   <div class="s-head">
     <div class="s-index">03 — Top 5</div>
@@ -1627,7 +1665,7 @@
 <!-- ═══════════════════════════════════
      PAGE 6 — RECOMMANDATION + SUITE
 ═══════════════════════════════════ -->
-<div class="page page-break">
+<div class="page">
 
   <div class="s-head">
     <div class="s-index">04 — Notre verdict</div>
@@ -1687,7 +1725,7 @@
     </div>
   </div>
 
-  <div style="background:var(--green-light);border:1px solid #bbf7d0;border-radius:12px;padding:20px 22px;margin-bottom:44px;display:flex;gap:14px;align-items:flex-start;">
+  <div class="tip-box" style="background:var(--green-light);border:1px solid #bbf7d0;border-radius:12px;padding:20px 22px;margin-bottom:44px;display:flex;gap:14px;align-items:flex-start;">
     <div style="font-size:20px;flex-shrink:0">💡</div>
     <div>
       <div style="font-size:13px;font-weight:700;color:#15803d;margin-bottom:3px">Budget total : ~39€ / an pour une protection complète</div>
@@ -1755,7 +1793,7 @@
     <div>
       <h3 class="cta-title">Prêt à choisir<br><em>votre domaine ?</em></h3>
       <p class="cta-body">Répondez-nous simplement avec le numéro de votre domaine préféré — par exemple "Option 1, destockpro.fr". Nous gérons tout le reste sous 24h.</p>
-      <a href="tel:+33768962486" class="btn-primary">Appeler Oussama →</a>
+      <span class="btn-primary">07 68 96 24 86</span>
     </div>
     <div class="cta-info">
       <div class="cta-row"><div class="cta-row-ico">👤</div><div><strong>Oussama Sahnoune</strong></div></div>
