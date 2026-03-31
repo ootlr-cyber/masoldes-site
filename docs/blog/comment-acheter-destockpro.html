@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment acheter sur DestockPro : tutoriel pas a pas — DestockPro</title>
+    <meta name="description" content="Tutoriel complet pour acheter sur DestockPro : parcourir le catalogue, ajouter au panier, valider votre commande et recuperer vos achats.">
+    <meta property="og:title" content="Comment acheter sur DestockPro : tutoriel pas a pas — DestockPro">
+    <meta property="og:description" content="Tutoriel complet pour acheter sur DestockPro : parcourir le catalogue, ajouter au panier, valider votre commande et recuperer vos achats.">
+    <meta property="og:image" content="../images/blog/achat-en-ligne.jpg">
+    <meta property="og:type" content="article">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .breadcrumb { padding: 1rem 0; font-size: 0.85rem; color: #999; }
+        .breadcrumb a { color: #666; text-decoration: none; }
+        .breadcrumb a:hover { color: #e63946; }
+        .breadcrumb span { margin: 0 0.5rem; }
+        .article-wrapper { max-width: 800px; margin: 0 auto; padding: 2rem 1rem 4rem; }
+        .article-category { display: inline-block; background: linear-gradient(135deg, #667eea, #764ba2); color: #fff; padding: 4px 16px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 1rem; }
+        .article-wrapper h1 { font-size: 2rem; line-height: 1.3; color: #1a1a2e; margin-bottom: 1rem; }
+        .article-meta { display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: 0.85rem; color: #999; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #eee; }
+        .article-meta i { margin-right: 4px; }
+        .article-body h2 { font-size: 1.4rem; color: #1a1a2e; margin: 2rem 0 1rem; }
+        .article-body p { font-size: 1rem; line-height: 1.8; color: #444; margin-bottom: 1rem; }
+        .article-body ul, .article-body ol { margin: 1rem 0 1.5rem 1.5rem; color: #444; line-height: 1.8; }
+        .article-body li { margin-bottom: 0.5rem; }
+        .article-body blockquote { border-left: 4px solid #e63946; background: #fdf2f2; padding: 1rem 1.5rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0; font-style: italic; color: #555; }
+        .article-cta { background: linear-gradient(135deg, #1a1a2e, #16213e); color: #fff; padding: 2rem; border-radius: 16px; text-align: center; margin: 3rem 0 2rem; }
+        .article-cta h3 { margin-bottom: 0.5rem; font-size: 1.3rem; }
+        .article-cta p { color: rgba(255,255,255,0.8); margin-bottom: 1.5rem; }
+        .related-section { margin-top: 3rem; }
+        .related-section h3 { font-size: 1.3rem; color: #1a1a2e; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid #eee; }
+        .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+        .related-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.07); text-decoration: none; transition: transform 0.3s; }
+        .related-card:hover { transform: translateY(-4px); }
+        .related-card-img { height: 120px; display: flex; align-items: center; justify-content: center; }
+        .related-card-img i { font-size: 2rem; color: rgba(255,255,255,0.8); }
+        .related-card-body { padding: 1rem; }
+        .related-card-body h4 { font-size: 0.95rem; color: #1a1a2e; margin-bottom: 0.3rem; line-height: 1.4; }
+        .related-card-body small { color: #999; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-bar-track">
+        <span><i class="fas fa-truck"></i> Livraison possible sur toute la France</span>
+        <span><i class="fas fa-tag"></i> Vetements de marque au kilo des 2EUR/kg</span>
+        <span><i class="fas fa-box-open"></i> 1000 cuisines OSKAB neuves — jusqu'a -70%</span>
+        <span><i class="fas fa-shopping-cart"></i> Vente directe — prix casses toute l annee</span>
+        <span><i class="fas fa-truck"></i> Livraison possible sur toute la France</span>
+        <span><i class="fas fa-tag"></i> Vetements de marque au kilo des 2EUR/kg</span>
+        <span><i class="fas fa-box-open"></i> 1000 cuisines OSKAB neuves — jusqu'a -70%</span>
+        <span><i class="fas fa-shopping-cart"></i> Vente directe — prix casses toute l annee</span>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+    <div class="container">
+        <div class="header-main">
+            <a href="../index.html" class="logo"><i class="fas fa-warehouse"></i> DESTOCK<span>PRO</span></a>
+            <div class="search-bar">
+                <input type="text" placeholder="Rechercher un produit, une marque, une gamme...">
+                <button aria-label="Rechercher"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="header-actions">
+                <a href="tel:+33184609300" class="header-action"><i class="fas fa-phone"></i><small>Appeler</small></a>
+                <a href="#" class="header-action"><i class="far fa-heart"></i><small>Favoris</small></a>
+                <a href="../panier.html" class="header-action" id="headerCartBtn"><i class="fas fa-shopping-cart"></i><small>Panier</small><span class="cart-count" id="headerCartCount">0</span></a>
+            </div>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+        <nav class="nav-categories">
+            <a href="../index.html" class="nav-cat"><i class="fas fa-home"></i> Accueil</a>
+            <a href="../vetements.html" class="nav-cat"><i class="fas fa-tshirt"></i> Vetements au Kilo</a>
+            <a href="../cuisines.html" class="nav-cat"><i class="fas fa-kitchen-set"></i> Cuisines OSKAB</a>
+            <a href="../salles-de-bain.html" class="nav-cat"><i class="fas fa-bath"></i> Salles de Bain</a>
+            <a href="../promotions.html" class="nav-cat"><i class="fas fa-percent"></i> Promotions</a>
+            <a href="../promotions.html#contact" class="nav-cat"><i class="fas fa-headset"></i> Contact</a>
+            <a href="../panier.html" class="nav-cat highlight" id="navCartBtn"><i class="fas fa-shopping-cart"></i> Panier (0)</a>
+        </nav>
+    </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-search"><input type="text" placeholder="Rechercher..."></div>
+    <a href="../index.html" class="mobile-link"><i class="fas fa-home"></i> Accueil</a>
+    <a href="../vetements.html" class="mobile-link"><i class="fas fa-tshirt"></i> Vetements au Kilo</a>
+    <a href="../cuisines.html" class="mobile-link"><i class="fas fa-kitchen-set"></i> Cuisines OSKAB</a>
+    <a href="../salles-de-bain.html" class="mobile-link"><i class="fas fa-bath"></i> Salles de Bain</a>
+    <a href="../promotions.html" class="mobile-link"><i class="fas fa-percent"></i> Promotions</a>
+    <a href="../promotions.html#contact" class="mobile-link"><i class="fas fa-headset"></i> Contact</a>
+</div>
+
+<!-- BREADCRUMB -->
+<div class="container">
+    <div class="breadcrumb">
+        <a href="../index.html">Accueil</a> <span>/</span> <a href="../blog.html">Blog</a> <span>/</span> Comment acheter sur DestockPro
+    </div>
+</div>
+
+<!-- ARTICLE -->
+<article class="article-wrapper">
+    <span class="article-category">Tutoriel</span>
+    <h1>Comment acheter sur DestockPro : tutoriel pas a pas</h1>
+    <div class="article-meta">
+        <span><i class="far fa-calendar"></i> 28 fevrier 2026</span>
+        <span><i class="far fa-clock"></i> 6 min de lecture</span>
+        <span><i class="far fa-user"></i> Equipe DestockPro</span>
+    </div>
+
+    <img src="../images/blog/achat-en-ligne.jpg" alt="Achat en ligne sur DestockPro" style="width:100%; border-radius:12px; margin: 20px 0;">
+
+    <div class="article-body">
+        <p>DestockPro est votre entrepot de destockage en ligne pour vetements au kilo et cuisines OSKAB neuves. Ce tutoriel vous guide de la navigation sur le site a la recuperation de vos achats.</p>
+
+        <h2>Qu'est-ce que DestockPro ?</h2>
+        <p>DestockPro est un site de vente directe de produits destockes : vetements de marque au kilo et cuisines OSKAB neuves a prix casses. Vous achetez directement en ligne sans intermediaire, avec des prix fixes et transparents.</p>
+        <p>Les ventes de DestockPro sont des ventes volontaires, ce qui signifie qu'elles ne sont pas judiciaires. Vous achetez du stock neuf mis en vente directement par notre entrepot, avec une description claire de chaque lot.</p>
+
+        <h2>Etape 1 : creer son compte</h2>
+        <p>Parcourez notre catalogue en ligne :</p>
+        <ol>
+            <li>Rendez-vous sur le site DestockPro.</li>
+            <li>Naviguez dans les categories : Vetements au Kilo ou Cuisines OSKAB.</li>
+            <li>Consultez les fiches produits avec photos, descriptions et prix.</li>
+            <li>Ajoutez les produits souhaites a votre panier.</li>
+            <li>Validez votre panier et procedez au paiement.</li>
+            <li>Renseignez vos coordonnees de livraison ou choisissez le retrait en entrepot.</li>
+        </ol>
+        <p>C'est simple, rapide et sans inscription obligatoire.</p>
+
+        <h2>Etape 2 : trouver les produits sur DestockPro</h2>
+        <p>Pour trouver nos produits, plusieurs methodes s'offrent a vous :</p>
+        <ul>
+            <li><strong>Via notre site</strong> : sur DestockPro, chaque categorie vous mene directement aux produits disponibles.</li>
+            <li><strong>Via la recherche DestockPro</strong> : utilisez la barre de recherche en haut du site pour trouver un produit specifique.</li>
+            <li><strong>Via les promotions</strong> : consultez la page Promotions pour les meilleures offres du moment.</li>
+        </ul>
+
+        <h2>Etape 3 : consulter un lot</h2>
+        <p>Avant de commander, prenez le temps d'examiner chaque lot en detail :</p>
+        <ul>
+            <li><strong>La description</strong> : lisez attentivement la composition du lot, le nombre de pieces ou le poids, et les conditions de vente.</li>
+            <li><strong>Les photos</strong> : examinez toutes les photos fournies pour vous faire une idee precise du contenu.</li>
+            <li><strong>Le prix</strong> : le prix affiche est le prix final, pas de frais caches.</li>
+            <li><strong>Les options</strong> : verifiez les options de livraison ou de retrait disponibles.</li>
+            <li><strong>Le retrait ou la livraison</strong> : verifiez les modalites de recuperation du lot (retrait a l'entrepot, livraison possible, delais).</li>
+        </ul>
+
+        <blockquote>
+            <strong>Important :</strong> N'hesitez pas a nous contacter directement si vous avez des questions sur un lot. Nous pouvons vous fournir des informations complementaires, des photos supplementaires ou vous accueillir a l'entrepot pour voir le stock en personne.
+        </blockquote>
+
+        <h2>Etape 4 : passer votre commande</h2>
+        <p>Il existe deux manieres d'acheter sur DestockPro :</p>
+        <ul>
+            <li><strong>Ajout au panier</strong> : selectionnez vos produits et ajoutez-les au panier. Vous pouvez continuer vos achats et valider plus tard.</li>
+            <li><strong>Commande directe</strong> : depuis la fiche produit, cliquez sur "Ajouter au panier" puis "Valider la commande" pour un achat rapide.</li>
+        </ul>
+        <p>Le processus est simple et securise. Vous ne payez que le prix affiche, sans surprises.</p>
+
+        <h2>Etape 5 : apres la commande</h2>
+        <p>Une fois votre commande validee, voici la suite des evenements :</p>
+        <ol>
+            <li>Vous recevez un email de confirmation avec le detail de votre achat.</li>
+            <li>Le montant a payer correspond au prix des produits plus les frais de livraison eventuels.</li>
+            <li>Vous procedez au paiement securise en ligne.</li>
+            <li>Vous organisez le retrait du lot a notre entrepot ou demandez un devis de livraison.</li>
+        </ol>
+
+        <h2>Nos conseils pour bien acheter</h2>
+        <p>Avec l'experience, nous avons identifie les pratiques qui maximisent vos chances de succes :</p>
+        <ul>
+            <li><strong>Fixez votre budget maximum avant de commencer</strong> et ne le depassez jamais. Les stocks sont limites, achetez quand vous trouvez ce qui vous convient.</li>
+            <li><strong>Prenez en compte tous les frais</strong> : frais acheteur, transport, stockage. Votre prix maximum doit integrer ces couts.</li>
+            <li><strong>Consultez regulierement le catalogue</strong> car de nouveaux produits sont ajoutes frequemment.</li>
+            <li><strong>Comparez les gammes de cuisines</strong> en consultant notre guide comparatif pour faire le meilleur choix.</li>
+            <li><strong>Contactez-nous</strong> pour toute question, notre equipe est disponible par email et telephone.</li>
+        </ul>
+
+        <blockquote>
+            <strong>Astuce :</strong> Les stocks sont limites et certains produits partent tres vite. N'hesitez pas a passer commande rapidement quand vous trouvez un produit qui vous interesse.
+        </blockquote>
+
+        <h2>Les erreurs courantes a eviter</h2>
+        <p>Quelques pieges classiques dont il faut se mefier :</p>
+        <ul>
+            <li>Ne pas verifier les dimensions des cuisines avant de commander.</li>
+            <li>Ne pas verifier les conditions de retrait (certains lots volumineux necessitent un vehicule adapte).</li>
+            <li>Commander sans avoir lu la description complete du produit.</li>
+            <li>Ne pas prevoir l'espace de stockage necessaire pour les gros lots.</li>
+        </ul>
+    </div>
+
+    <!-- CTA -->
+    <div class="article-cta">
+        <h3>Decouvrez nos offres en cours</h3>
+        <p>Vetements au kilo et cuisines OSKAB a prix casses. Achetez maintenant sur notre boutique.</p>
+        <a href="../promotions.html" class="btn btn-white btn-lg">Voir les offres</a>
+    </div>
+
+    <!-- ARTICLES SIMILAIRES -->
+    <div class="related-section">
+        <h3>Articles similaires</h3>
+        <div class="related-grid">
+            <a href="acheter-vetements-au-kilo.html" class="related-card">
+                <div class="related-card-img" style="background: linear-gradient(135deg, #ffecd2, #fcb69f);">
+                    <i class="fas fa-weight-hanging"></i>
+                </div>
+                <div class="related-card-body">
+                    <h4>Comment acheter des vetements au kilo : le guide complet</h4>
+                    <small><i class="far fa-clock"></i> 7 min</small>
+                </div>
+            </a>
+            <a href="revendre-vetements-vinted.html" class="related-card">
+                <div class="related-card-img" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                    <i class="fas fa-hand-holding-dollar"></i>
+                </div>
+                <div class="related-card-body">
+                    <h4>Revendre sur Vinted : transformer un lot au kilo en profits</h4>
+                    <small><i class="far fa-clock"></i> 8 min</small>
+                </div>
+            </a>
+            <a href="guide-cuisines-oskab.html" class="related-card">
+                <div class="related-card-img" style="background: linear-gradient(135deg, #a1c4fd, #c2e9fb);">
+                    <i class="fas fa-kitchen-set"></i>
+                </div>
+                <div class="related-card-body">
+                    <h4>Guide des cuisines OSKAB : 15 gammes comparees</h4>
+                    <small><i class="far fa-clock"></i> 9 min</small>
+                </div>
+            </a>
+        </div>
+    </div>
+</article>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-brand"><i class="fas fa-warehouse"></i> DESTOCK<span>PRO</span></div>
+                <p>Votre entrepot de destockage en ligne. Vetements de marque au kilo et cuisines OSKAB neuves a prix casses.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <a href="../index.html">Accueil</a>
+                <a href="../vetements.html">Vetements au Kilo</a>
+                <a href="../cuisines.html">Cuisines OSKAB</a>
+                <a href="../salles-de-bain.html">Salles de Bain OSKAB</a>
+                <a href="../promotions.html">Promotions</a>
+            </div>
+            <div class="footer-col">
+                <h4>Informations</h4>
+                <a href="../promotions.html#faq">FAQ</a>
+                <a href="../promotions.html#contact">Contact</a>
+                <a href="../cgv.html">Conditions generales</a>
+                <a href="../mentions-legales.html">Mentions legales</a>
+                <a href="../confidentialite.html">Confidentialite</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 18 Avenue du Clocher, 93600 Aulnay-sous-Bois</p>
+                <p><i class="fas fa-phone"></i> 01 84 60 93 00</p>
+                <p><i class="fas fa-envelope"></i> contact@destockpro.fr</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2026 DestockPro — Tous droits reserves</p>
+        </div>
+    </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Compte — DestockPro | Connexion & Inscription</title>
+    <meta name="description" content="Connectez-vous ou creez votre compte DestockPro pour acceder a des prix exclusifs sur les vetements au kilo et cuisines OSKAB.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Mon Compte — DestockPro | Connexion & Inscription">
+    <meta property="og:description" content="Connectez-vous ou creez votre compte DestockPro pour acceder a des prix exclusifs sur les vetements au kilo et cuisines OSKAB.">
+    <meta property="og:image" content="images/cuisines/slider-4.jpg">
+    <meta property="og:url" content="https://destockpro.fr/compte.html">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="DestockPro">
+    <meta name="theme-color" content="#e02020">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-bar-track">
+        <span><i class="fas fa-truck"></i> Livraison possible sur toute la France</span>
+        <span><i class="fas fa-tag"></i> Vetements de marque au kilo des 2EUR/kg</span>
+        <span><i class="fas fa-box-open"></i> 1000 cuisines OSKAB neuves — jusqu'a -70%</span>
+        <span><i class="fas fa-shopping-cart"></i> Vente directe — prix casses toute l annee</span>
+        <span><i class="fas fa-truck"></i> Livraison possible sur toute la France</span>
+        <span><i class="fas fa-tag"></i> Vetements de marque au kilo des 2EUR/kg</span>
+        <span><i class="fas fa-box-open"></i> 1000 cuisines OSKAB neuves — jusqu'a -70%</span>
+        <span><i class="fas fa-shopping-cart"></i> Vente directe — prix casses toute l annee</span>
+    </div>
+</div>
+
+<!-- MEMBER BAR -->
+<div class="member-bar">
+    <div class="container">
+        <span class="member-bar-text"><i class="fas fa-crown"></i> Rejoignez <span>+500 membres</span> et profitez de prix exclusifs</span>
+        <a href="compte.html" class="btn btn-primary btn-sm">Creer mon compte gratuit</a>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+    <div class="container">
+        <div class="header-main">
+            <a href="index.html" class="logo">
+                <i class="fas fa-warehouse"></i> DESTOCK<span>PRO</span>
+            </a>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Rechercher un produit, une marque, une gamme...">
+                <button aria-label="Rechercher"><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="header-actions">
+                <a href="tel:+33184609300" class="header-action">
+                    <i class="fas fa-phone"></i>
+                    <small>Appeler</small>
+                </a>
+                <a href="compte.html" class="header-action">
+                    <i class="fas fa-user"></i>
+                    <small>Compte</small>
+                </a>
+                <a href="#" class="header-action">
+                    <i class="far fa-heart"></i>
+                    <small>Favoris</small>
+                </a>
+                <a href="panier.html" class="header-action" id="headerCartBtn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <small>Panier</small>
+                    <span class="cart-count" id="headerCartCount">0</span>
+                </a>
+            </div>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <nav class="nav-categories">
+            <a href="index.html" class="nav-cat"><i class="fas fa-home"></i> Accueil</a>
+            <a href="vetements.html" class="nav-cat"><i class="fas fa-tshirt"></i> Vetements au Kilo</a>
+            <a href="cuisines.html" class="nav-cat"><i class="fas fa-kitchen-set"></i> Cuisines OSKAB</a>
+            <a href="salles-de-bain.html" class="nav-cat"><i class="fas fa-bath"></i> Salles de Bain</a>
+            <a href="promotions.html" class="nav-cat"><i class="fas fa-percent"></i> Promotions</a>
+            <a href="promotions.html#contact" class="nav-cat"><i class="fas fa-headset"></i> Contact</a>
+            <a href="panier.html" class="nav-cat highlight" id="navCartBtn"><i class="fas fa-shopping-cart"></i> Panier (0)</a>
+        </nav>
+    </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-search">
+        <input type="text" placeholder="Rechercher...">
+    </div>
+    <a href="index.html" class="mobile-link"><i class="fas fa-home"></i> Accueil</a>
+    <a href="vetements.html" class="mobile-link"><i class="fas fa-tshirt"></i> Vetements au Kilo</a>
+    <a href="cuisines.html" class="mobile-link"><i class="fas fa-kitchen-set"></i> Cuisines OSKAB</a>
+    <a href="salles-de-bain.html" class="mobile-link"><i class="fas fa-bath"></i> Salles de Bain</a>
+    <a href="promotions.html" class="mobile-link"><i class="fas fa-percent"></i> Promotions</a>
+    <a href="promotions.html#contact" class="mobile-link"><i class="fas fa-headset"></i> Contact</a>
+    <a href="compte.html" class="mobile-link"><i class="fas fa-user"></i> Mon Compte</a>
+</div>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Accueil</a> <i class="fas fa-chevron-right"></i> <span>Mon Compte</span>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="auth-layout" style="border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden;">
+            <!-- LEFT: Form -->
+            <div class="auth-form-side">
+                <div class="auth-tabs">
+                    <div class="auth-tab active" onclick="document.getElementById('loginForm').style.display='flex'; document.getElementById('registerForm').style.display='none'; this.classList.add('active'); this.nextElementSibling.classList.remove('active');">Connexion</div>
+                    <div class="auth-tab" onclick="document.getElementById('registerForm').style.display='flex'; document.getElementById('loginForm').style.display='none'; this.classList.add('active'); this.previousElementSibling.classList.remove('active');">Inscription</div>
+                </div>
+
+                <!-- LOGIN FORM -->
+                <form id="loginForm" class="auth-form" onsubmit="event.preventDefault(); localStorage.setItem('destockpro_user', JSON.stringify({name:'Membre', email:document.getElementById('login-email').value})); window.location.href='index.html';">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" placeholder="votre@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Mot de passe</label>
+                        <input type="password" id="login-password" placeholder="Votre mot de passe" required>
+                    </div>
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <label style="display:flex; align-items:center; gap:6px; font-size:12px; color:var(--text-secondary); cursor:pointer;">
+                            <input type="checkbox"> Se souvenir de moi
+                        </label>
+                        <a href="#" style="font-size:12px; color:var(--accent);">Mot de passe oublie ?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Se connecter</button>
+                    <div class="auth-divider">ou</div>
+                    <button type="button" class="btn-social"><i class="fab fa-google"></i> Continuer avec Google</button>
+                </form>
+
+                <!-- REGISTER FORM -->
+                <form id="registerForm" class="auth-form" style="display:none;" onsubmit="event.preventDefault(); localStorage.setItem('destockpro_user', JSON.stringify({name:document.getElementById('reg-prenom').value, email:document.getElementById('reg-email').value})); window.location.href='index.html';">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="reg-prenom">Prenom</label>
+                            <input type="text" id="reg-prenom" placeholder="Votre prenom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reg-nom">Nom</label>
+                            <input type="text" id="reg-nom" placeholder="Votre nom" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-email">Email</label>
+                        <input type="email" id="reg-email" placeholder="votre@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-tel">Telephone</label>
+                        <input type="tel" id="reg-tel" placeholder="06 12 34 56 78">
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-password">Mot de passe</label>
+                        <input type="password" id="reg-password" placeholder="Minimum 8 caracteres" required minlength="8">
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-type">Vous etes</label>
+                        <select id="reg-type">
+                            <option>Particulier</option>
+                            <option>Revendeur / Friperie</option>
+                            <option>Cuisiniste / Artisan</option>
+                            <option>Grossiste</option>
+                            <option>Autre professionnel</option>
+                        </select>
+                    </div>
+                    <label style="display:flex; align-items:flex-start; gap:6px; font-size:11px; color:var(--text-secondary); cursor:pointer;">
+                        <input type="checkbox" required style="margin-top:2px;">
+                        J'accepte les <a href="cgv.html" style="color:var(--accent);">conditions generales</a> et la <a href="confidentialite.html" style="color:var(--accent);">politique de confidentialite</a>
+                    </label>
+                    <label style="display:flex; align-items:center; gap:6px; font-size:11px; color:var(--text-secondary); cursor:pointer;">
+                        <input type="checkbox"> Je souhaite recevoir les alertes et promotions par email
+                    </label>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Creer mon compte gratuit</button>
+                </form>
+
+                <p class="auth-footer-text">En creant un compte, vous accedez a des prix exclusifs et des ventes flash reservees aux membres.</p>
+            </div>
+
+            <!-- RIGHT: Promo -->
+            <div class="auth-promo-side">
+                <h2>Rejoignez +500 membres</h2>
+                <p>Creez votre compte gratuit et accedez a des avantages exclusifs :</p>
+                <ul class="auth-promo-list">
+                    <li><i class="fas fa-check"></i> Prix membres exclusifs sur tout le catalogue</li>
+                    <li><i class="fas fa-check"></i> Alertes arrivages et ventes flash</li>
+                    <li><i class="fas fa-check"></i> Historique de commandes et suivi</li>
+                    <li><i class="fas fa-check"></i> Favoris sauvegardes en permanence</li>
+                    <li><i class="fas fa-check"></i> 10EUR offerts des votre premiere commande</li>
+                    <li><i class="fas fa-check"></i> Programme de parrainage : 10EUR par filleul</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-brand"><i class="fas fa-warehouse"></i> DESTOCK<span>PRO</span></div>
+                <p>Votre entrepot de destockage en ligne. Vetements de marque au kilo et cuisines OSKAB neuves a prix casses.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <a href="index.html">Accueil</a>
+                <a href="vetements.html">Vetements au Kilo</a>
+                <a href="cuisines.html">Cuisines OSKAB</a>
+                <a href="salles-de-bain.html">Salles de Bain</a>
+                <a href="promotions.html">Promotions</a>
+                <a href="a-propos.html">A propos</a>
+                <a href="blog.html">Blog</a>
+            </div>
+            <div class="footer-col">
+                <h4>Informations</h4>
+                <a href="promotions.html#faq">FAQ</a>
+                <a href="promotions.html#contact">Contact</a>
+                <a href="cgv.html">CGV</a>
+                <a href="mentions-legales.html">Mentions legales</a>
+                <a href="confidentialite.html">Confidentialite</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 18 Avenue du Clocher, 93600 Aulnay-sous-Bois</p>
+                <p><i class="fas fa-phone"></i> 01 84 60 93 00</p>
+                <p><i class="fas fa-envelope"></i> contact@destockpro.fr</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2026 DestockPro — Tous droits reserves</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

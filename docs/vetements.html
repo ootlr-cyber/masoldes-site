@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetements au Kilo — Destockage Marques | DestockPro</title>
+    <meta name="description" content="Vetements de marque au kilo : enseignes milieu de gamme en liquidation. Lots a partir de 2EUR/kg.">
+    <meta property="og:title" content="Vetements au Kilo">
+    <meta property="og:description" content="Vetements de marque au kilo : enseignes milieu de gamme en liquidation. Lots a partir de 2EUR/kg.">
+    <meta property="og:image" content="images/cuisines/slider-4.jpg">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-bar-track">
+        <span><i class="fas fa-truck"></i> Livraison possible sur toute la France</span>
+        <span><i class="fas fa-tag"></i> Vetements de marque au kilo des 2EUR/kg</span>
+        <span><i class="fas fa-box-open"></i> 1000 cuisines OSKAB neuves — jusqu'a -70%</span>
+        <span><i class="fas fa-shopping-cart"></i> Vente directe — prix casses toute l annee</span>
+        <span><i class="fas fa-truck"></i> Livraison possible sur toute la France</span>
+        <span><i class="fas fa-tag"></i> Vetements de marque au kilo des 2EUR/kg</span>
+        <span><i class="fas fa-box-open"></i> 1000 cuisines OSKAB neuves — jusqu'a -70%</span>
+        <span><i class="fas fa-shopping-cart"></i> Vente directe — prix casses toute l annee</span>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+    <div class="container">
+        <div class="header-main">
+            <a href="index.html" class="logo"><i class="fas fa-warehouse"></i> DESTOCK<span>PRO</span></a>
+            <div class="search-bar">
+                <input type="text" placeholder="Rechercher un produit, une marque, une gamme...">
+                <button aria-label="Rechercher"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="header-actions">
+                <a href="tel:+33184609300" class="header-action"><i class="fas fa-phone"></i><small>Appeler</small></a>
+                <a href="#" class="header-action"><i class="far fa-heart"></i><small>Favoris</small></a>
+                <a href="panier.html" class="header-action" id="headerCartBtn"><i class="fas fa-shopping-cart"></i><small>Panier</small><span class="cart-count" id="headerCartCount">0</span></a>
+            </div>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+        <nav class="nav-categories">
+            <a href="index.html" class="nav-cat"><i class="fas fa-home"></i> Accueil</a>
+            <a href="vetements.html" class="nav-cat active"><i class="fas fa-tshirt"></i> Vetements au Kilo</a>
+            <a href="cuisines.html" class="nav-cat"><i class="fas fa-kitchen-set"></i> Cuisines OSKAB</a>
+            <a href="salles-de-bain.html" class="nav-cat"><i class="fas fa-bath"></i> Salles de Bain</a>
+            <a href="promotions.html" class="nav-cat"><i class="fas fa-percent"></i> Promotions</a>
+            <a href="promotions.html#contact" class="nav-cat"><i class="fas fa-headset"></i> Contact</a>
+            <a href="panier.html" class="nav-cat highlight" id="navCartBtn"><i class="fas fa-shopping-cart"></i> Panier (0)</a>
+        </nav>
+    </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-search"><input type="text" placeholder="Rechercher..."></div>
+    <a href="index.html" class="mobile-link"><i class="fas fa-home"></i> Accueil</a>
+    <a href="vetements.html" class="mobile-link active"><i class="fas fa-tshirt"></i> Vetements au Kilo</a>
+    <a href="cuisines.html" class="mobile-link"><i class="fas fa-kitchen-set"></i> Cuisines OSKAB</a>
+    <a href="salles-de-bain.html" class="mobile-link"><i class="fas fa-bath"></i> Salles de Bain</a>
+    <a href="promotions.html" class="mobile-link"><i class="fas fa-percent"></i> Promotions</a>
+    <a href="promotions.html#contact" class="mobile-link"><i class="fas fa-headset"></i> Contact</a>
+</div>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Accueil</a> <i class="fas fa-chevron-right"></i> <span>Vetements au Kilo</span>
+        </div>
+        <h1 class="page-title">Vetements de Marque au Kilo</h1>
+        <p class="page-subtitle">Enseignes milieu de gamme en liquidation judiciaire. Des milliers de pieces neuves vendues au poids.</p>
+    </div>
+</section>
+
+<!-- INFO BOXES -->
+<section class="section-sm">
+    <div class="container">
+        <div class="info-grid reveal">
+            <div class="info-card">
+                <h3><i class="fas fa-box-open"></i> Origine du stock</h3>
+                <p>Enseignes francaises milieu de gamme ayant fait faillite ou en liquidation judiciaire. Stock neuf, jamais porte, souvent encore avec les etiquettes d'origine.</p>
+            </div>
+            <div class="info-card">
+                <h3><i class="fas fa-balance-scale"></i> Vente au kilo</h3>
+                <p>Vous achetez des lots peses au kilo. Exemple : 50kg de vetements femme. Vous payez au poids final. Plus le lot est gros, plus le prix au kilo baisse.</p>
+            </div>
+            <div class="info-card">
+                <h3><i class="fas fa-bullseye"></i> Pour qui ?</h3>
+                <p>Revendeurs, gerants de friperies, grossistes textile, et particuliers qui veulent des bonnes affaires. Toutes tailles et styles disponibles.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FILTERS + PRODUCTS -->
+<section class="section">
+    <div class="container">
+        <div class="filters-bar">
+            <button class="filter-btn active" data-filter="all">Tous les lots <span class="filter-count">6</span></button>
+            <button class="filter-btn" data-filter="femme"><i class="fas fa-person-dress"></i> Femme</button>
+            <button class="filter-btn" data-filter="homme"><i class="fas fa-user-tie"></i> Homme</button>
+            <button class="filter-btn" data-filter="enfant"><i class="fas fa-child"></i> Enfant</button>
+            <button class="filter-btn" data-filter="manteaux"><i class="fas fa-vest"></i> Manteaux</button>
+            <button class="filter-btn" data-filter="accessoires"><i class="fas fa-bag-shopping"></i> Accessoires</button>
+            <div class="filters-right">
+                <span class="results-count">6 lots disponibles</span>
+                <select class="sort-select">
+                    <option>Trier par : Pertinence</option>
+                    <option>Prix croissant</option>
+                    <option>Prix decroissant</option>
+                    <option>Poids croissant</option>
+                    <option>Nouveautes</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="product-grid product-grid-3 reveal">
+            <!-- Lot 1 -->
+            <div class="product-card" data-category="femme">
+                <div class="product-img" style="padding-top: 70%;">
+                    <img src="images/vetements/lot-femme.jpg" alt="Lot 50kg vetements femme neufs robes tops pantalons destockage">
+                    <div class="product-badges"><span class="badge badge-red">Vente flash</span></div>
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-sm" data-add-cart="vet-001"><i class="fas fa-cart-plus"></i> Ajouter</button>
+                        <button class="btn btn-white btn-sm" aria-label="Ajouter aux favoris" data-favorite="vet-001"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-brand">Lot Femme</span>
+                    <a href="produits/vetements/lot-femme-mix.html"><h3 class="product-name">Lot 50kg — Vetements Femme Mix Saisons</h3></a>
+                    <p class="product-desc">Robes, tops, pantalons, jupes, vestes. Marques milieu de gamme. Toutes tailles.</p>
+                    <div class="product-meta">
+                        <span class="product-tag"><i class="fas fa-weight-hanging"></i> 50 kg</span>
+                        <span class="product-tag"><i class="fas fa-tag"></i> Neuf avec etiquettes</span>
+                        <span class="product-tag">~200 pieces</span>
+                    </div>
+                    <div class="product-pricing">
+                        <span class="price-current">2EUR/kg</span>
+                        <span class="price-unit">soit ~100EUR le lot</span>
+                    </div>
+                </div>
+                <div class="product-footer">
+                    <button class="btn btn-primary btn-sm btn-block" data-add-cart="vet-001"><i class="fas fa-shopping-cart"></i> Ajouter au panier</button>
+                </div>
+            </div>
+
+            <!-- Lot 2 -->
+            <div class="product-card" data-category="homme">
+                <div class="product-img" style="padding-top: 70%;">
+                    <img src="images/vetements/lot-homme.jpg" alt="Lot 50kg vetements homme neufs chemises jeans polos destockage">
+                    <div class="product-badges"><span class="badge badge-green">Nouveau</span></div>
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-sm" data-add-cart="vet-002"><i class="fas fa-cart-plus"></i> Ajouter</button>
+                        <button class="btn btn-white btn-sm" aria-label="Ajouter aux favoris" data-favorite="vet-002"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-brand">Lot Homme</span>
+                    <a href="produits/vetements/lot-homme-casual.html"><h3 class="product-name">Lot 50kg — Vetements Homme Casual & Business</h3></a>
+                    <p class="product-desc">Chemises, polos, jeans, chinos, blazers. Coupes modernes, marques francaises.</p>
+                    <div class="product-meta">
+                        <span class="product-tag"><i class="fas fa-weight-hanging"></i> 50 kg</span>
+                        <span class="product-tag"><i class="fas fa-tag"></i> Neuf avec etiquettes</span>
+                        <span class="product-tag">~180 pieces</span>
+                    </div>
+                    <div class="product-pricing">
+                        <span class="price-current">2EUR/kg</span>
+                        <span class="price-unit">soit ~100EUR le lot</span>
+                    </div>
+                </div>
+                <div class="product-footer">
+                    <button class="btn btn-primary btn-sm btn-block" data-add-cart="vet-002"><i class="fas fa-shopping-cart"></i> Ajouter au panier</button>
+                </div>
+            </div>
+
+            <!-- Lot 3 -->
+            <div class="product-card" data-category="enfant">
+                <div class="product-img" style="padding-top: 70%;">
+                    <img src="images/vetements/lot-enfant.jpg" alt="Lot 30kg vetements enfant neufs 0-14 ans destockage">
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-sm" data-add-cart="vet-003"><i class="fas fa-cart-plus"></i> Ajouter</button>
+                        <button class="btn btn-white btn-sm" aria-label="Ajouter aux favoris" data-favorite="vet-003"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-brand">Lot Enfant</span>
+                    <a href="produits/vetements/lot-enfant.html"><h3 class="product-name">Lot 30kg — Vetements Enfant 0 a 14 ans</h3></a>
+                    <p class="product-desc">Bodies, t-shirts, pantalons, robes, pyjamas. Du bebe a l'ado.</p>
+                    <div class="product-meta">
+                        <span class="product-tag"><i class="fas fa-weight-hanging"></i> 30 kg</span>
+                        <span class="product-tag"><i class="fas fa-tag"></i> Neuf avec etiquettes</span>
+                        <span class="product-tag">~250 pieces</span>
+                    </div>
+                    <div class="product-pricing">
+                        <span class="price-current">3EUR/kg</span>
+                        <span class="price-unit">soit ~90EUR le lot</span>
+                    </div>
+                </div>
+                <div class="product-footer">
+                    <button class="btn btn-primary btn-sm btn-block" data-add-cart="vet-003"><i class="fas fa-shopping-cart"></i> Ajouter au panier</button>
+                </div>
+            </div>
+
+            <!-- Lot 4 -->
+            <div class="product-card" data-category="manteaux">
+                <div class="product-img" style="padding-top: 70%;">
+                    <img src="images/vetements/lot-manteaux.jpg" alt="Lot 40kg manteaux et vestes hiver neufs doudounes parkas">
+                    <div class="product-badges"><span class="badge badge-orange">Populaire</span></div>
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-sm" data-add-cart="vet-004"><i class="fas fa-cart-plus"></i> Ajouter</button>
+                        <button class="btn btn-white btn-sm" aria-label="Ajouter aux favoris" data-favorite="vet-004"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-brand">Lot Manteaux</span>
+                    <a href="produits/vetements/lot-manteaux-hiver.html"><h3 class="product-name">Lot 40kg — Manteaux & Vestes Hiver</h3></a>
+                    <p class="product-desc">Doudounes, parkas, trenchs, manteaux laine. Homme et femme.</p>
+                    <div class="product-meta">
+                        <span class="product-tag"><i class="fas fa-weight-hanging"></i> 40 kg</span>
+                        <span class="product-tag"><i class="fas fa-tag"></i> Neuf avec etiquettes</span>
+                        <span class="product-tag">~60 pieces</span>
+                    </div>
+                    <div class="product-pricing">
+                        <span class="price-current">5EUR/kg</span>
+                        <span class="price-unit">soit ~200EUR le lot</span>
+                    </div>
+                </div>
+                <div class="product-footer">
+                    <button class="btn btn-primary btn-sm btn-block" data-add-cart="vet-004"><i class="fas fa-shopping-cart"></i> Ajouter au panier</button>
+                </div>
+            </div>
+
+            <!-- Lot 5 -->
+            <div class="product-card" data-category="accessoires">
+                <div class="product-img" style="padding-top: 70%;">
+                    <img src="images/vetements/lot-accessoires.jpg" alt="Lot 20kg accessoires mode neufs sacs echarpes ceintures">
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-sm" data-add-cart="vet-005"><i class="fas fa-cart-plus"></i> Ajouter</button>
+                        <button class="btn btn-white btn-sm" aria-label="Ajouter aux favoris" data-favorite="vet-005"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-brand">Lot Accessoires</span>
+                    <a href="produits/vetements/lot-accessoires.html"><h3 class="product-name">Lot 20kg — Sacs, Echarpes, Ceintures</h3></a>
+                    <p class="product-desc">Accessoires de mode varies. Sacs a main, foulards, echarpes, ceintures.</p>
+                    <div class="product-meta">
+                        <span class="product-tag"><i class="fas fa-weight-hanging"></i> 20 kg</span>
+                        <span class="product-tag"><i class="fas fa-tag"></i> Neuf</span>
+                        <span class="product-tag">~150 pieces</span>
+                    </div>
+                    <div class="product-pricing">
+                        <span class="price-current">4EUR/kg</span>
+                        <span class="price-unit">soit ~80EUR le lot</span>
+                    </div>
+                </div>
+                <div class="product-footer">
+                    <button class="btn btn-primary btn-sm btn-block" data-add-cart="vet-005"><i class="fas fa-shopping-cart"></i> Ajouter au panier</button>
+                </div>
+            </div>
+
+            <!-- Lot 6 -->
+            <div class="product-card" data-category="sportswear">
+                <div class="product-img" style="padding-top: 70%;">
+                    <img src="images/vetements/lot-sportswear.jpg" alt="Lot 40kg sportswear neuf leggings sweats shorts sport destockage">
+                    <div class="product-badges"><span class="badge badge-green">Nouveau</span></div>
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-sm" data-add-cart="vet-006"><i class="fas fa-cart-plus"></i> Ajouter</button>
+                        <button class="btn btn-white btn-sm" aria-label="Ajouter aux favoris" data-favorite="vet-006"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-brand">Lot Sportswear</span>
+                    <a href="produits/vetements/lot-sportswear.html"><h3 class="product-name">Lot 40kg — Sportswear Homme & Femme</h3></a>
+                    <p class="product-desc">Leggings, t-shirts techniques, sweats, joggings. Marques sport & lifestyle.</p>
+                    <div class="product-meta">
+                        <span class="product-tag"><i class="fas fa-weight-hanging"></i> 40 kg</span>
+                        <span class="product-tag"><i class="fas fa-tag"></i> Neuf avec etiquettes</span>
+                        <span class="product-tag">~160 pieces</span>
+                    </div>
+                    <div class="product-pricing">
+                        <span class="price-current">3EUR/kg</span>
+                        <span class="price-unit">soit ~120EUR le lot</span>
+                    </div>
+                </div>
+                <div class="product-footer">
+                    <button class="btn btn-primary btn-sm btn-block" data-add-cart="vet-006"><i class="fas fa-shopping-cart"></i> Ajouter au panier</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- AVANTAGES -->
+<section class="section section-gray reveal">
+    <div class="container">
+        <div class="section-head-center">
+            <h2>Pourquoi acheter au kilo ?</h2>
+            <p>Les avantages du destockage textile pour les pros comme les particuliers.</p>
+        </div>
+        <div class="features-row">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-coins"></i></div>
+                <h3>Prix imbattables</h3>
+                <p>Des 2EUR/kg, chaque piece revient a quelques centimes. Marge enorme pour les revendeurs.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-gem"></i></div>
+                <h3>Qualite garantie</h3>
+                <p>Vetements neufs avec etiquettes d'origine. Marques milieu de gamme reconnues.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-boxes-stacked"></i></div>
+                <h3>Gros volumes</h3>
+                <p>Des tonnes de stock disponibles. Lots de 10kg a plusieurs centaines de kilos.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-recycle"></i></div>
+                <h3>Eco-responsable</h3>
+                <p>Donnez une seconde vie a ces vetements neufs plutot que de les voir detruits.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="container">
+        <h2>Interesse par un lot ?</h2>
+        <p>Commandez en ligne ou contactez-nous pour des lots sur mesure.</p>
+        <div class="cta-buttons">
+            <a href="panier.html" class="btn btn-white btn-lg"><i class="fas fa-shopping-cart"></i> Voir le panier</a>
+            <a href="promotions.html#contact" class="btn btn-outline btn-lg" style="color:#fff; border-color:rgba(255,255,255,0.4);"><i class="fas fa-phone"></i> Nous contacter</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-brand"><i class="fas fa-warehouse"></i> DESTOCK<span>PRO</span></div>
+                <p>Votre entrepot de destockage en ligne. Vetements de marque au kilo et cuisines OSKAB neuves a prix casses.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <a href="index.html">Accueil</a>
+                <a href="vetements.html">Vetements au Kilo</a>
+                <a href="cuisines.html">Cuisines OSKAB</a>
+                <a href="salles-de-bain.html">Salles de Bain OSKAB</a>
+                <a href="promotions.html">Promotions</a>
+            </div>
+            <div class="footer-col">
+                <h4>Informations</h4>
+                <a href="a-propos.html">A propos</a>
+                <a href="blog.html">Blog</a>
+                <a href="promotions.html#faq">FAQ</a>
+                <a href="promotions.html#contact">Contact</a>
+                <a href="cgv.html">Conditions generales</a>
+                <a href="mentions-legales.html">Mentions legales</a>
+                <a href="confidentialite.html">Confidentialite</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 18 Avenue du Clocher, 93600 Aulnay-sous-Bois</p>
+                <p><i class="fas fa-phone"></i> 01 84 60 93 00</p>
+                <p><i class="fas fa-envelope"></i> contact@destockpro.fr</p>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>2026 DestockPro — Tous droits reserves</p></div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

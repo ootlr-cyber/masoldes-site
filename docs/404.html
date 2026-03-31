@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page introuvable — DestockPro</title>
+    <meta name="description" content="La page que vous cherchez n'existe pas ou a ete deplacee. Retournez a l'accueil DestockPro pour continuer vos achats.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .error-page {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .error-content {
+            max-width: 600px;
+        }
+        .error-code {
+            font-size: 120px;
+            font-weight: 900;
+            color: var(--primary, #e02020);
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+        .error-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 15px;
+        }
+        .error-text {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .error-search {
+            display: flex;
+            max-width: 420px;
+            margin: 0 auto 30px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: border-color 0.3s;
+        }
+        .error-search:focus-within {
+            border-color: var(--primary, #e02020);
+        }
+        .error-search input {
+            flex: 1;
+            padding: 12px 16px;
+            border: none;
+            font-size: 15px;
+            outline: none;
+        }
+        .error-search button {
+            padding: 12px 18px;
+            background: var(--primary, #e02020);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+            transition: background 0.3s;
+        }
+        .error-search button:hover {
+            background: #c01818;
+        }
+        .error-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .error-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: #f5f5f5;
+            color: #1a1a2e;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background 0.3s, color 0.3s;
+        }
+        .error-links a:hover {
+            background: var(--primary, #e02020);
+            color: #fff;
+        }
+        .error-cta .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        @media (max-width: 600px) {
+            .error-code {
+                font-size: 80px;
+            }
+            .error-title {
+                font-size: 22px;
+            }
+            .error-links a {
+                padding: 8px 14px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+    <div class="container">
+        <div class="header-main">
+            <a href="index.html" class="logo">
+                <i class="fas fa-warehouse"></i> DESTOCK<span>PRO</span>
+            </a>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Rechercher un produit, une marque, une gamme...">
+                <button aria-label="Rechercher"><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="header-actions">
+                <a href="compte.html" class="header-icon" title="Mon compte"><i class="fas fa-user"></i></a>
+                <a href="panier.html" class="header-icon cart-icon" title="Panier"><i class="fas fa-shopping-cart"></i><span class="cart-count" id="cartCount">0</span></a>
+            </div>
+        </div>
+
+        <nav class="nav">
+            <a href="index.html">Accueil</a>
+            <a href="cuisines.html">Cuisines OSKAB</a>
+            <a href="vetements.html">Vetements au Kilo</a>
+            <a href="salles-de-bain.html">Salles de Bain</a>
+            <a href="promotions.html">Promotions</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+    </div>
+</header>
+
+<!-- 404 CONTENT -->
+<section class="error-page">
+    <div class="error-content">
+        <div class="error-code">404</div>
+        <h1 class="error-title">Page introuvable</h1>
+        <p class="error-text">La page que vous cherchez n'existe pas ou a ete deplacee. Utilisez la recherche ci-dessous ou explorez nos categories pour trouver ce que vous cherchez.</p>
+
+        <div class="error-search">
+            <input type="text" placeholder="Rechercher un produit...">
+            <button aria-label="Rechercher"><i class="fas fa-search"></i></button>
+        </div>
+
+        <div class="error-links">
+            <a href="index.html"><i class="fas fa-home"></i> Accueil</a>
+            <a href="cuisines.html"><i class="fas fa-utensils"></i> Cuisines OSKAB</a>
+            <a href="vetements.html"><i class="fas fa-tshirt"></i> Vetements au Kilo</a>
+            <a href="salles-de-bain.html"><i class="fas fa-bath"></i> Salles de Bain</a>
+        </div>
+
+        <div class="error-cta">
+            <a href="index.html" class="btn btn-primary btn-lg"><i class="fas fa-arrow-left"></i> Retour a l'accueil</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-brand"><i class="fas fa-warehouse"></i> DESTOCK<span>PRO</span></div>
+                <p>Votre entrepot de destockage en ligne. Vetements de marque au kilo et cuisines OSKAB neuves a prix casses.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <a href="index.html">Accueil</a>
+                <a href="vetements.html">Vetements au Kilo</a>
+                <a href="cuisines.html">Cuisines OSKAB</a>
+                <a href="salles-de-bain.html">Salles de Bain</a>
+                <a href="promotions.html">Promotions</a>
+                <a href="a-propos.html">A propos</a>
+                <a href="blog.html">Blog</a>
+            </div>
+            <div class="footer-col">
+                <h4>Informations</h4>
+                <a href="promotions.html#faq">FAQ</a>
+                <a href="promotions.html#contact">Contact</a>
+                <a href="cgv.html">CGV</a>
+                <a href="mentions-legales.html">Mentions legales</a>
+                <a href="confidentialite.html">Confidentialite</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 18 Avenue du Clocher, 93600 Aulnay-sous-Bois</p>
+                <p><i class="fas fa-phone"></i> 01 84 60 93 00</p>
+                <p><i class="fas fa-envelope"></i> contact@destockpro.fr</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2026 DestockPro — Tous droits reserves</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

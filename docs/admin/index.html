@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DestockPro - Administration</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="stylesheet" href="admin.css">
+    <meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+
+<!-- ============ LOGIN ============ -->
+<div class="login-wrapper" id="loginScreen">
+    <div class="login-card">
+        <div class="login-logo">Destock<span>Pro</span></div>
+        <p class="login-subtitle">Panneau d'administration</p>
+        <form class="login-form" id="loginForm">
+            <div class="form-group">
+                <label for="loginPassword">Mot de passe</label>
+                <input type="password" id="loginPassword" class="form-control" placeholder="Entrez le mot de passe" autocomplete="current-password">
+            </div>
+            <button type="submit" class="login-btn">Se connecter</button>
+            <p class="login-error" id="loginError">Mot de passe incorrect. Veuillez reessayer.</p>
+        </form>
+    </div>
+</div>
+
+<!-- ============ ADMIN LAYOUT ============ -->
+<div class="admin-layout" id="adminLayout">
+
+    <!-- Sidebar Overlay (mobile) -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">Destock<span>Pro</span> <span class="sidebar-badge">Admin</span></div>
+        </div>
+        <nav class="sidebar-nav">
+            <div class="nav-section-title">Menu principal</div>
+            <div class="nav-item active" data-section="dashboard">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                Dashboard
+            </div>
+            <div class="nav-item" data-section="produits">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                Produits
+                <span class="nav-badge" id="navProductCount">0</span>
+            </div>
+            <div class="nav-item" data-section="blog">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                Blog
+            </div>
+            <div class="nav-item" data-section="commandes">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                Commandes
+                <span class="nav-badge" id="navOrderCount">0</span>
+            </div>
+            <div class="nav-item" data-section="parametres">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                Parametres
+            </div>
+            <div class="nav-section-title">Liens</div>
+            <a href="../index.html" class="nav-item" target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Retour au site
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="nav-item" id="logoutBtn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                Deconnexion
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="content-header">
+            <div class="d-flex align-center gap-8">
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                </button>
+                <h1 id="sectionTitle">Dashboard</h1>
+            </div>
+            <div class="content-header-actions">
+                <button class="btn btn-outline btn-sm" id="exportDataBtn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Exporter
+                </button>
+                <label class="btn btn-outline btn-sm" style="margin:0">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                    Importer
+                    <input type="file" accept=".json" id="importDataInput" style="display:none">
+                </label>
+            </div>
+        </header>
+
+        <!-- Content Body -->
+        <div class="content-body">
+
+            <!-- ======== DASHBOARD SECTION ======== -->
+            <section class="admin-section active" id="section-dashboard">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-card-label">Total produits</div>
+                        <div class="stat-card-value" id="statProducts">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-label">Commandes en attente</div>
+                        <div class="stat-card-value" id="statPendingOrders">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-label">Visiteurs ce mois</div>
+                        <div class="stat-card-value" id="statVisitors">--</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-label">Chiffre d'affaires</div>
+                        <div class="stat-card-value" id="statRevenue">0 EUR</div>
+                    </div>
+                </div>
+
+                <!-- Recent Orders -->
+                <div class="panel">
+                    <div class="panel-header">
+                        <h2>Dernieres commandes</h2>
+                        <button class="btn btn-sm btn-secondary" onclick="Admin.navigate('commandes')">Voir tout</button>
+                    </div>
+                    <div class="panel-body" style="padding:0">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Client</th>
+                                    <th>Total</th>
+                                    <th>Statut</th>
+                                </tr>
+                            </thead>
+                            <tbody id="recentOrdersBody">
+                                <tr><td colspan="4" class="table-empty">Aucune commande pour le moment.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="panel">
+                    <div class="panel-header">
+                        <h2>Actions rapides</h2>
+                    </div>
+                    <div class="panel-body">
+                        <div class="quick-actions">
+                            <button class="quick-action" onclick="Admin.navigate('produits'); setTimeout(function(){ Admin.openProductModal(); }, 100);">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                                Ajouter un produit
+                            </button>
+                            <a href="../index.html" target="_blank" class="quick-action">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                                Voir le site
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======== PRODUITS SECTION ======== -->
+            <section class="admin-section" id="section-produits">
+                <div class="filter-bar">
+                    <div class="filter-tabs">
+                        <button class="filter-tab active" data-filter="all">Tous</button>
+                        <button class="filter-tab" data-filter="cuisine">Cuisines</button>
+                        <button class="filter-tab" data-filter="sdb">Salles de bain</button>
+                        <button class="filter-tab" data-filter="vetement">Vetements</button>
+                    </div>
+                    <input type="text" class="search-input" id="productSearch" placeholder="Rechercher un produit...">
+                    <button class="btn btn-primary" id="addProductBtn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        Ajouter un produit
+                    </button>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-body" style="padding:0; overflow-x:auto;">
+                        <table class="data-table" id="productsTable">
+                            <thead>
+                                <tr>
+                                    <th>Produit</th>
+                                    <th>Categorie</th>
+                                    <th>Prix</th>
+                                    <th>Prix original</th>
+                                    <th>Stock</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="productsBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======== BLOG SECTION ======== -->
+            <section class="admin-section" id="section-blog">
+                <div class="d-flex justify-between align-center mb-24">
+                    <div></div>
+                    <button class="btn btn-primary" id="addBlogBtn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        Nouvel article
+                    </button>
+                </div>
+                <div class="panel">
+                    <div class="panel-body" style="padding:0; overflow-x:auto;">
+                        <table class="data-table" id="blogTable">
+                            <thead>
+                                <tr>
+                                    <th>Titre</th>
+                                    <th>Categorie</th>
+                                    <th>Date</th>
+                                    <th>Statut</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="blogBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======== COMMANDES SECTION ======== -->
+            <section class="admin-section" id="section-commandes">
+                <div class="panel">
+                    <div class="panel-body" style="padding:0; overflow-x:auto;">
+                        <table class="data-table" id="ordersTable">
+                            <thead>
+                                <tr>
+                                    <th>N. commande</th>
+                                    <th>Date</th>
+                                    <th>Client</th>
+                                    <th>Email</th>
+                                    <th>Total</th>
+                                    <th>Statut</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="ordersBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======== PARAMETRES SECTION ======== -->
+            <section class="admin-section" id="section-parametres">
+                <form id="settingsForm">
+                    <div class="panel">
+                        <div class="panel-header"><h2>Informations generales</h2></div>
+                        <div class="panel-body">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Nom du site</label>
+                                    <input type="text" class="form-control" id="settingSiteName" value="DestockPro">
+                                </div>
+                                <div class="form-group">
+                                    <label>Telephone</label>
+                                    <input type="text" class="form-control" id="settingPhone" value="+33 1 23 45 67 89">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="email" class="form-control" id="settingEmail" value="contact@destockpro.fr">
+                                </div>
+                                <div class="form-group">
+                                    <label>Adresse</label>
+                                    <input type="text" class="form-control" id="settingAddress" value="12 Rue du Commerce, 75015 Paris">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-header"><h2>Contenu du site</h2></div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label>Message barre promotionnelle</label>
+                                <input type="text" class="form-control" id="settingPromoBar" value="Destockage massif : jusqu'a -70% sur les cuisines et salles de bain !">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Titre hero</label>
+                                    <input type="text" class="form-control" id="settingHeroTitle" value="Destockage de Cuisines & Salles de Bain Premium">
+                                </div>
+                                <div class="form-group">
+                                    <label>Sous-titre hero</label>
+                                    <input type="text" class="form-control" id="settingHeroSubtitle" value="Jusqu'a -70% sur les plus grandes marques">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-header"><h2>Fonctionnalites</h2></div>
+                        <div class="panel-body">
+                            <div class="toggle-wrapper">
+                                <div>
+                                    <div class="toggle-label">Newsletter</div>
+                                    <div class="toggle-desc">Activer le formulaire d'inscription newsletter sur le site</div>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox" id="settingNewsletter" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                            <div class="toggle-wrapper">
+                                <div>
+                                    <div class="toggle-label">Chat en ligne</div>
+                                    <div class="toggle-desc">Activer le widget de chat en bas a droite du site</div>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox" id="settingChat" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+                        Enregistrer les parametres
+                    </button>
+                </form>
+            </section>
+
+        </div>
+    </main>
+</div>
+
+<!-- ============ PRODUCT MODAL ============ -->
+<div class="modal-overlay" id="productModal">
+    <div class="modal">
+        <div class="modal-header">
+            <h2 id="productModalTitle">Ajouter un produit</h2>
+            <button class="modal-close" onclick="Admin.closeProductModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+            <form id="productForm">
+                <input type="hidden" id="productId">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Nom <span class="required">*</span></label>
+                        <input type="text" class="form-control" id="productName" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Marque</label>
+                        <input type="text" class="form-control" id="productBrand">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Categorie <span class="required">*</span></label>
+                        <select class="form-control" id="productCategory" required>
+                            <option value="">-- Choisir --</option>
+                            <option value="cuisine">Cuisine</option>
+                            <option value="sdb">Salle de bain</option>
+                            <option value="vetement">Vetement</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Stock</label>
+                        <input type="number" class="form-control" id="productStock" min="0" value="0">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Prix destocke (EUR) <span class="required">*</span></label>
+                        <input type="number" class="form-control" id="productPrice" min="0" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Prix original (EUR)</label>
+                        <input type="number" class="form-control" id="productOriginalPrice" min="0" step="0.01">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>URL de l'image</label>
+                    <input type="text" class="form-control" id="productImage" placeholder="../images/cuisines/exemple.jpg">
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea class="form-control" id="productDesc" rows="3"></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-secondary" onclick="Admin.closeProductModal()">Annuler</button>
+            <button class="btn btn-primary" onclick="Admin.saveProduct()">Enregistrer</button>
+        </div>
+    </div>
+</div>
+
+<!-- ============ BLOG MODAL ============ -->
+<div class="modal-overlay" id="blogModal">
+    <div class="modal">
+        <div class="modal-header">
+            <h2 id="blogModalTitle">Nouvel article</h2>
+            <button class="modal-close" onclick="Admin.closeBlogModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+            <form id="blogForm">
+                <input type="hidden" id="blogId">
+                <div class="form-group">
+                    <label>Titre <span class="required">*</span></label>
+                    <input type="text" class="form-control" id="blogTitle" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Categorie</label>
+                        <select class="form-control" id="blogCategory">
+                            <option value="general">General</option>
+                            <option value="cuisine">Cuisine</option>
+                            <option value="sdb">Salle de bain</option>
+                            <option value="vetement">Vetement</option>
+                            <option value="conseil">Conseil</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Statut</label>
+                        <select class="form-control" id="blogStatus">
+                            <option value="brouillon">Brouillon</option>
+                            <option value="publie">Publie</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Contenu <span class="required">*</span></label>
+                    <textarea class="form-control" id="blogContent" rows="8" required></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-secondary" onclick="Admin.closeBlogModal()">Annuler</button>
+            <button class="btn btn-primary" onclick="Admin.saveBlog()">Enregistrer</button>
+        </div>
+    </div>
+</div>
+
+<!-- ============ ORDER DETAIL MODAL ============ -->
+<div class="modal-overlay" id="orderModal">
+    <div class="modal">
+        <div class="modal-header">
+            <h2 id="orderModalTitle">Detail commande</h2>
+            <button class="modal-close" onclick="Admin.closeOrderModal()">&times;</button>
+        </div>
+        <div class="modal-body" id="orderModalBody"></div>
+        <div class="modal-footer">
+            <button class="btn btn-secondary" onclick="Admin.closeOrderModal()">Fermer</button>
+        </div>
+    </div>
+</div>
+
+<!-- ============ CONFIRM MODAL ============ -->
+<div class="modal-overlay" id="confirmModal">
+    <div class="modal" style="max-width:440px">
+        <div class="modal-body">
+            <div class="confirm-dialog">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                <h3 id="confirmTitle">Confirmer la suppression</h3>
+                <p id="confirmMessage">Cette action est irreversible. Voulez-vous continuer ?</p>
+                <div class="confirm-actions">
+                    <button class="btn btn-secondary" onclick="Admin.closeConfirm()">Annuler</button>
+                    <button class="btn btn-danger" id="confirmAction">Supprimer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============ TOAST CONTAINER ============ -->
+<div class="toast-container" id="toastContainer"></div>
+
+<!-- ============ JAVASCRIPT ============ -->
+<script>
+(function() {
+    'use strict';
+
+    // ---- CONSTANTS ----
+    var ADMIN_PASSWORD = 'destockpro2026';
+    var STORAGE_KEYS = {
+        products: 'destockpro_products',
+        orders: 'destockpro_orders',
+        blog: 'destockpro_blog',
+        settings: 'destockpro_settings',
+        session: 'destockpro_admin_session'
+    };
+
+    var CATEGORY_LABELS = {
+        cuisine: 'Cuisine',
+        sdb: 'Salle de bain',
+        vetement: 'Vetement',
+        general: 'General',
+        conseil: 'Conseil'
+    };
+
+    var ORDER_STATUS_LABELS = {
+        'en_attente': 'En attente',
+        'confirmee': 'Confirmee',
+        'expediee': 'Expediee',
+        'annulee': 'Annulee'
+    };
+
+    var DEFAULT_PRODUCTS = [
+        {id:'cui-001', name:'HELIA Noir Mat', brand:'OSKAB', category:'cuisine', price:1350, originalPrice:4500, image:'../images/cuisines/slider-4.jpg', desc:'Cuisine moderne, facades noires mates sans poignee', stock:120},
+        {id:'cui-002', name:'IPOMA Blanc Brillant', brand:'OSKAB', category:'cuisine', price:1140, originalPrice:3800, image:'../images/cuisines/acc-realisations.jpg', desc:'Cuisine contemporaine, finition laquee', stock:100},
+        {id:'cui-003', name:'GINKO Bois Naturel', brand:'OSKAB', category:'cuisine', price:1560, originalPrice:5200, image:'../images/cuisines/project-cuisine.jpeg', desc:'Esprit scandinave, chene naturel', stock:80},
+        {id:'cui-004', name:'BORA Bleu Nuit', brand:'OSKAB', category:'cuisine', price:1470, originalPrice:4900, image:'../images/cuisines/project-relooking.jpeg', desc:'Cuisine design, couleur tendance', stock:90},
+        {id:'cui-005', name:'HELIA Gris Clair', brand:'OSKAB', category:'cuisine', price:1260, originalPrice:4200, image:'../images/cuisines/slider-2.jpg', desc:'Finition grise satinee', stock:75},
+        {id:'cui-006', name:'HELIA Chene Naturel', brand:'OSKAB', category:'cuisine', price:1440, originalPrice:4800, image:'../images/cuisines/slider-3.jpg', desc:'Facades effet bois chene', stock:65},
+        {id:'cui-007', name:'IPOMA Chene Blond', brand:'OSKAB', category:'cuisine', price:1230, originalPrice:4100, image:'../images/cuisines/acc-devis.jpeg', desc:'Chene blond, finition brillante', stock:55},
+        {id:'cui-008', name:'BORA Vert Sauge', brand:'OSKAB', category:'cuisine', price:1410, originalPrice:4700, image:'../images/cuisines/acc-logiciel.jpeg', desc:'Vert doux naturel, mate', stock:60},
+        {id:'cui-009', name:'PIMA Blanc Mat', brand:'OSKAB', category:'cuisine', price:750, originalPrice:2500, image:'../images/cuisines/acc-psm.jpeg', desc:'Entree de gamme, blanc mat', stock:85},
+        {id:'cui-010', name:'STATIC Ivoire', brand:'OSKAB', category:'cuisine', price:960, originalPrice:3200, image:'../images/cuisines/project-sdb.jpeg', desc:'Classique, moulures discretes', stock:70},
+        {id:'cui-011', name:'STECIA Blanc Brillant', brand:'OSKAB', category:'cuisine', price:1650, originalPrice:5500, image:'../images/cuisines/slider-2.jpg', desc:'Haut de gamme, laquee premium', stock:40},
+        {id:'cui-012', name:'GINKO Noyer', brand:'OSKAB', category:'cuisine', price:1380, originalPrice:4600, image:'../images/cuisines/slider-3.jpg', desc:'Noyer fonce, chaleureux', stock:50},
+        {id:'sdb-001', name:'HELIA Noir Mat SDB', brand:'OSKAB', category:'sdb', price:890, originalPrice:2970, image:'../images/sdb/sdb-1.jpeg', desc:'Meuble vasque 80cm + colonne', stock:30},
+        {id:'sdb-002', name:'IPOMA Blanc SDB', brand:'OSKAB', category:'sdb', price:750, originalPrice:2500, image:'../images/sdb/sdb-blanche.jpg', desc:'Meuble vasque 100cm blanc brillant', stock:25},
+        {id:'sdb-003', name:'GINKO Bois SDB', brand:'OSKAB', category:'sdb', price:960, originalPrice:3200, image:'../images/sdb/sdb-bois.jpg', desc:'Meuble vasque chene + miroir', stock:20},
+        {id:'sdb-004', name:'BORA Gris SDB', brand:'OSKAB', category:'sdb', price:850, originalPrice:2830, image:'../images/sdb/sdb-grise.jpg', desc:'Ensemble gris anthracite', stock:22},
+        {id:'sdb-005', name:'HELIA Design SDB', brand:'OSKAB', category:'sdb', price:1100, originalPrice:3670, image:'../images/sdb/sdb-design.jpg', desc:'Double vasque 120cm', stock:15},
+        {id:'sdb-006', name:'STATIC Ivoire SDB', brand:'OSKAB', category:'sdb', price:690, originalPrice:2300, image:'../images/sdb/sdb-vasque.jpg', desc:'Classique moulures', stock:18},
+        {id:'sdb-007', name:'STECIA Premium SDB', brand:'OSKAB', category:'sdb', price:1350, originalPrice:4500, image:'../images/sdb/sdb-luxe.jpg', desc:'Premium laquee', stock:10},
+        {id:'sdb-008', name:'BORA Noir SDB', brand:'OSKAB', category:'sdb', price:920, originalPrice:3070, image:'../images/sdb/sdb-noire.jpg', desc:'Noir mat + colonne', stock:16},
+        {id:'vet-001', name:'Lot 50kg Vetements Femme', brand:'Lot Femme', category:'vetement', price:100, originalPrice:null, image:'../images/vetements/lot-femme.jpg', desc:'Robes, tops, pantalons ~200 pieces', stock:50},
+        {id:'vet-002', name:'Lot 50kg Vetements Homme', brand:'Lot Homme', category:'vetement', price:100, originalPrice:null, image:'../images/vetements/lot-homme.jpg', desc:'Chemises, polos, jeans ~180 pieces', stock:45},
+        {id:'vet-003', name:'Lot 30kg Vetements Enfant', brand:'Lot Enfant', category:'vetement', price:90, originalPrice:null, image:'../images/vetements/lot-enfant.jpg', desc:'Bodies, t-shirts ~250 pieces', stock:35},
+        {id:'vet-004', name:'Lot 40kg Manteaux Vestes', brand:'Lot Manteaux', category:'vetement', price:200, originalPrice:null, image:'../images/vetements/lot-manteaux.jpg', desc:'Doudounes, parkas ~60 pieces', stock:20},
+        {id:'vet-005', name:'Lot 20kg Accessoires', brand:'Lot Accessoires', category:'vetement', price:80, originalPrice:null, image:'../images/vetements/lot-accessoires.jpg', desc:'Sacs, echarpes ~150 pieces', stock:30},
+        {id:'vet-006', name:'Lot 40kg Sportswear', brand:'Lot Sportswear', category:'vetement', price:120, originalPrice:null, image:'../images/vetements/lot-sportswear.jpg', desc:'Leggings, sweats ~160 pieces', stock:25}
+    ];
+
+    // ---- STATE ----
+    var currentSection = 'dashboard';
+    var currentFilter = 'all';
+    var currentSearch = '';
+    var confirmCallback = null;
+
+    // ---- HELPERS ----
+    function $(selector) { return document.querySelector(selector); }
+    function $$(selector) { return document.querySelectorAll(selector); }
+
+    function getStorage(key) {
+        try {
+            var data = localStorage.getItem(key);
+            return data ? JSON.parse(data) : null;
+        } catch(e) { return null; }
+    }
+
+    function setStorage(key, data) {
+        try {
+            localStorage.setItem(key, JSON.stringify(data));
+        } catch(e) {
+            console.error('Erreur localStorage:', e);
+        }
+    }
+
+    function formatPrice(price) {
+        if (price === null || price === undefined) return '--';
+        return new Intl.NumberFormat('fr-FR').format(price) + ' EUR';
+    }
+
+    function formatDate(dateStr) {
+        if (!dateStr) return '--';
+        var d = new Date(dateStr);
+        return d.toLocaleDateString('fr-FR', { day:'2-digit', month:'2-digit', year:'numeric' });
+    }
+
+    function generateId(prefix) {
+        return prefix + '-' + Date.now().toString(36) + Math.random().toString(36).substr(2, 4);
+    }
+
+    function escapeHtml(str) {
+        if (!str) return '';
+        var div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+
+    // ---- DATA ACCESS ----
+    function getProducts() {
+        var products = getStorage(STORAGE_KEYS.products);
+        if (!products || products.length === 0) {
+            products = JSON.parse(JSON.stringify(DEFAULT_PRODUCTS));
+            setStorage(STORAGE_KEYS.products, products);
+        }
+        return products;
+    }
+
+    function getOrders() {
+        return getStorage(STORAGE_KEYS.orders) || [];
+    }
+
+    function getBlog() {
+        return getStorage(STORAGE_KEYS.blog) || [];
+    }
+
+    function getSettings() {
+        return getStorage(STORAGE_KEYS.settings) || {
+            siteName: 'DestockPro',
+            phone: '+33 1 23 45 67 89',
+            email: 'contact@destockpro.fr',
+            address: '12 Rue du Commerce, 75015 Paris',
+            promoBar: 'Destockage massif : jusqu\'a -70% sur les cuisines et salles de bain !',
+            heroTitle: 'Destockage de Cuisines & Salles de Bain Premium',
+            heroSubtitle: 'Jusqu\'a -70% sur les plus grandes marques',
+            newsletter: true,
+            chat: true
+        };
+    }
+
+    // ---- TOAST ----
+    function showToast(message, type) {
+        type = type || 'success';
+        var container = $('#toastContainer');
+        var toast = document.createElement('div');
+        toast.className = 'toast ' + type;
+
+        var iconPaths = {
+            success: '<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>',
+            error: '<circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/>',
+            warning: '<path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>',
+            info: '<circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>'
+        };
+
+        toast.innerHTML = '<svg class="toast-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' + iconPaths[type] + '</svg>' +
+            '<span class="toast-message">' + escapeHtml(message) + '</span>' +
+            '<button class="toast-close" onclick="this.parentElement.remove()">&times;</button>';
+
+        container.appendChild(toast);
+        setTimeout(function() {
+            toast.classList.add('hiding');
+            setTimeout(function() { toast.remove(); }, 300);
+        }, 4000);
+    }
+
+    // ---- CONFIRM ----
+    function showConfirm(title, message, callback) {
+        $('#confirmTitle').textContent = title;
+        $('#confirmMessage').textContent = message;
+        $('#confirmModal').classList.add('active');
+        confirmCallback = callback;
+    }
+
+    function closeConfirm() {
+        $('#confirmModal').classList.remove('active');
+        confirmCallback = null;
+    }
+
+    // ---- AUTH ----
+    function checkAuth() {
+        if (sessionStorage.getItem(STORAGE_KEYS.session) === 'true') {
+            showAdmin();
+        }
+    }
+
+    function login(password) {
+        if (password === ADMIN_PASSWORD) {
+            sessionStorage.setItem(STORAGE_KEYS.session, 'true');
+            showAdmin();
+            return true;
+        }
+        return false;
+    }
+
+    function logout() {
+        sessionStorage.removeItem(STORAGE_KEYS.session);
+        $('#adminLayout').classList.remove('active');
+        $('#loginScreen').style.display = 'flex';
+        $('#loginPassword').value = '';
+    }
+
+    function showAdmin() {
+        $('#loginScreen').style.display = 'none';
+        $('#adminLayout').classList.add('active');
+        navigate('dashboard');
+        updateNavBadges();
+    }
+
+    // ---- NAVIGATION ----
+    function navigate(section) {
+        currentSection = section;
+
+        // Update nav items
+        $$('.nav-item[data-section]').forEach(function(item) {
+            item.classList.toggle('active', item.dataset.section === section);
+        });
+
+        // Update sections
+        $$('.admin-section').forEach(function(s) {
+            s.classList.toggle('active', s.id === 'section-' + section);
+        });
+
+        // Update title
+        var titles = {
+            dashboard: 'Dashboard',
+            produits: 'Gestion des produits',
+            blog: 'Gestion du blog',
+            commandes: 'Commandes',
+            parametres: 'Parametres du site'
+        };
+        $('#sectionTitle').textContent = titles[section] || 'Dashboard';
+
+        // Render section
+        switch(section) {
+            case 'dashboard': renderDashboard(); break;
+            case 'produits': renderProducts(); break;
+            case 'blog': renderBlog(); break;
+            case 'commandes': renderOrders(); break;
+            case 'parametres': renderSettings(); break;
+        }
+
+        // Close mobile sidebar
+        closeSidebar();
+    }
+
+    function updateNavBadges() {
+        var products = getProducts();
+        var orders = getOrders();
+        var pending = orders.filter(function(o) { return o.status === 'en_attente'; });
+
+        $('#navProductCount').textContent = products.length;
+        $('#navOrderCount').textContent = pending.length;
+    }
+
+    // ---- DASHBOARD ----
+    function renderDashboard() {
+        var products = getProducts();
+        var orders = getOrders();
+        var pending = orders.filter(function(o) { return o.status === 'en_attente'; });
+        var revenue = orders.reduce(function(sum, o) { return sum + (o.total || 0); }, 0);
+
+        $('#statProducts').textContent = products.length;
+        $('#statPendingOrders').textContent = pending.length;
+        $('#statVisitors').textContent = Math.floor(Math.random() * 2000 + 500);
+        $('#statRevenue').textContent = formatPrice(revenue);
+
+        // Recent orders
+        var tbody = $('#recentOrdersBody');
+        if (orders.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="4" class="table-empty">Aucune commande pour le moment.</td></tr>';
+        } else {
+            var recent = orders.slice(-5).reverse();
+            tbody.innerHTML = recent.map(function(o) {
+                return '<tr>' +
+                    '<td>' + formatDate(o.date) + '</td>' +
+                    '<td>' + escapeHtml(o.client || '--') + '</td>' +
+                    '<td class="price-current">' + formatPrice(o.total) + '</td>' +
+                    '<td>' + getStatusBadge(o.status) + '</td>' +
+                '</tr>';
+            }).join('');
+        }
+    }
+
+    function getStatusBadge(status) {
+        var classes = {
+            'en_attente': 'badge-warning',
+            'confirmee': 'badge-info',
+            'expediee': 'badge-success',
+            'annulee': 'badge-danger'
+        };
+        return '<span class="badge ' + (classes[status] || 'badge-neutral') + '">' + (ORDER_STATUS_LABELS[status] || status) + '</span>';
+    }
+
+    // ---- PRODUCTS ----
+    function renderProducts() {
+        var products = getProducts();
+        var filtered = products;
+
+        if (currentFilter !== 'all') {
+            filtered = filtered.filter(function(p) { return p.category === currentFilter; });
+        }
+
+        if (currentSearch) {
+            var s = currentSearch.toLowerCase();
+            filtered = filtered.filter(function(p) {
+                return (p.name && p.name.toLowerCase().indexOf(s) !== -1) ||
+                       (p.brand && p.brand.toLowerCase().indexOf(s) !== -1) ||
+                       (p.id && p.id.toLowerCase().indexOf(s) !== -1);
+            });
+        }
+
+        var tbody = $('#productsBody');
+        if (filtered.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="6" class="table-empty">Aucun produit trouve.</td></tr>';
+            return;
+        }
+
+        tbody.innerHTML = filtered.map(function(p) {
+            return '<tr>' +
+                '<td><div class="table-product-info">' +
+                    '<img src="' + escapeHtml(p.image || '') + '" alt="" class="table-thumbnail" onerror="this.src=\'data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22 fill=%22%23ddd%22><rect width=%2248%22 height=%2248%22/></svg>\'">' +
+                    '<div><div class="table-product-name">' + escapeHtml(p.name) + '</div><div class="table-product-brand">' + escapeHtml(p.brand || '') + '</div></div>' +
+                '</div></td>' +
+                '<td><span class="badge badge-neutral">' + (CATEGORY_LABELS[p.category] || p.category) + '</span></td>' +
+                '<td class="price-current">' + formatPrice(p.price) + '</td>' +
+                '<td>' + (p.originalPrice ? '<span class="price-original">' + formatPrice(p.originalPrice) + '</span>' : '--') + '</td>' +
+                '<td>' + (p.stock || 0) + '</td>' +
+                '<td><div class="table-actions">' +
+                    '<button class="btn-icon" onclick="Admin.editProduct(\'' + p.id + '\')" title="Modifier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>' +
+                    '<button class="btn-icon danger" onclick="Admin.deleteProduct(\'' + p.id + '\')" title="Supprimer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>' +
+                '</div></td>' +
+            '</tr>';
+        }).join('');
+    }
+
+    function openProductModal(product) {
+        $('#productModalTitle').textContent = product ? 'Modifier le produit' : 'Ajouter un produit';
+        $('#productId').value = product ? product.id : '';
+        $('#productName').value = product ? product.name : '';
+        $('#productBrand').value = product ? (product.brand || '') : '';
+        $('#productCategory').value = product ? product.category : '';
+        $('#productPrice').value = product ? product.price : '';
+        $('#productOriginalPrice').value = product && product.originalPrice ? product.originalPrice : '';
+        $('#productImage').value = product ? (product.image || '') : '';
+        $('#productDesc').value = product ? (product.desc || '') : '';
+        $('#productStock').value = product ? (product.stock || 0) : 0;
+        $('#productModal').classList.add('active');
+    }
+
+    function closeProductModal() {
+        $('#productModal').classList.remove('active');
+    }
+
+    function saveProduct() {
+        var name = $('#productName').value.trim();
+        var category = $('#productCategory').value;
+        var price = parseFloat($('#productPrice').value);
+
+        if (!name) { showToast('Le nom du produit est requis.', 'error'); return; }
+        if (!category) { showToast('La categorie est requise.', 'error'); return; }
+        if (isNaN(price) || price <= 0) { showToast('Le prix doit etre superieur a 0.', 'error'); return; }
+
+        var products = getProducts();
+        var id = $('#productId').value;
+        var originalPriceVal = parseFloat($('#productOriginalPrice').value);
+
+        var productData = {
+            name: name,
+            brand: $('#productBrand').value.trim(),
+            category: category,
+            price: price,
+            originalPrice: isNaN(originalPriceVal) ? null : originalPriceVal,
+            image: $('#productImage').value.trim(),
+            desc: $('#productDesc').value.trim(),
+            stock: parseInt($('#productStock').value) || 0
+        };
+
+        if (id) {
+            // Edit existing
+            var idx = products.findIndex(function(p) { return p.id === id; });
+            if (idx !== -1) {
+                products[idx] = Object.assign({}, products[idx], productData);
+                showToast('Produit modifie avec succes.');
+            }
+        } else {
+            // Add new
+            var prefix = category === 'cuisine' ? 'cui' : category === 'sdb' ? 'sdb' : 'vet';
+            productData.id = generateId(prefix);
+            products.push(productData);
+            showToast('Produit ajoute avec succes.');
+        }
+
+        setStorage(STORAGE_KEYS.products, products);
+        closeProductModal();
+        renderProducts();
+        updateNavBadges();
+    }
+
+    function editProduct(id) {
+        var products = getProducts();
+        var product = products.find(function(p) { return p.id === id; });
+        if (product) openProductModal(product);
+    }
+
+    function deleteProduct(id) {
+        showConfirm('Supprimer ce produit ?', 'Cette action est irreversible. Le produit sera definitivement supprime.', function() {
+            var products = getProducts();
+            products = products.filter(function(p) { return p.id !== id; });
+            setStorage(STORAGE_KEYS.products, products);
+            renderProducts();
+            updateNavBadges();
+            showToast('Produit supprime.');
+            closeConfirm();
+        });
+    }
+
+    // ---- BLOG ----
+    function renderBlog() {
+        var articles = getBlog();
+        var tbody = $('#blogBody');
+
+        if (articles.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="5" class="table-empty">Aucun article pour le moment. Commencez par en creer un.</td></tr>';
+            return;
+        }
+
+        tbody.innerHTML = articles.map(function(a) {
+            var statusClass = a.status === 'publie' ? 'badge-success' : 'badge-warning';
+            var statusLabel = a.status === 'publie' ? 'Publie' : 'Brouillon';
+            return '<tr>' +
+                '<td><strong>' + escapeHtml(a.title) + '</strong></td>' +
+                '<td><span class="badge badge-neutral">' + (CATEGORY_LABELS[a.category] || a.category) + '</span></td>' +
+                '<td>' + formatDate(a.date) + '</td>' +
+                '<td><span class="badge ' + statusClass + '">' + statusLabel + '</span></td>' +
+                '<td><div class="table-actions">' +
+                    '<button class="btn-icon" onclick="Admin.editBlog(\'' + a.id + '\')" title="Modifier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>' +
+                    '<button class="btn-icon danger" onclick="Admin.deleteBlog(\'' + a.id + '\')" title="Supprimer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>' +
+                '</div></td>' +
+            '</tr>';
+        }).join('');
+    }
+
+    function openBlogModal(article) {
+        $('#blogModalTitle').textContent = article ? 'Modifier l\'article' : 'Nouvel article';
+        $('#blogId').value = article ? article.id : '';
+        $('#blogTitle').value = article ? article.title : '';
+        $('#blogCategory').value = article ? (article.category || 'general') : 'general';
+        $('#blogStatus').value = article ? (article.status || 'brouillon') : 'brouillon';
+        $('#blogContent').value = article ? (article.content || '') : '';
+        $('#blogModal').classList.add('active');
+    }
+
+    function closeBlogModal() {
+        $('#blogModal').classList.remove('active');
+    }
+
+    function saveBlog() {
+        var title = $('#blogTitle').value.trim();
+        var content = $('#blogContent').value.trim();
+
+        if (!title) { showToast('Le titre est requis.', 'error'); return; }
+        if (!content) { showToast('Le contenu est requis.', 'error'); return; }
+
+        var articles = getBlog();
+        var id = $('#blogId').value;
+
+        var articleData = {
+            title: title,
+            content: content,
+            category: $('#blogCategory').value,
+            status: $('#blogStatus').value
+        };
+
+        if (id) {
+            var idx = articles.findIndex(function(a) { return a.id === id; });
+            if (idx !== -1) {
+                articles[idx] = Object.assign({}, articles[idx], articleData);
+                showToast('Article modifie avec succes.');
+            }
+        } else {
+            articleData.id = generateId('blog');
+            articleData.date = new Date().toISOString();
+            articles.push(articleData);
+            showToast('Article cree avec succes.');
+        }
+
+        setStorage(STORAGE_KEYS.blog, articles);
+        closeBlogModal();
+        renderBlog();
+    }
+
+    function editBlog(id) {
+        var articles = getBlog();
+        var article = articles.find(function(a) { return a.id === id; });
+        if (article) openBlogModal(article);
+    }
+
+    function deleteBlog(id) {
+        showConfirm('Supprimer cet article ?', 'Cette action est irreversible.', function() {
+            var articles = getBlog();
+            articles = articles.filter(function(a) { return a.id !== id; });
+            setStorage(STORAGE_KEYS.blog, articles);
+            renderBlog();
+            showToast('Article supprime.');
+            closeConfirm();
+        });
+    }
+
+    // ---- ORDERS ----
+    function renderOrders() {
+        var orders = getOrders();
+        var tbody = $('#ordersBody');
+
+        if (orders.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="7" class="table-empty">Aucune commande recue pour le moment.</td></tr>';
+            return;
+        }
+
+        tbody.innerHTML = orders.slice().reverse().map(function(o) {
+            return '<tr>' +
+                '<td><strong>' + escapeHtml(o.id || '--') + '</strong></td>' +
+                '<td>' + formatDate(o.date) + '</td>' +
+                '<td>' + escapeHtml(o.client || '--') + '</td>' +
+                '<td>' + escapeHtml(o.email || '--') + '</td>' +
+                '<td class="price-current">' + formatPrice(o.total) + '</td>' +
+                '<td>' +
+                    '<select class="form-control" style="min-width:130px;padding:6px 10px;font-size:12px" onchange="Admin.updateOrderStatus(\'' + o.id + '\', this.value)">' +
+                        '<option value="en_attente"' + (o.status === 'en_attente' ? ' selected' : '') + '>En attente</option>' +
+                        '<option value="confirmee"' + (o.status === 'confirmee' ? ' selected' : '') + '>Confirmee</option>' +
+                        '<option value="expediee"' + (o.status === 'expediee' ? ' selected' : '') + '>Expediee</option>' +
+                        '<option value="annulee"' + (o.status === 'annulee' ? ' selected' : '') + '>Annulee</option>' +
+                    '</select>' +
+                '</td>' +
+                '<td>' +
+                    '<button class="btn-icon" onclick="Admin.viewOrder(\'' + o.id + '\')" title="Voir le detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>' +
+                '</td>' +
+            '</tr>';
+        }).join('');
+    }
+
+    function updateOrderStatus(orderId, status) {
+        var orders = getOrders();
+        var idx = orders.findIndex(function(o) { return o.id === orderId; });
+        if (idx !== -1) {
+            orders[idx].status = status;
+            setStorage(STORAGE_KEYS.orders, orders);
+            updateNavBadges();
+            showToast('Statut de la commande mis a jour.');
+        }
+    }
+
+    function viewOrder(orderId) {
+        var orders = getOrders();
+        var order = orders.find(function(o) { return o.id === orderId; });
+        if (!order) return;
+
+        $('#orderModalTitle').textContent = 'Commande ' + escapeHtml(order.id);
+
+        var productsHtml = '';
+        if (order.items && order.items.length > 0) {
+            productsHtml = '<ul class="order-products-list">' +
+                order.items.map(function(item) {
+                    return '<li><span>' + escapeHtml(item.name || 'Produit') + ' x' + (item.qty || 1) + '</span><span class="price-current">' + formatPrice(item.price * (item.qty || 1)) + '</span></li>';
+                }).join('') +
+            '</ul>';
+        } else {
+            productsHtml = '<p class="text-muted">Aucun detail disponible.</p>';
+        }
+
+        $('#orderModalBody').innerHTML =
+            '<div class="order-detail-grid">' +
+                '<div class="order-detail-section">' +
+                    '<h3>Informations client</h3>' +
+                    '<div class="order-detail-row"><span>Nom</span><span>' + escapeHtml(order.client || '--') + '</span></div>' +
+                    '<div class="order-detail-row"><span>Email</span><span>' + escapeHtml(order.email || '--') + '</span></div>' +
+                    '<div class="order-detail-row"><span>Telephone</span><span>' + escapeHtml(order.phone || '--') + '</span></div>' +
+                    '<div class="order-detail-row"><span>Adresse</span><span>' + escapeHtml(order.address || '--') + '</span></div>' +
+                '</div>' +
+                '<div class="order-detail-section">' +
+                    '<h3>Commande</h3>' +
+                    '<div class="order-detail-row"><span>Date</span><span>' + formatDate(order.date) + '</span></div>' +
+                    '<div class="order-detail-row"><span>Statut</span><span>' + getStatusBadge(order.status) + '</span></div>' +
+                    '<div class="order-detail-row"><span>Total</span><span class="price-current">' + formatPrice(order.total) + '</span></div>' +
+                '</div>' +
+            '</div>' +
+            '<div class="order-detail-section mt-24">' +
+                '<h3>Produits commandes</h3>' +
+                productsHtml +
+            '</div>';
+
+        $('#orderModal').classList.add('active');
+    }
+
+    function closeOrderModal() {
+        $('#orderModal').classList.remove('active');
+    }
+
+    // ---- SETTINGS ----
+    function renderSettings() {
+        var settings = getSettings();
+        $('#settingSiteName').value = settings.siteName || '';
+        $('#settingPhone').value = settings.phone || '';
+        $('#settingEmail').value = settings.email || '';
+        $('#settingAddress').value = settings.address || '';
+        $('#settingPromoBar').value = settings.promoBar || '';
+        $('#settingHeroTitle').value = settings.heroTitle || '';
+        $('#settingHeroSubtitle').value = settings.heroSubtitle || '';
+        $('#settingNewsletter').checked = settings.newsletter !== false;
+        $('#settingChat').checked = settings.chat !== false;
+    }
+
+    function saveSettings() {
+        var settings = {
+            siteName: $('#settingSiteName').value.trim(),
+            phone: $('#settingPhone').value.trim(),
+            email: $('#settingEmail').value.trim(),
+            address: $('#settingAddress').value.trim(),
+            promoBar: $('#settingPromoBar').value.trim(),
+            heroTitle: $('#settingHeroTitle').value.trim(),
+            heroSubtitle: $('#settingHeroSubtitle').value.trim(),
+            newsletter: $('#settingNewsletter').checked,
+            chat: $('#settingChat').checked
+        };
+        setStorage(STORAGE_KEYS.settings, settings);
+        showToast('Parametres enregistres avec succes.');
+    }
+
+    // ---- IMPORT / EXPORT ----
+    function exportData() {
+        var data = {
+            version: '1.0',
+            exportDate: new Date().toISOString(),
+            products: getProducts(),
+            orders: getOrders(),
+            blog: getBlog(),
+            settings: getSettings()
+        };
+
+        var blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.href = url;
+        a.download = 'destockpro-export-' + new Date().toISOString().slice(0,10) + '.json';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        showToast('Donnees exportees avec succes.', 'info');
+    }
+
+    function importData(file) {
+        if (!file) return;
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            try {
+                var data = JSON.parse(e.target.result);
+                if (data.products) setStorage(STORAGE_KEYS.products, data.products);
+                if (data.orders) setStorage(STORAGE_KEYS.orders, data.orders);
+                if (data.blog) setStorage(STORAGE_KEYS.blog, data.blog);
+                if (data.settings) setStorage(STORAGE_KEYS.settings, data.settings);
+                showToast('Donnees importees avec succes.', 'success');
+                navigate(currentSection);
+                updateNavBadges();
+            } catch(err) {
+                showToast('Fichier invalide. Veuillez utiliser un fichier JSON valide.', 'error');
+            }
+        };
+        reader.readAsText(file);
+    }
+
+    // ---- SIDEBAR MOBILE ----
+    function openSidebar() {
+        $('#sidebar').classList.add('open');
+        $('#sidebarOverlay').classList.add('active');
+    }
+
+    function closeSidebar() {
+        $('#sidebar').classList.remove('open');
+        $('#sidebarOverlay').classList.remove('active');
+    }
+
+    // ---- EVENT BINDINGS ----
+    function init() {
+        // Login form
+        $('#loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var pw = $('#loginPassword').value;
+            if (!login(pw)) {
+                $('#loginError').classList.add('visible');
+                $('#loginPassword').value = '';
+                $('#loginPassword').focus();
+                setTimeout(function() {
+                    $('#loginError').classList.remove('visible');
+                }, 3000);
+            }
+        });
+
+        // Logout
+        $('#logoutBtn').addEventListener('click', logout);
+
+        // Nav items
+        $$('.nav-item[data-section]').forEach(function(item) {
+            item.addEventListener('click', function() {
+                navigate(this.dataset.section);
+            });
+        });
+
+        // Mobile toggle
+        $('#mobileToggle').addEventListener('click', openSidebar);
+        $('#sidebarOverlay').addEventListener('click', closeSidebar);
+
+        // Product filter tabs
+        $$('.filter-tab').forEach(function(tab) {
+            tab.addEventListener('click', function() {
+                $$('.filter-tab').forEach(function(t) { t.classList.remove('active'); });
+                this.classList.add('active');
+                currentFilter = this.dataset.filter;
+                renderProducts();
+            });
+        });
+
+        // Product search
+        $('#productSearch').addEventListener('input', function() {
+            currentSearch = this.value;
+            renderProducts();
+        });
+
+        // Add product button
+        $('#addProductBtn').addEventListener('click', function() {
+            openProductModal();
+        });
+
+        // Add blog button
+        $('#addBlogBtn').addEventListener('click', function() {
+            openBlogModal();
+        });
+
+        // Settings form
+        $('#settingsForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            saveSettings();
+        });
+
+        // Confirm action
+        $('#confirmAction').addEventListener('click', function() {
+            if (typeof confirmCallback === 'function') {
+                confirmCallback();
+            }
+        });
+
+        // Close modals on overlay click
+        $$('.modal-overlay').forEach(function(overlay) {
+            overlay.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.classList.remove('active');
+                }
+            });
+        });
+
+        // Close modals with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                $$('.modal-overlay.active').forEach(function(m) { m.classList.remove('active'); });
+            }
+        });
+
+        // Export
+        $('#exportDataBtn').addEventListener('click', exportData);
+
+        // Import
+        $('#importDataInput').addEventListener('change', function() {
+            if (this.files && this.files[0]) {
+                importData(this.files[0]);
+                this.value = '';
+            }
+        });
+
+        // Check auth
+        checkAuth();
+    }
+
+    // ---- PUBLIC API ----
+    window.Admin = {
+        navigate: navigate,
+        openProductModal: openProductModal,
+        closeProductModal: closeProductModal,
+        saveProduct: saveProduct,
+        editProduct: editProduct,
+        deleteProduct: deleteProduct,
+        openBlogModal: openBlogModal,
+        closeBlogModal: closeBlogModal,
+        saveBlog: saveBlog,
+        editBlog: editBlog,
+        deleteBlog: deleteBlog,
+        viewOrder: viewOrder,
+        closeOrderModal: closeOrderModal,
+        updateOrderStatus: updateOrderStatus,
+        closeConfirm: closeConfirm,
+        showToast: showToast
+    };
+
+    // ---- INIT ----
+    document.addEventListener('DOMContentLoaded', init);
+
+})();
+</script>
+
+</body>
+</html>
