@@ -866,12 +866,105 @@
   .footer-right { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,.15); }
 
   /* ───────────────────────────────────────
-     PRINT
+     PRINT — A4 optimisé, aucun élément coupé
   ─────────────────────────────────────── */
   @media print {
-    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    .cover { height: 100vh; page-break-after: always; }
-    .page-break { page-break-before: always; }
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+
+    /* Contenu imprimable */
+    html, body { width: 210mm; background: #fff; }
+
+    /* Cover = exactement 1 page A4 */
+    .cover {
+      width: 210mm;
+      height: 297mm;
+      padding: 40mm 18mm 20mm;
+      page-break-after: always;
+      break-after: page;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+
+    .cover-h1 { font-size: 52px; }
+    .cover-lead { font-size: 15px; }
+
+    /* Pages contenu */
+    .page {
+      max-width: 100%;
+      width: 210mm;
+      padding: 14mm 18mm 10mm;
+      margin: 0;
+    }
+
+    /* Sauts de page forcés */
+    .page-break {
+      page-break-before: always;
+      break-before: page;
+    }
+
+    hr.sep { display: none; }
+
+    /* Titres restent avec leur contenu */
+    .s-head, .s-title, .s-lead { break-after: avoid; }
+    .cat-label { break-after: avoid; }
+
+    /* Éléments à ne JAMAIS couper */
+    .crit            { break-inside: avoid; page-break-inside: avoid; }
+    .drow            { break-inside: avoid; page-break-inside: avoid; }
+    .t5card          { break-inside: avoid; page-break-inside: avoid; }
+    .strat           { break-inside: avoid; page-break-inside: avoid; }
+    .step            { break-inside: avoid; page-break-inside: avoid; }
+    .cta-block       { break-inside: avoid; page-break-inside: avoid; }
+    .rec             { break-inside: avoid; page-break-inside: avoid; }
+    .rec-kpi         { break-inside: avoid; page-break-inside: avoid; }
+    .ctable          { break-inside: avoid; page-break-inside: avoid; }
+    .ctable tr       { break-inside: avoid; page-break-inside: avoid; }
+    .doc-footer      { break-inside: avoid; page-break-inside: avoid; }
+
+    /* Grilles : forcer 1 colonne si manque de place */
+    .criteria   { grid-template-columns: 1fr 1fr; }
+    .strategy   { grid-template-columns: repeat(3, 1fr); }
+
+    /* Garder catégorie avec au moins 2 lignes de son contenu */
+    .cat-label  { break-after: avoid; }
+    .dlist      { break-inside: auto; }
+    .dlist .drow:first-child { break-before: avoid; }
+
+    /* Top 5 : winner sur toute la largeur, 2 cards/ligne */
+    .top5 { grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px; }
+    .t5card.winner { grid-column: 1 / -1; }
+
+    /* Réduire les espacements pour gagner de la place */
+    .s-title   { font-size: 26px; margin-bottom: 6px; }
+    .s-lead    { font-size: 13px; margin-bottom: 24px; }
+    .drow      { padding: 10px 14px; }
+    .drow-desc { font-size: 11px; }
+    .step      { padding: 14px 16px; }
+    .rec       { padding: 32px 36px; }
+    .rec-domain { font-size: 44px; }
+    .rec-why   { font-size: 13px; margin-bottom: 24px; }
+    .cta-block { padding: 28px 32px; gap: 32px; }
+    .cta-title { font-size: 22px; }
+    .doc-footer { padding: 16px 18mm; }
+
+    /* Grille critères sans surplus */
+    .criteria  { margin-bottom: 28px; }
+    .crit      { padding: 12px 14px; }
+    .crit-text { font-size: 12px; }
+
+    /* Hover désactivé */
+    .drow:hover { border-color: var(--border); }
+
+    /* Footer en bas de dernière page */
+    .doc-footer {
+      position: running(footer);
+      break-before: avoid;
+    }
   }
 
   @media (max-width: 640px) {
