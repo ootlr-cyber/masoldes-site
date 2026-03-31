@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /panier.html
+Disallow: /compte.html
+
+Sitemap: https://destockpro.fr/sitemap.xml

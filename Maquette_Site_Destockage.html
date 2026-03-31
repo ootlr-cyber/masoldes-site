@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DestockPro - Destockage Maison & Cuisine</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary: #1a1a2e;
+            --accent: #e94560;
+            --accent-light: #ff6b81;
+            --secondary: #16213e;
+            --bg: #f8f9fa;
+            --white: #ffffff;
+            --text: #2d2d2d;
+            --text-light: #6c757d;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --border: #e9ecef;
+            --shadow: 0 2px 15px rgba(0,0,0,0.08);
+            --shadow-hover: 0 8px 30px rgba(0,0,0,0.12);
+            --radius: 12px;
+        }
+
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: var(--text); background: var(--bg); }
+
+        /* ===== PROMO BAR ===== */
+        .promo-bar {
+            background: var(--accent);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .promo-bar span { animation: pulse 2s infinite; display: inline-block; }
+        @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.7; } }
+
+        /* ===== HEADER ===== */
+        header {
+            background: var(--primary);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+        }
+        .header-main {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 24px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        .logo-icon {
+            width: 42px; height: 42px;
+            background: var(--accent);
+            border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 22px; font-weight: 800; color: white;
+        }
+        .logo-text { color: white; }
+        .logo-text h1 { font-size: 22px; font-weight: 800; letter-spacing: -0.5px; }
+        .logo-text span { font-size: 11px; color: rgba(255,255,255,0.6); letter-spacing: 1px; text-transform: uppercase; }
+
+        .search-bar {
+            flex: 1;
+            max-width: 500px;
+            margin: 0 30px;
+            position: relative;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 12px 48px 12px 20px;
+            border: none;
+            border-radius: 50px;
+            font-size: 14px;
+            background: rgba(255,255,255,0.12);
+            color: white;
+            outline: none;
+            transition: all 0.3s;
+        }
+        .search-bar input::placeholder { color: rgba(255,255,255,0.5); }
+        .search-bar input:focus { background: rgba(255,255,255,0.2); }
+        .search-bar button {
+            position: absolute;
+            right: 5px; top: 50%;
+            transform: translateY(-50%);
+            background: var(--accent);
+            border: none;
+            width: 36px; height: 36px;
+            border-radius: 50%;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .header-action {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 11px;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .header-action:hover { color: white; }
+        .header-action .icon { font-size: 22px; margin-bottom: 2px; }
+        .cart-badge {
+            position: relative;
+        }
+        .cart-badge::after {
+            content: '2';
+            position: absolute;
+            top: -6px; right: -8px;
+            background: var(--accent);
+            color: white;
+            font-size: 10px;
+            font-weight: 700;
+            width: 18px; height: 18px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+        }
+
+        /* ===== NAV ===== */
+        nav {
+            background: var(--secondary);
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+        nav ul {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            list-style: none;
+            padding: 0 24px;
+            gap: 0;
+        }
+        nav li a {
+            display: block;
+            padding: 14px 20px;
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.2s;
+            border-bottom: 3px solid transparent;
+        }
+        nav li a:hover, nav li a.active {
+            color: white;
+            background: rgba(255,255,255,0.05);
+            border-bottom-color: var(--accent);
+        }
+        nav li a.hot { color: var(--accent-light); }
+
+        /* ===== HERO ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, #0f3460 100%);
+            padding: 60px 24px 70px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%; right: -20%;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(233,69,96,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-text h2 {
+            font-size: 44px;
+            color: white;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+        .hero-text h2 span { color: var(--accent); }
+        .hero-text p {
+            color: rgba(255,255,255,0.75);
+            font-size: 17px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .hero-badges {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+        .hero-badge {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.15);
+            padding: 8px 18px;
+            border-radius: 50px;
+            color: white;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        .hero-cta {
+            display: inline-flex;
+            gap: 15px;
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+            padding: 16px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary:hover { background: var(--accent-light); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(233,69,96,0.4); }
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 16px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            border: 2px solid rgba(255,255,255,0.3);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-secondary:hover { border-color: white; background: rgba(255,255,255,0.1); }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .stat-card {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 28px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        .stat-card .number {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--accent);
+            display: block;
+        }
+        .stat-card .label {
+            color: rgba(255,255,255,0.7);
+            font-size: 13px;
+            margin-top: 5px;
+        }
+
+        /* ===== TRUST BAR ===== */
+        .trust-bar {
+            background: white;
+            padding: 25px 24px;
+            border-bottom: 1px solid var(--border);
+        }
+        .trust-items {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .trust-icon {
+            width: 44px; height: 44px;
+            background: var(--bg);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 20px;
+        }
+        .trust-text strong { display: block; font-size: 13px; }
+        .trust-text span { font-size: 12px; color: var(--text-light); }
+
+        /* ===== SECTION ===== */
+        .section {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 50px 24px;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .section-header h2 {
+            font-size: 30px;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        .section-header p {
+            color: var(--text-light);
+            font-size: 16px;
+        }
+        .section-header .accent-line {
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        /* ===== CATEGORIES ===== */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .category-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 30px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+        }
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent);
+        }
+        .category-icon {
+            width: 64px; height: 64px;
+            background: linear-gradient(135deg, #fff0f3, #ffe0e6);
+            border-radius: 16px;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 28px;
+        }
+        .category-card h3 {
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+        .category-card .count {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+        .category-card.featured {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            grid-column: span 2;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            text-align: left;
+            gap: 20px;
+            align-items: center;
+        }
+        .category-card.featured h3 { color: white; font-size: 20px; }
+        .category-card.featured .count { color: rgba(255,255,255,0.7); }
+        .category-card.featured .category-icon {
+            width: 80px; height: 80px;
+            margin: 0;
+            font-size: 36px;
+        }
+        .category-card.featured .tag {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            margin-top: 8px;
+        }
+
+        /* ===== PRODUCTS ===== */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .product-card {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: all 0.3s;
+            border: 1px solid var(--border);
+        }
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+        .product-image {
+            height: 220px;
+            background: linear-gradient(135deg, #f0f0f0, #e8e8e8);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .product-image .placeholder {
+            font-size: 60px;
+            opacity: 0.3;
+        }
+        .product-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: var(--accent);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+        .product-badge.new { background: var(--success); }
+        .product-badge.limited { background: var(--warning); }
+        .product-wishlist {
+            position: absolute;
+            top: 12px; right: 12px;
+            width: 36px; height: 36px;
+            background: white;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            font-size: 16px;
+        }
+        .product-info {
+            padding: 20px;
+        }
+        .product-brand {
+            font-size: 11px;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+        .product-info h3 {
+            font-size: 15px;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        .product-prices {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+        .price-current {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--accent);
+        }
+        .price-original {
+            font-size: 14px;
+            color: var(--text-light);
+            text-decoration: line-through;
+        }
+        .price-discount {
+            background: #fff0f3;
+            color: var(--accent);
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .product-stock {
+            font-size: 12px;
+            color: var(--success);
+            font-weight: 600;
+        }
+        .product-stock.low { color: var(--warning); }
+        .btn-add-cart {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .btn-add-cart:hover { background: var(--accent); }
+
+        /* ===== OSKAB BANNER ===== */
+        .oskab-banner {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+            padding: 60px 24px;
+            margin: 50px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .oskab-banner::after {
+            content: 'OSKAB';
+            position: absolute;
+            right: -30px; top: 50%;
+            transform: translateY(-50%);
+            font-size: 180px;
+            font-weight: 900;
+            color: rgba(255,255,255,0.03);
+            letter-spacing: 10px;
+        }
+        .oskab-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 50px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        .oskab-text h2 {
+            font-size: 34px;
+            color: white;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+        .oskab-text h2 span { color: var(--accent); }
+        .oskab-text p {
+            color: rgba(255,255,255,0.7);
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+        .oskab-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .oskab-feature {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 18px;
+        }
+        .oskab-feature .icon { font-size: 24px; margin-bottom: 8px; }
+        .oskab-feature strong { color: white; font-size: 14px; display: block; margin-bottom: 3px; }
+        .oskab-feature span { color: rgba(255,255,255,0.5); font-size: 12px; }
+
+        /* ===== ADVANTAGES ===== */
+        .advantages {
+            background: white;
+            padding: 60px 24px;
+        }
+        .advantages-grid {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+        .advantage-card {
+            text-align: center;
+            padding: 30px 20px;
+        }
+        .advantage-icon {
+            width: 70px; height: 70px;
+            background: linear-gradient(135deg, #fff0f3, #ffe0e6);
+            border-radius: 20px;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 18px;
+            font-size: 30px;
+        }
+        .advantage-card h3 { font-size: 16px; margin-bottom: 8px; }
+        .advantage-card p { font-size: 13px; color: var(--text-light); line-height: 1.5; }
+
+        /* ===== NEWSLETTER ===== */
+        .newsletter {
+            background: var(--bg);
+            padding: 50px 24px;
+            text-align: center;
+        }
+        .newsletter h2 { font-size: 26px; color: var(--primary); margin-bottom: 10px; }
+        .newsletter p { color: var(--text-light); margin-bottom: 25px; }
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+            gap: 10px;
+        }
+        .newsletter-form input {
+            flex: 1;
+            padding: 14px 20px;
+            border: 2px solid var(--border);
+            border-radius: 50px;
+            font-size: 14px;
+            outline: none;
+        }
+        .newsletter-form input:focus { border-color: var(--accent); }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.7);
+            padding: 50px 24px 30px;
+        }
+        .footer-grid {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .footer-col h4 {
+            color: white;
+            font-size: 15px;
+            margin-bottom: 18px;
+        }
+        .footer-col p { font-size: 13px; line-height: 1.7; margin-bottom: 15px; }
+        .footer-col a {
+            display: block;
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 13px;
+            padding: 5px 0;
+            transition: color 0.2s;
+        }
+        .footer-col a:hover { color: var(--accent); }
+        .footer-bottom {
+            max-width: 1280px;
+            margin: 20px auto 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+        }
+        .payment-icons { display: flex; gap: 10px; }
+        .payment-icon {
+            background: rgba(255,255,255,0.1);
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /* ===== FLOATING BADGE ===== */
+        .maquette-badge {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--accent);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            box-shadow: 0 4px 20px rgba(233,69,96,0.5);
+            z-index: 999;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero-content { grid-template-columns: 1fr; }
+            .hero-stats { grid-template-columns: 1fr 1fr; }
+            .hero-text h2 { font-size: 30px; }
+            .categories-grid { grid-template-columns: repeat(2, 1fr); }
+            .category-card.featured { grid-column: span 2; }
+            .products-grid { grid-template-columns: 1fr; }
+            .oskab-content { grid-template-columns: 1fr; }
+            .advantages-grid { grid-template-columns: 1fr 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .search-bar { display: none; }
+            nav ul { overflow-x: auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Promo Bar -->
+    <div class="promo-bar">
+        <span>DESTOCKAGE MASSIF : Jusqu'a -70% sur les cuisines OSKAB | Livraison possible dans toute la France</span>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-main">
+            <a href="#" class="logo">
+                <div class="logo-icon">D</div>
+                <div class="logo-text">
+                    <h1>DestockPro</h1>
+                    <span>Le destockage maison</span>
+                </div>
+            </a>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Rechercher un produit (ex: cuisine OSKAB, baignoire...)">
+                <button>&#x1F50D;</button>
+            </div>
+
+            <div class="header-actions">
+                <a class="header-action" href="#">
+                    <span class="icon">&#x1F464;</span>
+                    Mon compte
+                </a>
+                <a class="header-action" href="#">
+                    <span class="icon">&#x2764;</span>
+                    Favoris
+                </a>
+                <a class="header-action" href="#">
+                    <span class="icon cart-badge">&#x1F6D2;</span>
+                    Panier
+                </a>
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Accueil</a></li>
+                <li><a href="#" class="hot">Cuisines OSKAB</a></li>
+                <li><a href="#">Salle de bain</a></li>
+                <li><a href="#">Materiaux</a></li>
+                <li><a href="#">Menuiseries</a></li>
+                <li><a href="#">Electromenager</a></li>
+                <li><a href="#">Encheres</a></li>
+                <li><a href="#">Vetements</a></li>
+                <li><a href="#" class="hot">Promos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badges">
+                    <span class="hero-badge">Destockage</span>
+                    <span class="hero-badge">Prix usine</span>
+                    <span class="hero-badge">Stock limite</span>
+                </div>
+                <h2>Cuisines <span>OSKAB</span> a prix de destockage</h2>
+                <p>Profitez de prix exceptionnels sur un stock de plus de 1 000 cuisines de la marque OSKAB, rachete en liquidation. Qualite professionnelle, prix imbattables.</p>
+                <div class="hero-cta">
+                    <a href="#" class="btn-primary">Voir les cuisines</a>
+                    <a href="#" class="btn-secondary">Notre entrepot</a>
+                </div>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <span class="number">-70%</span>
+                    <span class="label">vs prix catalogue</span>
+                </div>
+                <div class="stat-card">
+                    <span class="number">1000+</span>
+                    <span class="label">Cuisines en stock</span>
+                </div>
+                <div class="stat-card">
+                    <span class="number">50+</span>
+                    <span class="label">Modeles disponibles</span>
+                </div>
+                <div class="stat-card">
+                    <span class="number">0&euro;</span>
+                    <span class="label">Retrait sur place</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+        <div class="trust-items">
+            <div class="trust-item">
+                <div class="trust-icon">&#x1F69A;</div>
+                <div class="trust-text">
+                    <strong>Livraison France</strong>
+                    <span>Retrait gratuit ou livraison</span>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">&#x1F512;</div>
+                <div class="trust-text">
+                    <strong>Paiement securise</strong>
+                    <span>CB, virement, Paypal</span>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">&#x2B50;</div>
+                <div class="trust-text">
+                    <strong>Marques reconnues</strong>
+                    <span>OSKAB, Rockwool, ONIP...</span>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">&#x1F4DE;</div>
+                <div class="trust-text">
+                    <strong>Service client</strong>
+                    <span>Du lundi au samedi</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Categories -->
+    <section class="section">
+        <div class="section-header">
+            <h2>Nos categories</h2>
+            <p>Tout pour votre maison a prix destocke</p>
+            <div class="accent-line"></div>
+        </div>
+
+        <div class="categories-grid">
+            <a href="#" class="category-card featured">
+                <div class="category-icon">&#x1F3E0;</div>
+                <div>
+                    <h3>Cuisines OSKAB</h3>
+                    <span class="count">+1 000 articles disponibles</span>
+                    <div class="tag">STOCK EXCLUSIF</div>
+                </div>
+            </a>
+            <a href="#" class="category-card">
+                <div class="category-icon">&#x1F6C1;</div>
+                <h3>Salle de bain</h3>
+                <span class="count">120+ articles</span>
+            </a>
+            <a href="#" class="category-card">
+                <div class="category-icon">&#x1F3A8;</div>
+                <h3>Peinture</h3>
+                <span class="count">200+ articles</span>
+            </a>
+            <a href="#" class="category-card">
+                <div class="category-icon">&#x1F9F1;</div>
+                <h3>Isolation</h3>
+                <span class="count">80+ articles</span>
+            </a>
+            <a href="#" class="category-card">
+                <div class="category-icon">&#x1FA9F;</div>
+                <h3>Menuiseries</h3>
+                <span class="count">60+ articles</span>
+            </a>
+            <a href="#" class="category-card">
+                <div class="category-icon">&#x1F4A1;</div>
+                <h3>Eclairage</h3>
+                <span class="count">90+ articles</span>
+            </a>
+            <a href="#" class="category-card">
+                <div class="category-icon">&#x1F527;</div>
+                <h3>Quincaillerie</h3>
+                <span class="count">300+ articles</span>
+            </a>
+            <a href="#" class="category-card">
+                <div class="category-icon">&#x1F455;</div>
+                <h3>Vetements</h3>
+                <span class="count">Stock divers</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- OSKAB Banner -->
+    <section class="oskab-banner">
+        <div class="oskab-content">
+            <div class="oskab-text">
+                <h2>Stock exclusif <span>OSKAB</span></h2>
+                <p>OSKAB etait l'un des cuisinistes francais les plus reputes avec un chiffre d'affaires de 30 millions d'euros. Suite a la liquidation de novembre 2024, nous avons rachete l'integralite du stock restant. Profitez de cuisines de qualite professionnelle a des prix jamais vus.</p>
+                <a href="#" class="btn-primary">Decouvrir les cuisines OSKAB</a>
+            </div>
+            <div class="oskab-features">
+                <div class="oskab-feature">
+                    <div class="icon">&#x2705;</div>
+                    <strong>Qualite pro</strong>
+                    <span>Fabrication francaise</span>
+                </div>
+                <div class="oskab-feature">
+                    <div class="icon">&#x1F4B0;</div>
+                    <strong>Jusqu'a -70%</strong>
+                    <span>vs prix d'origine</span>
+                </div>
+                <div class="oskab-feature">
+                    <div class="icon">&#x1F4E6;</div>
+                    <strong>Neufs emballe</strong>
+                    <span>Jamais utilises</span>
+                </div>
+                <div class="oskab-feature">
+                    <div class="icon">&#x26A1;</div>
+                    <strong>Stock limite</strong>
+                    <span>Jusqu'a epuisement</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Showcase -->
+    <section class="section">
+        <div class="section-header">
+            <h2>Selection du moment</h2>
+            <p>Les meilleures affaires de notre entrepot</p>
+            <div class="accent-line"></div>
+        </div>
+
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #f5f0eb, #ebe5de);">
+                    <span class="placeholder">&#x1F3E0;</span>
+                    <span class="product-badge">-65%</span>
+                    <span class="product-wishlist">&#x2661;</span>
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">OSKAB</div>
+                    <h3>Meuble bas cuisine 2 portes - Blanc mat - L80xH70xP58</h3>
+                    <div class="product-prices">
+                        <span class="price-current">89 &euro;</span>
+                        <span class="price-original">259 &euro;</span>
+                        <span class="price-discount">-65%</span>
+                    </div>
+                    <div class="product-meta">
+                        <span class="product-stock">&#x2713; En stock (34)</span>
+                        <button class="btn-add-cart">Ajouter au panier</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #eef2f7, #dde4ed);">
+                    <span class="placeholder">&#x1F6BF;</span>
+                    <span class="product-badge new">Nouveau</span>
+                    <span class="product-wishlist">&#x2661;</span>
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">DESTOCKAGE</div>
+                    <h3>Receveur de douche extra-plat 80x120 cm - Blanc</h3>
+                    <div class="product-prices">
+                        <span class="price-current">69 &euro;</span>
+                        <span class="price-original">189 &euro;</span>
+                        <span class="price-discount">-63%</span>
+                    </div>
+                    <div class="product-meta">
+                        <span class="product-stock">&#x2713; En stock (12)</span>
+                        <button class="btn-add-cart">Ajouter au panier</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #f0f5ee, #dce8d6);">
+                    <span class="placeholder">&#x1F3A8;</span>
+                    <span class="product-badge limited">Derniers</span>
+                    <span class="product-wishlist">&#x2661;</span>
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">ONIP</div>
+                    <h3>Peinture murale satin - Blanc - 10L</h3>
+                    <div class="product-prices">
+                        <span class="price-current">29 &euro;</span>
+                        <span class="price-original">79 &euro;</span>
+                        <span class="price-discount">-63%</span>
+                    </div>
+                    <div class="product-meta">
+                        <span class="product-stock low">&#x26A0; Plus que 5</span>
+                        <button class="btn-add-cart">Ajouter au panier</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #f5f0eb, #ebe5de);">
+                    <span class="placeholder">&#x1F3E0;</span>
+                    <span class="product-badge">-70%</span>
+                    <span class="product-wishlist">&#x2661;</span>
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">OSKAB</div>
+                    <h3>Plan de travail stratifie - Chene naturel - L200xP65</h3>
+                    <div class="product-prices">
+                        <span class="price-current">59 &euro;</span>
+                        <span class="price-original">199 &euro;</span>
+                        <span class="price-discount">-70%</span>
+                    </div>
+                    <div class="product-meta">
+                        <span class="product-stock">&#x2713; En stock (48)</span>
+                        <button class="btn-add-cart">Ajouter au panier</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages -->
+    <section class="advantages">
+        <div class="section-header">
+            <h2>Pourquoi nous choisir ?</h2>
+            <p>Le destockage intelligent pour votre maison</p>
+            <div class="accent-line"></div>
+        </div>
+        <div class="advantages-grid">
+            <div class="advantage-card">
+                <div class="advantage-icon">&#x1F4B8;</div>
+                <h3>Prix imbattables</h3>
+                <p>Jusqu'a -70% sur les prix d'origine grace au rachat de stocks en liquidation</p>
+            </div>
+            <div class="advantage-card">
+                <div class="advantage-icon">&#x2705;</div>
+                <h3>Produits neufs</h3>
+                <p>Tous nos produits sont neufs, dans leur emballage d'origine, jamais utilises</p>
+            </div>
+            <div class="advantage-card">
+                <div class="advantage-icon">&#x1F69A;</div>
+                <h3>Livraison flexible</h3>
+                <p>Retrait gratuit a l'entrepot ou livraison dans toute la France</p>
+            </div>
+            <div class="advantage-card">
+                <div class="advantage-icon">&#x1F4DE;</div>
+                <h3>Conseil expert</h3>
+                <p>Notre equipe vous accompagne dans le choix de votre cuisine et de vos materiaux</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <h2>Restez informe des nouveaux arrivages</h2>
+        <p>Recevez en avant-premiere les nouvelles offres et les arrivages de stock</p>
+        <div class="newsletter-form">
+            <input type="email" placeholder="Votre adresse email">
+            <button class="btn-primary">S'inscrire</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>DestockPro</h4>
+                <p>Specialiste du destockage maison depuis [date]. Nous rachetons les stocks de marques reconnues en liquidation pour vous les proposer a prix casse.</p>
+                <p>Entrepot ouvert du lundi au samedi<br>de 9h a 18h</p>
+            </div>
+            <div class="footer-col">
+                <h4>Categories</h4>
+                <a href="#">Cuisines OSKAB</a>
+                <a href="#">Salle de bain</a>
+                <a href="#">Peinture & enduits</a>
+                <a href="#">Isolation</a>
+                <a href="#">Menuiseries</a>
+                <a href="#">Electromenager</a>
+                <a href="#">Encheres</a>
+            </div>
+            <div class="footer-col">
+                <h4>Informations</h4>
+                <a href="#">A propos</a>
+                <a href="#">Livraison & retrait</a>
+                <a href="#">Conditions generales</a>
+                <a href="#">Politique de retour</a>
+                <a href="#">FAQ</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <a href="#">&#x1F4CD; [Adresse entrepot]</a>
+                <a href="#">&#x1F4DE; [Telephone]</a>
+                <a href="#">&#x2709; [Email]</a>
+                <div style="margin-top: 15px;">
+                    <h4>Suivez-nous</h4>
+                    <a href="#">Facebook | Instagram | TikTok</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 DestockPro - Tous droits reserves</span>
+            <div class="payment-icons">
+                <span class="payment-icon">VISA</span>
+                <span class="payment-icon">Mastercard</span>
+                <span class="payment-icon">PayPal</span>
+                <span class="payment-icon">Virement</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Maquette Badge -->
+    <div class="maquette-badge">MAQUETTE - Proposition de design</div>
+
+</body>
+</html>

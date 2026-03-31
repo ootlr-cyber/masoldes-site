@@ -1,0 +1,240 @@
+================================================================================
+OSKAB ARCHIVED IMAGE URLS - Extracted from Wayback Machine
+Date: 2026-03-27
+================================================================================
+
+NOTE: Pages 288-ipoma-blanc-brillant and 290-ipoma-chene-naturel were NOT archived
+by the Wayback Machine. Page 76-ipoma-blanc-brillant was used instead for blanc brillant.
+
+================================================================================
+PAGE 1: HOMEPAGE (https://web.archive.org/web/20241003084108/https://www.oskab.com/)
+================================================================================
+
+--- Banners & Hero Images ---
+https://www.oskab.com/img/banner/big/347-banner_big.jpg
+https://www.oskab.com/img/banner/banner_mobile/347-banner_mobile.jpg
+
+--- Homeslider Images ---
+https://www.oskab.com/modules/homeslider/images/2b279bf729d29a7ee2caf4cc3ce8d9fd.png
+https://www.oskab.com/modules/homeslider/images/5265fe2fae58fb553944ea3f8ef5d79c.jpg
+
+--- Product Images (Meuble petit dejeuner) ---
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2023/meuble-petit-dejeuner-volet-alu-caisson-gris/200x200/meuble-petit-dejeuner-alu.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2023/meuble-petit-dejeuner-volet-blanc-caisson-blanc/150x150/meuble-petit-dejeuner-blanc.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2023/meuble-petit-dejeuner-volet-noir-caisson-blanc/200x200/meuble-petit-dejeuner-noir.jpg
+
+--- HELIA Blanc Product Images (homepage featured) ---
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/helia-blanc_4/150x150/20260543_helia-blanc_meuble-bas-1-porte-l40xh70xp37-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/helia-blanc_4/150x150/20260544_helia-blanc_meuble-bas-1-porte-l50xh70xp37-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/helia-blanc_4/150x150/20260545_helia-blanc_meuble-bas-1-porte-l60xh70xp37-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/helia-blanc_4/150x150/20260697_helia-blanc_meuble-bas-2-portes-l60xh70xp37-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/helia-blanc_4/150x150/20260546_helia-blanc_meuble-bas-2-portes-l80xh70xp37-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/helia-blanc_4/150x150/20260547_helia-blanc_meuble-bas-1-porte-l40xh92xp37-oskab.jpg
+
+--- Footer/UI Images ---
+https://www.oskab.com/themes/homeplus/img/footer-v2/conseiller-desk.png
+https://www.oskab.com/themes/homeplus/img/footer-v2/logo-fnaem.png
+https://www.oskab.com/themes/homeplus/img/footer-v2/best-site.png
+
+================================================================================
+PAGE 2: MODELE DE CUISINE (https://web.archive.org/web/20241012160410/https://www.oskab.com/cuisine/6-modele-de-cuisine)
+================================================================================
+
+--- Category Banner ---
+https://www.oskab.com/img/banner/banner_list_default/6-pu_pi.jpg
+https://www.oskab.com/modules/homeslider/images/e513abda4b98c0e215360ba6fd2f5bf0.jpg
+
+--- Kitchen Model Thumbnails (extra_large category images) ---
+https://www.oskab.com/c/266-pu_pi_extra_large/cuisine-ginko-taupe.jpg
+https://www.oskab.com/c/347-pu_pi_extra_large/helia-blanc.jpg
+https://www.oskab.com/c/328-pu_pi_extra_large/helia-vert.jpg
+https://www.oskab.com/c/348-pu_pi_extra_large/helia-gris.jpg
+https://www.oskab.com/c/349-pu_pi_extra_large/helia-noir.jpg
+https://www.oskab.com/c/304-pu_pi_extra_large/ipoma-noir-mat.jpg
+https://www.oskab.com/c/286-pu_pi_extra_large/ipoma-blanc-mat.jpg
+https://www.oskab.com/c/76-pu_pi_extra_large/ipoma-blanc-brillant.jpg
+https://www.oskab.com/c/321-pu_pi_extra_large/oka-chene.jpg
+https://www.oskab.com/c/399-pu_pi_extra_large/hosta-chene-prestige.jpg
+https://www.oskab.com/c/145-pu_pi_extra_large/cuisine-ikoro-chene-clair.jpg
+https://www.oskab.com/c/276-pu_pi_extra_large/bora-blanc.jpg
+https://www.oskab.com/c/311-pu_pi_extra_large/avara-frene-noir.jpg
+https://www.oskab.com/c/329-pu_pi_extra_large/alpa-blanc.jpg
+https://www.oskab.com/c/142-pu_pi_extra_large/cuisine-vitre.jpg
+https://www.oskab.com/c/258-pu_pi_extra_large/meuble-rideau.jpg
+
+================================================================================
+PAGE 3: IPOMA BLANC MAT (https://web.archive.org/web/20241106173745/https://www.oskab.com/cuisine/modele-de-cuisine/286-ipoma-blanc-mat)
+================================================================================
+
+--- Banner Images ---
+https://www.oskab.com/img/banner/big/286-banner_big.jpg
+https://www.oskab.com/img/banner/banner_mobile/286-banner_mobile.jpg
+
+--- IPOMA Blanc Mat Product Images (80 products) ---
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199461_ipoma-blanc-mat_meuble-bas-1-porte-l40xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199460_ipoma-blanc-mat_meuble-bas-1-porte-l30xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199462_ipoma-blanc-mat_meuble-bas-1-porte-l50xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199463_ipoma-blanc-mat_meuble-bas-1-porte-l60xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199464_ipoma-blanc-mat_meuble-bas-2-portes-l80xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199642_ipoma-blanc-mat_meuble-bas-2-portes-l60xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199465_ipoma-blanc-mat_meuble-bas-2-portes-l100xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199466_ipoma-blanc-mat_meuble-bas-2-portes-l120xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199467_ipoma-blanc-mat_meuble-sous-evier-1-porte-l40xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199468_ipoma-blanc-mat_meuble-sous-evier-1-porte-l50xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199469_ipoma-blanc-mat_meuble-sous-evier-1-porte-l60xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199470_ipoma-blanc-mat_meuble-sous-evier-2-portes-l80xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199471_ipoma-blanc-mat_meuble-sous-evier-2-portes-l100xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199472_ipoma-blanc-mat_meuble-sous-evier-2-portes-l120xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199473_ipoma-blanc-mat_meuble-bas-2-tiroirs-l40xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199474_ipoma-blanc-mat_meuble-bas-2-tiroirs-l50xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199475_ipoma-blanc-mat_meuble-bas-2-tiroirs-l60xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199476_ipoma-blanc-mat_meuble-bas-2-tiroirs-l80xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199477_ipoma-blanc-mat_meuble-bas-3-tiroirs-l60xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199478_ipoma-blanc-mat_meuble-casserolier-3-tiroirs-l80xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199479_ipoma-blanc-mat_meuble-bas-1-porte-1-tiroir-l40xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199480_ipoma-blanc-mat_meuble-bas-1-porte-1-tiroir-l50xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199481_ipoma-blanc-mat_meuble-bas-1-porte-1-tiroir-l60xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199482_ipoma-blanc-mat_meuble-angle-bas-1-porte-n19-l40xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199483_ipoma-blanc-mat_meuble-angle-bas-tourniquet-n23-1-porte-l40xh70xp65-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199484_ipoma-blanc-mat_meuble-epice-1-porte-l15xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199485_ipoma-blanc-mat_meuble-bas-four-micro-ondes-l60xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199486_ipoma-blanc-mat_meuble-haut-1-porte-l40xh70xp37-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199487_ipoma-blanc-mat_meuble-haut-1-porte-l50xh70xp37-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199488_ipoma-blanc-mat_meuble-haut-1-porte-l60xh70xp37-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199489_ipoma-blanc-mat_meuble-haut-2-portes-l80xh70xp37-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199490_ipoma-blanc-mat_meuble-haut-2-portes-l100xh70xp37-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199491_ipoma-blanc-mat_meuble-haut-2-portes-l120xh70xp37-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199492_ipoma-blanc-mat_meuble-haut-ouvrant-l40xh70xp37-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199493_ipoma-blanc-mat_meuble-haut-ouvrant-l60xh70xp37-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199494_ipoma-blanc-mat_meuble-haut-abattant-l60xh35xp37-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199495_ipoma-blanc-mat_meuble-haut-abattant-l80xh35xp37-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199496_ipoma-blanc-mat_meuble-haut-abattant-l60xh35xp37-vitré-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199497_ipoma-blanc-mat_meuble-angle-haut-tourniquet-1-porte-n19-l40xh70xp37-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199498_ipoma-blanc-mat_meuble-angle-haut-tourniquet-1-porte-n23-l40xh70xp37-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199499_ipoma-blanc-mat_meuble-haut-four-micro-ondes-l60xh70xp37-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199500_ipoma-blanc-mat_meuble-haut-1-porte-l30xh70xp37-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199501_ipoma-blanc-mat_colonne-four-n-27-1-porte-l60xh217xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199502_ipoma-blanc-mat_colonne-four-micro-ondes-n-56-1-porte-l60xh217xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199503_ipoma-blanc-mat_colonne-four-micro-ondes-n-58-2-portes-1-tiroir-l60xh217xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199504_ipoma-blanc-mat_colonne-lave-vaisselle-1-porte-l60xh217xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199505_ipoma-blanc-mat_armoire-frigo-n-27-2-portes-l60xh217xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199506_ipoma-blanc-mat_armoire-rangement-n-27-2-portes-l60xh217xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199507_ipoma-blanc-mat_demi-colonne-four-n-87-1-porte-l60xh114xp58-oskab.jpg
+
+================================================================================
+PAGE 4: IPOMA BLANC BRILLANT (https://web.archive.org/web/20241006223939/https://www.oskab.com/cuisine/modele-de-cuisine/76-ipoma-blanc-brillant)
+================================================================================
+
+--- Banner Images ---
+https://www.oskab.com/img/banner/big/76-banner_big.jpg
+https://www.oskab.com/img/banner/banner_mobile/76-banner_mobile.jpg
+
+--- IPOMA Blanc Brillant Product Images (78 products) ---
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220035_ipoma-blanc-brillant_meuble-bas-1-porte-l40xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220034_ipoma-blanc-brillant_meuble-bas-1-porte-l30xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220036_ipoma-blanc-brillant_meuble-bas-1-porte-l50xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220037_ipoma-blanc-brillant_meuble-bas-1-porte-l60xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220038_ipoma-blanc-brillant_meuble-bas-2-portes-l80xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220039_ipoma-blanc-brillant_meuble-bas-2-portes-l100xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220040_ipoma-blanc-brillant_meuble-bas-2-portes-l120xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220041_ipoma-blanc-brillant_meuble-bas-2-tiroirs-l40xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220042_ipoma-blanc-brillant_meuble-bas-2-tiroirs-l50xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220043_ipoma-blanc-brillant_meuble-bas-2-tiroirs-l60xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220044_ipoma-blanc-brillant_meuble-bas-2-tiroirs-l80xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220045_ipoma-blanc-brillant_meuble-bas-3-tiroirs-l60xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220046_ipoma-blanc-brillant_meuble-casserolier-3-tiroirs-l80xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220047_ipoma-blanc-brillant_meuble-bas-1-porte-1-tiroir-l40xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220048_ipoma-blanc-brillant_meuble-bas-1-porte-1-tiroir-l50xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220049_ipoma-blanc-brillant_meuble-bas-1-porte-1-tiroir-l60xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220050_ipoma-blanc-brillant_meuble-angle-bas-1-porte-n19-l40xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220051_ipoma-blanc-brillant_meuble-angle-bas-tourniquet-n23-1-porte-l40xh70xp65-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220052_ipoma-blanc-brillant_meuble-epice-1-porte-l15xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220053_ipoma-blanc-brillant_meuble-sous-evier-1-porte-l60xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220054_ipoma-blanc-brillant_meuble-sous-evier-2-portes-l80xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220055_ipoma-blanc-brillant_meuble-sous-evier-2-portes-l100xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220056_ipoma-blanc-brillant_meuble-sous-evier-2-portes-l120xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220057_ipoma-blanc-brillant_meuble-bas-four-micro-ondes-l60xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220058_ipoma-blanc-brillant_meuble-haut-1-porte-l30xh70xp37-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220059_ipoma-blanc-brillant_meuble-haut-1-porte-l40xh70xp37-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220060_ipoma-blanc-brillant_meuble-haut-1-porte-l50xh70xp37-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220061_ipoma-blanc-brillant_meuble-haut-1-porte-l60xh70xp37-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220062_ipoma-blanc-brillant_meuble-haut-2-portes-l80xh70xp37-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220063_ipoma-blanc-brillant_meuble-haut-2-portes-l100xh70xp37-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220064_ipoma-blanc-brillant_meuble-haut-2-portes-l120xh70xp37-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220065_ipoma-blanc-brillant_meuble-haut-ouvrant-l40xh70xp37-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220066_ipoma-blanc-brillant_meuble-haut-ouvrant-l60xh70xp37-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220067_ipoma-blanc-brillant_meuble-haut-abattant-l60xh35xp37-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220068_ipoma-blanc-brillant_meuble-haut-abattant-l80xh35xp37-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220069_ipoma-blanc-brillant_meuble-haut-abattant-l60xh35xp37-vitré-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220070_ipoma-blanc-brillant_meuble-angle-haut-tourniquet-1-porte-n19-l40xh70xp37-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220071_ipoma-blanc-brillant_meuble-angle-haut-tourniquet-1-porte-n23-l40xh70xp37-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220072_ipoma-blanc-brillant_meuble-haut-four-micro-ondes-l60xh70xp37-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220073_ipoma-blanc-brillant_colonne-four-n-27-1-porte-l60xh217xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220074_ipoma-blanc-brillant_colonne-four-micro-ondes-n-56-1-porte-l60xh217xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220075_ipoma-blanc-brillant_colonne-four-micro-ondes-n-58-2-portes-1-tiroir-l60xh217xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220076_ipoma-blanc-brillant_colonne-lave-vaisselle-1-porte-l60xh217xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220077_ipoma-blanc-brillant_armoire-frigo-n-27-2-portes-l60xh217xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220078_ipoma-blanc-brillant_armoire-rangement-n-27-2-portes-l60xh217xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220079_ipoma-blanc-brillant_demi-colonne-four-n-87-1-porte-l60xh114xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220080_ipoma-blanc-brillant_meuble-bas-2-portes-l60xh70xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220081_ipoma-blanc-brillant_meuble-bas-1-porte-l40xh92xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220082_ipoma-blanc-brillant_meuble-bas-1-porte-l50xh92xp58-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-brillant_2/150x150/13220083_ipoma-blanc-brillant_meuble-bas-1-porte-l60xh92xp58-oskab.jpg
+
+--- Caissons (Shared product images) ---
+https://media.oskab.com/oskab-prod/cuisine//caissons-simples/200x200/caisson-cuisine-armoire-range-bouteille-l15xh70xp56-sokleo-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//caissons-gris_1/200x200/caisson-cuisine-gris-armoire-range-bouteille-l15xh70xp56-sokleo-oskab.jpg
+
+================================================================================
+PAGE 5: IPOMA NOIR MAT (https://web.archive.org/web/20240804091307/https://www.oskab.com/cuisine/modele-de-cuisine/304-ipoma-noir-mat)
+================================================================================
+
+--- Banner Images ---
+https://www.oskab.com/img/banner/big/304-banner_big.jpg
+https://www.oskab.com/img/banner/banner_mobile/304-banner_mobile.jpg
+
+NOTE: Product listing images did not load properly in the Wayback Machine archive
+(JavaScript-loaded content). The product images follow the same URL pattern as
+other IPOMA models. Based on the pattern, they would be at:
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-noir-mat_X/150x150/[ID]_ipoma-noir-mat_[product-name]-oskab.jpg
+
+================================================================================
+PAGE 6: IPOMA CHENE NATUREL (290)
+================================================================================
+
+NOT ARCHIVED - The Wayback Machine has no snapshots of this URL.
+
+================================================================================
+SHARED / COMMON PRODUCT IMAGES (across multiple pages)
+================================================================================
+
+--- Meuble Petit Dejeuner ---
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2023/meuble-petit-dejeuner-volet-alu-caisson-gris/200x200/meuble-petit-dejeuner-alu.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2023/meuble-petit-dejeuner-volet-blanc-caisson-blanc/150x150/meuble-petit-dejeuner-blanc.jpg
+https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2023/meuble-petit-dejeuner-volet-noir-caisson-blanc/200x200/meuble-petit-dejeuner-noir.jpg
+
+--- Caissons ---
+https://media.oskab.com/oskab-prod/cuisine//caissons-simples/200x200/caisson-cuisine-armoire-range-bouteille-l15xh70xp56-sokleo-oskab.jpg
+https://media.oskab.com/oskab-prod/cuisine//caissons-gris_1/200x200/caisson-cuisine-gris-armoire-range-bouteille-l15xh70xp56-sokleo-oskab.jpg
+
+================================================================================
+URL PATTERN GUIDE - For constructing higher resolution URLs
+================================================================================
+
+Thumbnail URLs use /150x150/ or /200x200/ in the path.
+To get larger images, try replacing with:
+  /400x400/  (medium)
+  /800x800/  (large)
+  /1200x1200/ (extra large)
+  Or remove the size folder entirely for the original.
+
+Example:
+  Thumbnail: https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/150x150/17199461_ipoma-blanc-mat_meuble-bas-1-porte-l40xh70xp58-oskab.jpg
+  Large:     https://media.oskab.com/oskab-prod/cuisine//collections/0-reboot-2021/ipoma-blanc-mat_4/800x800/17199461_ipoma-blanc-mat_meuble-bas-1-porte-l40xh70xp58-oskab.jpg
+
+Category thumbnails use /pu_pi_extra_large/ in the path:
+  https://www.oskab.com/c/286-pu_pi_extra_large/ipoma-blanc-mat.jpg
+
+Banner images:
+  Big:    https://www.oskab.com/img/banner/big/[ID]-banner_big.jpg
+  Mobile: https://www.oskab.com/img/banner/banner_mobile/[ID]-banner_mobile.jpg

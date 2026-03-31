@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promotions & Ventes Flash | DestockPro</title>
+    <meta name="description" content="Promotions et ventes flash sur nos lots de vetements au kilo et cuisines OSKAB. Prix casses, stock limite.">
+    <meta property="og:title" content="Promotions & Ventes Flash">
+    <meta property="og:description" content="Promotions et ventes flash sur nos lots de vetements au kilo et cuisines OSKAB. Prix casses, stock limite.">
+    <meta property="og:image" content="images/cuisines/slider-4.jpg">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-bar-track">
+        <span><i class="fas fa-truck"></i> Livraison possible sur toute la France</span>
+        <span><i class="fas fa-tag"></i> Vetements de marque au kilo des 2EUR/kg</span>
+        <span><i class="fas fa-box-open"></i> 1000 cuisines OSKAB neuves — jusqu'a -70%</span>
+        <span><i class="fas fa-shopping-cart"></i> Vente directe — prix casses toute l annee</span>
+        <span><i class="fas fa-truck"></i> Livraison possible sur toute la France</span>
+        <span><i class="fas fa-tag"></i> Vetements de marque au kilo des 2EUR/kg</span>
+        <span><i class="fas fa-box-open"></i> 1000 cuisines OSKAB neuves — jusqu'a -70%</span>
+        <span><i class="fas fa-shopping-cart"></i> Vente directe — prix casses toute l annee</span>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+    <div class="container">
+        <div class="header-main">
+            <a href="index.html" class="logo"><i class="fas fa-warehouse"></i> DESTOCK<span>PRO</span></a>
+            <div class="search-bar">
+                <input type="text" placeholder="Rechercher un produit, une marque, une gamme...">
+                <button aria-label="Rechercher"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="header-actions">
+                <a href="tel:+33184609300" class="header-action"><i class="fas fa-phone"></i><small>Appeler</small></a>
+                <a href="#" class="header-action"><i class="far fa-heart"></i><small>Favoris</small></a>
+                <a href="panier.html" class="header-action" id="headerCartBtn"><i class="fas fa-shopping-cart"></i><small>Panier</small><span class="cart-count" id="headerCartCount">0</span></a>
+            </div>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+        <nav class="nav-categories">
+            <a href="index.html" class="nav-cat"><i class="fas fa-home"></i> Accueil</a>
+            <a href="vetements.html" class="nav-cat"><i class="fas fa-tshirt"></i> Vetements au Kilo</a>
+            <a href="cuisines.html" class="nav-cat"><i class="fas fa-kitchen-set"></i> Cuisines OSKAB</a>
+            <a href="salles-de-bain.html" class="nav-cat"><i class="fas fa-bath"></i> Salles de Bain</a>
+            <a href="promotions.html" class="nav-cat active"><i class="fas fa-percent"></i> Promotions</a>
+            <a href="#contact" class="nav-cat"><i class="fas fa-headset"></i> Contact</a>
+            <a href="panier.html" class="nav-cat highlight" id="navCartBtn"><i class="fas fa-shopping-cart"></i> Panier (0)</a>
+        </nav>
+    </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-search"><input type="text" placeholder="Rechercher..."></div>
+    <a href="index.html" class="mobile-link"><i class="fas fa-home"></i> Accueil</a>
+    <a href="vetements.html" class="mobile-link"><i class="fas fa-tshirt"></i> Vetements au Kilo</a>
+    <a href="cuisines.html" class="mobile-link"><i class="fas fa-kitchen-set"></i> Cuisines OSKAB</a>
+    <a href="salles-de-bain.html" class="mobile-link"><i class="fas fa-bath"></i> Salles de Bain</a>
+    <a href="promotions.html" class="mobile-link active"><i class="fas fa-percent"></i> Promotions</a>
+    <a href="promotions.html#contact" class="mobile-link"><i class="fas fa-headset"></i> Contact</a>
+</div>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Accueil</a> <i class="fas fa-chevron-right"></i> <span>Promotions</span>
+        </div>
+        <h1 class="page-title">Promotions & Ventes Flash</h1>
+        <p class="page-subtitle">Nos meilleures offres du moment. Stock limite, prix casses.</p>
+    </div>
+</section>
+
+
+<section class="trust-strip-enhanced">
+    <div class="container">
+        <div class="trust-enhanced-item">
+            <div class="trust-icon-box"><i class="fas fa-shield-halved"></i></div>
+            <div><h4>Produits neufs</h4><p>100% authentiques avec etiquettes</p></div>
+        </div>
+        <div class="trust-enhanced-item">
+            <div class="trust-icon-box"><i class="fas fa-truck-fast"></i></div>
+            <div><h4>Livraison France</h4><p>Retrait entrepot ou livraison</p></div>
+        </div>
+        <div class="trust-enhanced-item">
+            <div class="trust-icon-box"><i class="fas fa-rotate-left"></i></div>
+            <div><h4>Satisfait ou rembourse</h4><p>14 jours pour changer d'avis</p></div>
+        </div>
+        <div class="trust-enhanced-item">
+            <div class="trust-icon-box"><i class="fas fa-lock"></i></div>
+            <div><h4>Paiement securise</h4><p>Vos donnees sont protegees</p></div>
+        </div>
+        <div class="trust-enhanced-item">
+            <div class="trust-icon-box"><i class="fas fa-headset"></i></div>
+            <div><h4>Service client</h4><p>Reponse sous 24h</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- VENTES EN COURS -->
+<section class="section section-gray reveal">
+    <div class="container">
+        <div class="section-head">
+            <h2>Nos offres du moment</h2>
+        </div>
+
+        <div class="filters-bar">
+            <button class="filter-btn active" data-filter="all">Toutes <span class="filter-count">6</span></button>
+            <button class="filter-btn" data-filter="promo">En promo <span class="filter-count">4</span></button>
+            
+            <button class="filter-btn" data-filter="vetements"><i class="fas fa-tshirt"></i> Vetements</button>
+            <button class="filter-btn" data-filter="cuisines"><i class="fas fa-kitchen-set"></i> Cuisines</button>
+            <div class="filter-price-slider" style="display:flex; align-items:center; gap:8px;">
+                <span style="font-size:11px; color:var(--text-light);">Max:</span>
+                <input type="range" min="50" max="5000" value="5000" style="width:120px;">
+                <span class="price-range-value" style="font-size:12px; font-weight:700; color:var(--accent);">5000 EUR</span>
+            </div>
+            <div class="filters-right">
+                <select class="sort-select">
+                    <option>Trier par : Date de fin</option>
+                    <option>Prix croissant</option>
+                    <option>Plus populaire</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="auction-grid">
+            <!-- Promo 1 -->
+            <div class="auction-card">
+                <div class="auction-img" style="background-image: url('images/vetements/lot-femme.jpg'); background-size:cover; background-position:center;">
+                </div>
+                <div class="auction-body">
+                    <h3>Lot 50kg — Vetements Femme Mix Saisons</h3>
+                    <p>Robes, tops, pantalons, jupes. Marques milieu de gamme. Neufs.</p>
+                    <div class="auction-details">
+                        <span class="auction-detail"><i class="fas fa-weight-hanging"></i> 50 kg</span>
+                        <span class="auction-detail"><i class="fas fa-calendar"></i> Fin : 30 mars 2026</span>
+                        <span class="auction-detail"><i class="fas fa-fire"></i> Tres demande</span>
+                    </div>
+                </div>
+                <div class="auction-right">
+                    <div class="auction-price-label">Prix</div>
+                    <div class="auction-price">120EUR</div>
+</section>
+
+<!-- CALENDRIER DES VENTES FLASH -->
+<section class="section reveal">
+    <div class="container">
+        <div class="section-head-center">
+            <h2>Calendrier des ventes flash</h2>
+            <p>Nos prochaines ventes a prix casses. Stock limite, premier arrive, premier servi.</p>
+        </div>
+        <div class="flash-calendar">
+            <div class="flash-card">
+                <div class="flash-card-header">
+                    <h4>Vente Flash Cuisines</h4>
+                    <span class="flash-card-timer" data-end="2026-04-15T23:59:00">Calcul...</span>
+                </div>
+                <div class="flash-card-body">
+                    <span class="flash-status active">En cours</span>
+                    <h3>Cuisines OSKAB — Lot de 5 a prix grossiste</h3>
+                    <p>5 cuisines completes au choix parmi 15 gammes. Ideal cuisinistes et promoteurs immobiliers.</p>
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-top:8px;">
+                        <span style="font-size:18px; font-weight:800; color:var(--accent);">5 900EUR</span>
+                        <span style="font-size:12px; color:var(--text-light); text-decoration:line-through;">19 500EUR</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flash-card">
+                <div class="flash-card-header">
+                    <h4>Mega Lot Vetements</h4>
+                    <span class="flash-card-timer" data-end="2026-04-20T23:59:00">Calcul...</span>
+                </div>
+                <div class="flash-card-body">
+                    <span class="flash-status active">En cours</span>
+                    <h3>200kg de vetements — Mix toutes categories</h3>
+                    <p>Lot exceptionnel : femme, homme, enfant, accessoires. Ideal pour lancer une friperie.</p>
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-top:8px;">
+                        <span style="font-size:18px; font-weight:800; color:var(--accent);">350EUR</span>
+                        <span style="font-size:12px; color:var(--text-light);">soit 1,75EUR/kg</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flash-card">
+                <div class="flash-card-header" style="background: #b45309;">
+                    <h4>Prochaine vente</h4>
+                    <span class="flash-card-timer" data-end="2026-05-01T10:00:00">Calcul...</span>
+                </div>
+                <div class="flash-card-body">
+                    <span class="flash-status upcoming">A venir</span>
+                    <h3>Salles de Bain OSKAB — Lot Premium</h3>
+                    <p>10 meubles de salle de bain haut de gamme. Double vasques, colonnes, miroirs inclus.</p>
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-top:8px;">
+                        <span style="font-size:14px; font-weight:600; color:var(--text-secondary);">Prix revele le 1er mai</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="section reveal" id="faq">
+    <div class="container">
+        <div class="section-head-center">
+            <h2>Questions frequentes</h2>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                    Comment passer commande ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-a">
+                    <p>Parcourez notre catalogue, ajoutez les produits souhaites a votre panier et finalisez votre commande. Le processus est simple et rapide.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                    Les vetements sont-ils vraiment neufs ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-a">
+                    <p>Oui, tous les vetements proviennent de stocks d'enseignes en liquidation judiciaire. Ils sont neufs, jamais portes, et la plupart ont encore leurs etiquettes d'origine.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                    Peut-on choisir les vetements dans un lot ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-a">
+                    <p>Non, les lots sont vendus tels quels, au poids. Vous ne pouvez pas trier ou choisir des pieces individuelles. C'est le principe du destockage au kilo.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                    Les cuisines OSKAB sont-elles completes ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-a">
+                    <p>La plupart des cuisines sont vendues en lots complets (meubles hauts, bas, colonnes). Certains lots sont des elements separes. Chaque fiche produit detaille le contenu. L'electromenager n'est generalement pas inclus.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                    Comment recuperer mes achats ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-a">
+                    <p>Retrait gratuit a notre entrepot (sur rendez-vous) ou livraison sur devis partout en France. Pour les cuisines, nous recommandons un vehicule utilitaire ou notre service de livraison.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                    Y a-t-il des frais supplementaires ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-a">
+                    <p>Non, le prix affiche est le prix final. Seuls les frais de livraison eventuels s'ajoutent si vous optez pour une expedition.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section section-gray reveal" id="contact">
+    <div class="container">
+        <div class="section-head-center">
+            <h2>Contactez-nous</h2>
+            <p>Une question sur un lot ? Un besoin specifique ? Notre equipe est a votre ecoute.</p>
+        </div>
+
+        <div class="contact-layout">
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('Message envoye ! Nous vous repondrons sous 24h.');">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nom">Nom complet</label>
+                        <input type="text" id="nom" placeholder="Votre nom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="votre@email.com" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="telephone">Telephone</label>
+                        <input type="tel" id="telephone" placeholder="06 12 34 56 78">
+                    </div>
+                    <div class="form-group">
+                        <label for="sujet">Sujet</label>
+                        <select id="sujet">
+                            <option>Vetements au kilo</option>
+                            <option>Cuisines OSKAB</option>
+                            <option>Livraison</option>
+                            <option>Service de pose</option>
+                            <option>Lot professionnel / grossiste</option>
+                            <option>Autre</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" placeholder="Decrivez votre demande..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg" style="align-self: flex-start;">
+                    <i class="fas fa-paper-plane"></i> Envoyer le message
+                </button>
+            </form>
+
+            <div class="contact-card">
+                <h3>Nos coordonnees</h3>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="contact-text">
+                        <h4>Adresse de l'entrepot</h4>
+                        <p>18 Avenue du Clocher<br>93600 Aulnay-sous-Bois</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <div class="contact-text">
+                        <h4>Telephone</h4>
+                        <p>01 84 60 93 00<br>Du lundi au vendredi, 9h-18h</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-text">
+                        <h4>Email</h4>
+                        <p>contact@destockpro.fr<br>Reponse sous 24h</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                    <div class="contact-text">
+                        <h4>Horaires</h4>
+                        <p>Du lundi au vendredi<br>9h - 18h</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-brand"><i class="fas fa-warehouse"></i> DESTOCK<span>PRO</span></div>
+                <p>Votre entrepot de destockage en ligne. Vetements de marque au kilo et cuisines OSKAB neuves a prix casses.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <a href="index.html">Accueil</a>
+                <a href="vetements.html">Vetements au Kilo</a>
+                <a href="cuisines.html">Cuisines OSKAB</a>
+                <a href="salles-de-bain.html">Salles de Bain OSKAB</a>
+                <a href="promotions.html">Promotions</a>
+            </div>
+            <div class="footer-col">
+                <h4>Informations</h4>
+                <a href="a-propos.html">A propos</a>
+                <a href="blog.html">Blog</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
+                <a href="cgv.html">Conditions generales</a>
+                <a href="mentions-legales.html">Mentions legales</a>
+                <a href="confidentialite.html">Confidentialite</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 18 Avenue du Clocher, 93600 Aulnay-sous-Bois</p>
+                <p><i class="fas fa-phone"></i> 01 84 60 93 00</p>
+                <p><i class="fas fa-envelope"></i> contact@destockpro.fr</p>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>2026 DestockPro — Tous droits reserves</p></div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

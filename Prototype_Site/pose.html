@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service de Pose Cuisine — Artisans certifiés partout en France | DestockPro</title>
+    <meta name="description" content="Faites installer votre cuisine OSKAB par un artisan certifié. Devis gratuit en 2 minutes, tarifs transparents, garantie décennale. Pose partout en France.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #e63946;
+            --primary-dark: #c1121f;
+            --dark: #1d3557;
+            --accent: #457b9d;
+            --light: #f1faee;
+            --bg: #ffffff;
+            --text: #2b2d42;
+            --text-light: #6c757d;
+            --border: #e9ecef;
+            --success: #2d6a4f;
+            --warning: #e9c46a;
+            --shadow: 0 2px 15px rgba(0,0,0,0.08);
+            --shadow-hover: 0 8px 30px rgba(0,0,0,0.12);
+            --radius: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; height: auto; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
+
+        /* ===== PROMO BAR ===== */
+        .promo-bar { background: linear-gradient(90deg, var(--dark) 0%, #264653 100%); color: white; text-align: center; padding: 10px 20px; font-size: 13px; font-weight: 500; letter-spacing: 0.5px; }
+        .promo-bar strong { color: var(--warning); }
+        .promo-bar .countdown { display: inline-block; background: var(--primary); padding: 2px 10px; border-radius: 20px; margin-left: 10px; font-weight: 700; }
+
+        /* ===== HEADER ===== */
+        .header { background: white; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+        .header-top { display: flex; align-items: center; justify-content: space-between; padding: 15px 0; gap: 20px; }
+        .logo { font-size: 28px; font-weight: 900; color: var(--dark); letter-spacing: -1px; }
+        .logo span { color: var(--primary); }
+        .search-bar { flex: 1; max-width: 500px; position: relative; }
+        .search-bar input { width: 100%; padding: 12px 20px 12px 45px; border: 2px solid var(--border); border-radius: 50px; font-size: 14px; font-family: inherit; transition: var(--transition); }
+        .search-bar input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(69,123,157,0.15); }
+        .search-bar i { position: absolute; left: 18px; top: 50%; transform: translateY(-50%); color: var(--text-light); }
+        .header-actions { display: flex; align-items: center; gap: 20px; }
+        .header-actions a { display: flex; flex-direction: column; align-items: center; gap: 3px; font-size: 11px; color: var(--text-light); transition: var(--transition); }
+        .header-actions a:hover { color: var(--primary); }
+        .header-actions a i { font-size: 20px; }
+        .cart-badge { position: relative; }
+        .cart-badge::after { content: '3'; position: absolute; top: -8px; right: -8px; background: var(--primary); color: white; font-size: 10px; font-weight: 700; width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+
+        /* ===== NAV ===== */
+        .nav { background: var(--dark); }
+        .nav-list { display: flex; list-style: none; justify-content: center; gap: 0; }
+        .nav-list li a { display: block; padding: 14px 22px; color: white; font-size: 13px; font-weight: 500; letter-spacing: 0.3px; transition: var(--transition); border-bottom: 3px solid transparent; }
+        .nav-list li a:hover { background: rgba(255,255,255,0.08); border-bottom-color: var(--primary); }
+        .nav-list li a.active { border-bottom-color: var(--primary); background: rgba(255,255,255,0.05); }
+        .nav-hot { background: var(--primary) !important; font-weight: 700 !important; }
+
+        /* ===== POSE HERO ===== */
+        .pose-hero {
+            background: linear-gradient(135deg, var(--dark) 0%, #264653 50%, var(--accent) 100%);
+            color: white; padding: 80px 0; position: relative; overflow: hidden;
+        }
+        .pose-hero::before {
+            content: ''; position: absolute; top: -30%; right: -10%; width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(233,196,106,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .pose-hero::after {
+            content: ''; position: absolute; bottom: -40%; left: -10%; width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(230,57,70,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .pose-hero-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .pose-hero h1 { font-size: 44px; font-weight: 900; line-height: 1.15; margin-bottom: 18px; letter-spacing: -1px; }
+        .pose-hero h1 .hl { color: var(--warning); }
+        .pose-hero p { font-size: 17px; opacity: 0.85; line-height: 1.7; margin-bottom: 30px; max-width: 500px; }
+        .pose-hero-badges { display: flex; gap: 15px; flex-wrap: wrap; }
+        .hero-badge {
+            display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.1);
+            padding: 10px 18px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.15);
+            font-size: 13px; font-weight: 500;
+        }
+        .hero-badge i { font-size: 18px; color: var(--warning); }
+
+        /* Hero form */
+        .hero-form-card {
+            background: white; border-radius: 16px; padding: 35px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2); color: var(--text);
+        }
+        .hero-form-card h3 { font-size: 22px; font-weight: 800; color: var(--dark); margin-bottom: 5px; }
+        .hero-form-card .subtitle { font-size: 13px; color: var(--text-light); margin-bottom: 25px; }
+        .form-group { margin-bottom: 16px; }
+        .form-group label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; color: var(--dark); }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%; padding: 12px 15px; border: 1.5px solid var(--border);
+            border-radius: 8px; font-size: 14px; font-family: inherit; transition: var(--transition);
+            background: white;
+        }
+        .form-group textarea { resize: vertical; min-height: 80px; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(69,123,157,0.15);
+        }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: 8px; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer; transition: var(--transition); border: none; }
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(230,57,70,0.35); }
+        .btn-submit {
+            width: 100%; padding: 16px; background: var(--primary); color: white;
+            border: none; border-radius: 10px; font-size: 16px; font-weight: 700;
+            font-family: inherit; cursor: pointer; transition: var(--transition);
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+        }
+        .btn-submit:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(230,57,70,0.35); }
+        .form-note { font-size: 11px; color: var(--text-light); text-align: center; margin-top: 12px; }
+
+        /* ===== HOW IT WORKS ===== */
+        .section { padding: 70px 0; }
+        .section-header { text-align: center; margin-bottom: 50px; }
+        .section-header h2 { font-size: 32px; font-weight: 800; color: var(--dark); margin-bottom: 10px; letter-spacing: -0.5px; }
+        .section-header p { font-size: 16px; color: var(--text-light); max-width: 600px; margin: 0 auto; }
+        .section-header .line { width: 60px; height: 4px; background: var(--primary); margin: 15px auto 0; border-radius: 2px; }
+
+        .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; position: relative; }
+        .steps-grid::before {
+            content: ''; position: absolute; top: 40px; left: 12%; right: 12%;
+            height: 3px; background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 50%, var(--dark) 100%);
+            border-radius: 2px; z-index: 0;
+        }
+        .step-card { text-align: center; position: relative; z-index: 1; }
+        .step-num {
+            width: 80px; height: 80px; background: white; border: 3px solid var(--primary);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 28px; font-weight: 900; color: var(--primary); margin: 0 auto 20px;
+            box-shadow: 0 4px 15px rgba(230,57,70,0.15);
+        }
+        .step-card h3 { font-size: 16px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+        .step-card p { font-size: 13px; color: var(--text-light); line-height: 1.6; max-width: 240px; margin: 0 auto; }
+
+        /* ===== PRICING SECTION ===== */
+        .pricing-section { background: var(--light); }
+        .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+        .pricing-card {
+            background: white; border-radius: var(--radius); overflow: hidden;
+            border: 1px solid var(--border); transition: var(--transition);
+        }
+        .pricing-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
+        .pricing-card.featured { border-color: var(--primary); border-width: 2px; position: relative; }
+        .pricing-card.featured::before {
+            content: 'Le plus demandé'; position: absolute; top: 0; left: 0; right: 0;
+            background: var(--primary); color: white; text-align: center; padding: 6px;
+            font-size: 12px; font-weight: 700; letter-spacing: 0.5px;
+        }
+        .pricing-card-header {
+            padding: 30px 25px 20px; text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+        .pricing-card.featured .pricing-card-header { padding-top: 50px; }
+        .pricing-card-header i { font-size: 36px; color: var(--accent); margin-bottom: 12px; }
+        .pricing-card-header h3 { font-size: 20px; font-weight: 700; color: var(--dark); margin-bottom: 5px; }
+        .pricing-card-header .desc { font-size: 13px; color: var(--text-light); }
+        .pricing-card-header .price { font-size: 36px; font-weight: 900; color: var(--primary); margin-top: 15px; }
+        .pricing-card-header .price span { font-size: 14px; font-weight: 400; color: var(--text-light); }
+        .pricing-card-body { padding: 25px; }
+        .pricing-feature {
+            display: flex; align-items: flex-start; gap: 10px; padding: 8px 0;
+            font-size: 13px; color: var(--text);
+        }
+        .pricing-feature i { color: var(--success); margin-top: 3px; min-width: 16px; }
+        .pricing-card-footer { padding: 0 25px 25px; }
+        .pricing-btn {
+            width: 100%; padding: 14px; border-radius: 8px; font-size: 14px; font-weight: 600;
+            font-family: inherit; cursor: pointer; transition: var(--transition); border: none;
+            text-align: center; display: block;
+        }
+        .pricing-btn-outline { background: transparent; border: 2px solid var(--dark); color: var(--dark); }
+        .pricing-btn-outline:hover { background: var(--dark); color: white; }
+        .pricing-btn-primary { background: var(--primary); color: white; }
+        .pricing-btn-primary:hover { background: var(--primary-dark); }
+
+        /* ===== ZONES ===== */
+        .zones-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+        .zone-map {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: var(--radius); padding: 40px; min-height: 400px;
+            display: flex; align-items: center; justify-content: center;
+            border: 1px solid var(--border); position: relative;
+        }
+        .zone-map-placeholder { text-align: center; color: var(--text-light); }
+        .zone-map-placeholder i { font-size: 80px; margin-bottom: 15px; opacity: 0.3; }
+        .zone-map-placeholder p { font-size: 14px; }
+        .zone-list { }
+        .zone-list h3 { font-size: 22px; font-weight: 800; color: var(--dark); margin-bottom: 8px; }
+        .zone-list > p { font-size: 14px; color: var(--text-light); margin-bottom: 25px; }
+        .zone-item {
+            display: flex; align-items: center; gap: 15px; padding: 15px;
+            background: white; border-radius: 10px; border: 1px solid var(--border);
+            margin-bottom: 10px; transition: var(--transition);
+        }
+        .zone-item:hover { border-color: var(--accent); box-shadow: var(--shadow); }
+        .zone-icon {
+            width: 44px; height: 44px; border-radius: 10px; display: flex;
+            align-items: center; justify-content: center; font-size: 18px;
+        }
+        .zone-icon.z1 { background: rgba(45,106,79,0.1); color: var(--success); }
+        .zone-icon.z2 { background: rgba(69,123,157,0.1); color: var(--accent); }
+        .zone-icon.z3 { background: rgba(233,196,106,0.15); color: #b8860b; }
+        .zone-item-info h4 { font-size: 14px; font-weight: 600; color: var(--dark); }
+        .zone-item-info p { font-size: 12px; color: var(--text-light); }
+        .zone-item-price { margin-left: auto; font-size: 14px; font-weight: 700; color: var(--primary); white-space: nowrap; }
+
+        /* ===== GUARANTEES ===== */
+        .guarantees-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
+        .guarantee-card {
+            background: white; border-radius: var(--radius); padding: 30px 20px;
+            border: 1px solid var(--border); text-align: center; transition: var(--transition);
+        }
+        .guarantee-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+        .guarantee-card i { font-size: 36px; margin-bottom: 15px; }
+        .guarantee-card h3 { font-size: 15px; font-weight: 700; color: var(--dark); margin-bottom: 6px; }
+        .guarantee-card p { font-size: 12px; color: var(--text-light); line-height: 1.5; }
+
+        /* ===== FAQ ===== */
+        .faq-section { background: var(--light); }
+        .faq-grid { max-width: 800px; margin: 0 auto; }
+        .faq-item {
+            background: white; border-radius: 10px; border: 1px solid var(--border);
+            margin-bottom: 10px; overflow: hidden;
+        }
+        .faq-question {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 18px 22px; cursor: pointer; font-size: 14px; font-weight: 600;
+            color: var(--dark); transition: var(--transition);
+        }
+        .faq-question:hover { color: var(--primary); }
+        .faq-question i { transition: var(--transition); color: var(--text-light); }
+        .faq-item.open .faq-question i { transform: rotate(180deg); color: var(--primary); }
+        .faq-answer {
+            padding: 0 22px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
+        }
+        .faq-item.open .faq-answer { max-height: 200px; padding-bottom: 18px; }
+        .faq-answer p { font-size: 13px; color: var(--text-light); line-height: 1.7; }
+
+        /* ===== CTA BOTTOM ===== */
+        .cta-bottom {
+            background: linear-gradient(135deg, var(--dark) 0%, #264653 50%, var(--accent) 100%);
+            color: white; padding: 60px 0; text-align: center;
+        }
+        .cta-bottom h2 { font-size: 32px; font-weight: 800; margin-bottom: 12px; }
+        .cta-bottom p { font-size: 16px; opacity: 0.8; margin-bottom: 30px; max-width: 550px; margin-left: auto; margin-right: auto; }
+        .cta-bottom .btn { font-size: 17px; padding: 18px 40px; }
+        .btn-white { background: white; color: var(--dark); }
+        .btn-white:hover { background: var(--light); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.2); }
+
+        /* ===== NEWSLETTER ===== */
+        .newsletter { background: var(--dark); color: white; padding: 50px 0; text-align: center; }
+        .newsletter h2 { font-size: 28px; font-weight: 800; margin-bottom: 10px; }
+        .newsletter p { font-size: 15px; opacity: 0.7; margin-bottom: 25px; }
+        .newsletter-form { display: flex; max-width: 500px; margin: 0 auto; gap: 10px; }
+        .newsletter-form input { flex: 1; padding: 14px 20px; border: none; border-radius: 8px; font-size: 14px; font-family: inherit; }
+        .newsletter-form button { padding: 14px 28px; background: var(--primary); color: white; border: none; border-radius: 8px; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer; }
+
+        /* ===== FOOTER ===== */
+        .footer { background: #0d1b2a; color: rgba(255,255,255,0.7); padding: 60px 0 30px; }
+        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        .footer h4 { color: white; font-size: 15px; margin-bottom: 18px; font-weight: 600; }
+        .footer p, .footer a { font-size: 13px; line-height: 2; }
+        .footer a:hover { color: white; }
+        .footer-brand .logo { font-size: 24px; margin-bottom: 12px; }
+        .footer-brand p { max-width: 300px; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; font-size: 12px; }
+        .footer-payments { display: flex; gap: 10px; }
+        .footer-payments i { font-size: 28px; opacity: 0.5; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .steps-grid { grid-template-columns: repeat(2, 1fr); gap: 25px; }
+            .steps-grid::before { display: none; }
+            .pricing-grid { grid-template-columns: 1fr; max-width: 450px; margin: 0 auto; }
+            .guarantees-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .header-top { flex-wrap: wrap; }
+            .search-bar { order: 3; max-width: 100%; flex-basis: 100%; }
+            .nav-list { overflow-x: auto; justify-content: flex-start; }
+            .nav-list li a { padding: 12px 15px; white-space: nowrap; font-size: 12px; }
+            .pose-hero { padding: 50px 0; }
+            .pose-hero-inner { grid-template-columns: 1fr; gap: 30px; }
+            .pose-hero h1 { font-size: 30px; }
+            .zones-grid { grid-template-columns: 1fr; }
+            .zone-map { min-height: 250px; }
+            .guarantees-grid { grid-template-columns: 1fr 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 480px) {
+            .pose-hero h1 { font-size: 24px; }
+            .pose-hero-badges { flex-direction: column; }
+            .form-row { grid-template-columns: 1fr; }
+            .steps-grid { grid-template-columns: 1fr; }
+            .guarantees-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .newsletter-form { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- PROMO BAR -->
+<div class="promo-bar">
+    <strong>LIQUIDATION OSKAB</strong> — Cuisines neuves de marque jusqu'à <strong>-70%</strong> du prix catalogue
+    <span class="countdown"><i class="fas fa-fire"></i> Stock limité</span>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="container">
+        <div class="header-top">
+            <a href="index.html" class="logo">Destock<span>Pro</span></a>
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Rechercher un produit, une gamme, une réf...">
+            </div>
+            <div class="header-actions">
+                <a href="pose.html"><i class="fas fa-tools"></i> Service Pose</a>
+                <a href="#"><i class="fas fa-user"></i> Compte</a>
+                <a href="#"><i class="fas fa-heart"></i> Favoris</a>
+                <a href="#" class="cart-badge"><i class="fas fa-shopping-cart"></i> Panier</a>
+            </div>
+        </div>
+    </div>
+    <nav class="nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="cuisines.html" class="nav-hot"><i class="fas fa-fire"></i> Cuisines OSKAB</a></li>
+                <li><a href="#">Salle de Bains</a></li>
+                <li><a href="#">Plans de Travail</a></li>
+                <li><a href="#">Robinetterie</a></li>
+                <li><a href="#">Accessoires</a></li>
+                <li><a href="#">Peinture & Isolation</a></li>
+                <li><a href="#">Fenêtres</a></li>
+                <li><a href="pose.html" class="active">Service de Pose</a></li>
+                <li><a href="#">Promotions</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!-- POSE HERO -->
+<section class="pose-hero">
+    <div class="container">
+        <div class="pose-hero-inner">
+            <div>
+                <h1>Votre cuisine <span class="hl">posée</span> par un artisan <span class="hl">certifié</span></h1>
+                <p>Achetez votre cuisine OSKAB à -70% et faites-la installer par un professionnel qualifié. Devis gratuit, tarifs transparents, garantie décennale incluse.</p>
+                <div class="pose-hero-badges">
+                    <div class="hero-badge"><i class="fas fa-shield-halved"></i> Garantie décennale</div>
+                    <div class="hero-badge"><i class="fas fa-euro-sign"></i> Tarifs fixes transparents</div>
+                    <div class="hero-badge"><i class="fas fa-map-marker-alt"></i> Partout en France</div>
+                    <div class="hero-badge"><i class="fas fa-clock"></i> Réponse sous 24h</div>
+                </div>
+            </div>
+
+            <!-- DEVIS FORM -->
+            <div class="hero-form-card">
+                <h3><i class="fas fa-calculator" style="color: var(--primary); margin-right: 8px;"></i> Devis pose gratuit</h3>
+                <p class="subtitle">Réponse personnalisée sous 24h — Sans engagement</p>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Prénom *</label>
+                        <input type="text" placeholder="Votre prénom">
+                    </div>
+                    <div class="form-group">
+                        <label>Nom *</label>
+                        <input type="text" placeholder="Votre nom">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Téléphone *</label>
+                        <input type="tel" placeholder="06 12 34 56 78">
+                    </div>
+                    <div class="form-group">
+                        <label>Email *</label>
+                        <input type="email" placeholder="votre@email.com">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Code postal *</label>
+                        <input type="text" placeholder="ex: 59000">
+                    </div>
+                    <div class="form-group">
+                        <label>Type de logement</label>
+                        <select>
+                            <option>Maison</option>
+                            <option>Appartement (RDC)</option>
+                            <option>Appartement (étage avec ascenseur)</option>
+                            <option>Appartement (étage sans ascenseur)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Gamme cuisine choisie</label>
+                    <select>
+                        <option>Je n'ai pas encore choisi</option>
+                        <option>HELIA Blanc Mat</option>
+                        <option>HELIA Blanc Brillant</option>
+                        <option>IPOMA Blanc Brillant</option>
+                        <option>IPOMA Noir Mat</option>
+                        <option>GINKO Blanc</option>
+                        <option>GINKO Noir</option>
+                        <option>BORA Blanc</option>
+                        <option>STATIC Blanc</option>
+                        <option>OKA Chêne</option>
+                        <option>LUPI — diverses</option>
+                        <option>KERIA — diverses</option>
+                        <option>Autre gamme</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Nombre d'éléments (approximatif)</label>
+                    <select>
+                        <option>3-5 éléments (petite cuisine)</option>
+                        <option>6-10 éléments (cuisine standard)</option>
+                        <option>11-15 éléments (grande cuisine)</option>
+                        <option>15+ éléments (cuisine en L ou U)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Travaux complémentaires souhaités</label>
+                    <select>
+                        <option>Pose uniquement</option>
+                        <option>Pose + plomberie (raccordement évier/lave-vaisselle)</option>
+                        <option>Pose + électricité (prises, éclairage)</option>
+                        <option>Pose complète (plomberie + électricité)</option>
+                        <option>Dépose ancienne cuisine + pose</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Précisions ou commentaires</label>
+                    <textarea placeholder="Surface de la pièce, contraintes particulières, dates souhaitées..."></textarea>
+                </div>
+
+                <button class="btn-submit">
+                    <i class="fas fa-paper-plane"></i> Recevoir mon devis gratuit
+                </button>
+                <p class="form-note"><i class="fas fa-lock" style="margin-right: 4px;"></i> Vos données restent confidentielles — Sans engagement</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Comment ça marche ?</h2>
+            <p>Un processus simple en 4 étapes pour une cuisine posée sans stress</p>
+            <div class="line"></div>
+        </div>
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-num">1</div>
+                <h3>Choisissez votre cuisine</h3>
+                <p>Parcourez notre catalogue de cuisines OSKAB en destockage et ajoutez celle qui vous plaît au panier.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">2</div>
+                <h3>Demandez un devis pose</h3>
+                <p>Remplissez le formulaire ci-dessus. Nous vous envoyons un devis détaillé sous 24h avec le tarif exact.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">3</div>
+                <h3>Visite technique</h3>
+                <p>Un artisan de votre zone passe chez vous pour valider les mesures et les raccordements nécessaires.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">4</div>
+                <h3>Pose professionnelle</h3>
+                <p>Installation complète par notre artisan certifié. Votre cuisine est prête à l'emploi en 1 à 2 jours.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PRICING -->
+<section class="section pricing-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Tarifs de pose transparents</h2>
+            <p>Des forfaits clairs, sans surprise. Le prix affiché est le prix final.</p>
+            <div class="line"></div>
+        </div>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="pricing-card-header">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Petite Cuisine</h3>
+                    <div class="desc">3 à 5 éléments — Kitchenette, studio</div>
+                    <div class="price">690 € <span>TTC</span></div>
+                </div>
+                <div class="pricing-card-body">
+                    <div class="pricing-feature"><i class="fas fa-check"></i> Montage et fixation de tous les éléments</div>
+                    <div class="pricing-feature"><i class="fas fa-check"></i> Découpe et pose du plan de travail</div>
+                    <div class="pricing-feature"><i class="fas fa-check"></i> Raccordement évier (arrivée existante)</div>
+                    <div class="pricing-feature"><i class="fas fa-check"></i> Ajustements et finitions</div>
+                    <div class="pricing-feature"><i class="fas fa-check"></i> Nettoyage du chantier</div>
+                </div>
+                <div class="pricing-card-footer">
+                    <a href="#" class="pricing-btn pricing-btn-outline">Demander un devis</a>
+                </div>
+            </div>
+
+            <div class="pricing-card featured">
+                <div class="pricing-card-header">
+                    <i class="fas fa-kitchen-set"></i>
+                    <h3>Cuisine Standard</h3>
+                    <div class="desc">6 à 10 éléments — Cuisine familiale</div>
+                    <div class="price">1 290 € <span>TTC</span></div>
+                </div>
+                <div class="pricing-card-body">
+                    <div class="pricing-feature"><i class="fas fa-check"></i> Tout le forfait Petite Cuisine</div>
+                    <div class="pricing-feature"><i class="fas fa-check"></i> Pose de crédence (collée ou vissée)</div>
+                    <div class="pricing-feature"><i class="fas fa-check"></i> Raccordement lave-vaisselle</div>
+                    <div class="pricing-feature"><i class="fas fa-check"></i> Encastrement plaque & four</div>
+                    <div class="pricing-feature"><i class="fas fa-check"></i> Raccordement hotte (gaine existante)</div>
+                    <div class="pricing-feature"><i class="fas fa-check"></i> Garantie décennale</div>
+                </div>
+                <div class="pricing-card-footer">
+                    <a href="#" class="pricing-btn pricing-btn-primary">Demander un devis</a>
+                </div>
+            </div>
+
+            <div class="pricing-card">
+                <div class="pricing-card-header">
+                    <i class="fas fa-crown"></i>
+                    <h3>Grande Cuisine</h3>
+                    <div class="desc">11+ éléments — Cuisine en L, U ou avec îlot</div>
+                    <div class="price">1 890 € <span>TTC</span></div>
+                </div>
+                <div class="pricing-card-body">
+                    <div class="pricing-feature"><i class="fas fa-check"></i> Tout le forfait Standard</div>
+                    <div class="pricing-feature"><i class="fas fa-check"></i> Pose îlot central (si applicable)</div>
+                    <div class="pricing-feature"><i class="fas fa-check"></i> Ajustements angles & renvois</div>
+                    <div class="pricing-feature"><i class="fas fa-check"></i> Habillage joues et fileurs</div>
+                    <div class="pricing-feature"><i class="fas fa-check"></i> Éclairage sous meubles hauts</div>
+                    <div class="pricing-feature"><i class="fas fa-check"></i> Visite technique préalable incluse</div>
+                </div>
+                <div class="pricing-card-footer">
+                    <a href="#" class="pricing-btn pricing-btn-outline">Demander un devis</a>
+                </div>
+            </div>
+        </div>
+        <p style="text-align: center; font-size: 13px; color: var(--text-light); margin-top: 25px;">
+            Options supplémentaires : dépose ancienne cuisine (+250€), plomberie complète (+350€), électricité (+290€). Prix indicatifs, devis final après visite technique.
+        </p>
+    </div>
+</section>
+
+<!-- ZONES DE COUVERTURE -->
+<section class="section">
+    <div class="container">
+        <div class="zones-grid">
+            <div class="zone-map">
+                <div class="zone-map-placeholder">
+                    <i class="fas fa-map-location-dot"></i>
+                    <p>Carte de couverture interactive<br><span style="font-size: 12px; opacity: 0.6;">Intégrée avec l'API Google Maps en production</span></p>
+                </div>
+            </div>
+            <div class="zone-list">
+                <h3>Couverture nationale</h3>
+                <p>Notre réseau d'artisans couvre toute la France métropolitaine avec des délais adaptés selon votre zone.</p>
+
+                <div class="zone-item">
+                    <div class="zone-icon z1"><i class="fas fa-bolt"></i></div>
+                    <div class="zone-item-info">
+                        <h4>Zone Express — Hauts-de-France</h4>
+                        <p>Lille, Dunkerque, Valenciennes, Arras, Amiens et alentours</p>
+                    </div>
+                    <div class="zone-item-price">Délai : 5-7j</div>
+                </div>
+
+                <div class="zone-item">
+                    <div class="zone-icon z2"><i class="fas fa-truck-fast"></i></div>
+                    <div class="zone-item-info">
+                        <h4>Zone Standard — Grand Nord & IDF</h4>
+                        <p>Paris, Île-de-France, Normandie, Picardie, Champagne</p>
+                    </div>
+                    <div class="zone-item-price">Délai : 7-14j</div>
+                </div>
+
+                <div class="zone-item">
+                    <div class="zone-icon z3"><i class="fas fa-map-marked-alt"></i></div>
+                    <div class="zone-item-info">
+                        <h4>Zone Étendue — France entière</h4>
+                        <p>Toutes les autres régions métropolitaines</p>
+                    </div>
+                    <div class="zone-item-price">Délai : 14-21j</div>
+                </div>
+
+                <p style="font-size: 12px; color: var(--text-light); margin-top: 15px;">
+                    <i class="fas fa-info-circle" style="margin-right: 4px;"></i>
+                    Supplément déplacement selon zone : 0€ (Express), 90€ (Standard), 190€ (Étendue)
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GUARANTEES -->
+<section class="section" style="background: #f8f9fa;">
+    <div class="container">
+        <div class="section-header">
+            <h2>Nos garanties</h2>
+            <p>Posez en toute sérénité avec DestockPro</p>
+            <div class="line"></div>
+        </div>
+        <div class="guarantees-grid">
+            <div class="guarantee-card">
+                <i class="fas fa-shield-halved" style="color: var(--success);"></i>
+                <h3>Garantie décennale</h3>
+                <p>Tous nos artisans sont couverts par une assurance décennale. Votre installation est protégée pendant 10 ans.</p>
+            </div>
+            <div class="guarantee-card">
+                <i class="fas fa-user-check" style="color: var(--accent);"></i>
+                <h3>Artisans certifiés</h3>
+                <p>Chaque poseur est vérifié, qualifié et dispose d'au moins 5 ans d'expérience en pose de cuisine.</p>
+            </div>
+            <div class="guarantee-card">
+                <i class="fas fa-tags" style="color: var(--primary);"></i>
+                <h3>Prix fixe garanti</h3>
+                <p>Le devis validé est le prix final. Aucun supplément caché, aucune mauvaise surprise à la fin du chantier.</p>
+            </div>
+            <div class="guarantee-card">
+                <i class="fas fa-rotate-left" style="color: #b8860b;"></i>
+                <h3>Reprise garantie</h3>
+                <p>Si un défaut est constaté après la pose, notre artisan revient gratuitement pour le corriger sous 30 jours.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Questions fréquentes</h2>
+            <div class="line"></div>
+        </div>
+        <div class="faq-grid">
+            <div class="faq-item open">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    Combien de temps dure la pose d'une cuisine ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>La pose d'une cuisine standard (6-10 éléments) prend généralement 1 à 2 jours. Pour une grande cuisine en L ou U avec îlot, comptez 2 à 3 jours. La visite technique préalable permet de planifier précisément la durée.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    Faut-il que la plomberie et l'électricité soient déjà en place ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Idéalement oui — nos forfaits de base incluent le raccordement sur arrivées existantes. Si des travaux de plomberie ou d'électricité sont nécessaires, nous proposons des options complémentaires (dès 290€). Tout sera évalué lors de la visite technique.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    Puis-je faire poser une cuisine que je n'ai pas achetée chez vous ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Notre service de pose est exclusivement réservé aux cuisines achetées sur DestockPro. Cela nous permet de garantir la compatibilité et d'assurer un service irréprochable de bout en bout.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    Que comprend la visite technique ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>L'artisan vérifie les dimensions, les arrivées d'eau et d'électricité, l'état des murs et du sol, et identifie d'éventuelles contraintes. Il confirme le devis final et planifie la date d'intervention. La visite est gratuite pour les forfaits Grande Cuisine.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    Comment se passe le paiement de la pose ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Un acompte de 30% est demandé à la validation du devis, et le solde est payé à la fin de la pose, une fois que vous êtes satisfait du résultat. Paiement par CB ou virement.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA BOTTOM -->
+<section class="cta-bottom">
+    <div class="container">
+        <h2><i class="fas fa-screwdriver-wrench" style="margin-right: 10px;"></i> Prêt à lancer votre projet cuisine ?</h2>
+        <p>Cuisine OSKAB neuve à -70% + pose professionnelle. Le combo parfait pour une cuisine de rêve à petit prix.</p>
+        <a href="cuisines.html" class="btn btn-white"><i class="fas fa-arrow-right"></i> Voir les cuisines disponibles</a>
+    </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+    <div class="container">
+        <h2><i class="fas fa-bell" style="margin-right: 10px;"></i> Ne ratez aucune bonne affaire</h2>
+        <p>Recevez les nouveaux arrivages et les offres exclusives en avant-première</p>
+        <div class="newsletter-form">
+            <input type="email" placeholder="Votre adresse email">
+            <button>S'inscrire</button>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo">Destock<span>Pro</span></div>
+                <p>Spécialiste du destockage de cuisines et ameublement. Des produits neufs de marque à prix cassés, avec un service de pose professionnel.</p>
+            </div>
+            <div>
+                <h4>Nos univers</h4>
+                <a href="cuisines.html">Cuisines OSKAB</a><br>
+                <a href="#">Salle de Bains</a><br>
+                <a href="#">Plans de Travail</a><br>
+                <a href="#">Robinetterie & Éviers</a><br>
+                <a href="#">Accessoires Cuisine</a><br>
+                <a href="#">Peinture & Isolation</a>
+            </div>
+            <div>
+                <h4>Services</h4>
+                <a href="pose.html">Service de Pose</a><br>
+                <a href="#">Livraison</a><br>
+                <a href="#">Retrait en dépôt</a><br>
+                <a href="#">Paiement en 3x</a><br>
+                <a href="#">Guide d'achat</a>
+            </div>
+            <div>
+                <h4>Informations</h4>
+                <a href="#">Qui sommes-nous ?</a><br>
+                <a href="#">Contact</a><br>
+                <a href="#">FAQ</a><br>
+                <a href="#">CGV</a><br>
+                <a href="#">Mentions légales</a><br>
+                <a href="#">Politique de retour</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 DestockPro. Tous droits réservés.</span>
+            <div class="footer-payments">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-apple-pay"></i>
+                <i class="fab fa-google-pay"></i>
+                <i class="fab fa-cc-stripe"></i>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

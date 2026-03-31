@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog DestockPro — Guides, Conseils & Astuces Destockage</title>
+    <meta name="description" content="Retrouvez nos guides et conseils pour acheter au meilleur prix : vetements au kilo, cuisines OSKAB, vente directe et astuces revente.">
+    <meta property="og:title" content="Blog DestockPro — Guides, Conseils & Astuces Destockage">
+    <meta property="og:description" content="Retrouvez nos guides et conseils pour acheter au meilleur prix : vetements au kilo, cuisines OSKAB, vente directe et astuces revente.">
+    <meta property="og:image" content="images/cuisines/slider-4.jpg">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        @media (max-width: 900px) {
+            .blog-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 600px) {
+            .blog-grid { grid-template-columns: 1fr; }
+        }
+        .blog-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .blog-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+        }
+        .blog-card-img {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .blog-card-img i {
+            font-size: 3.5rem;
+            color: rgba(255,255,255,0.85);
+        }
+        .blog-card-category {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(255,255,255,0.95);
+            color: #333;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .blog-card-body {
+            padding: 1.5rem;
+        }
+        .blog-card-body h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.6rem;
+            line-height: 1.4;
+            color: #1a1a2e;
+        }
+        .blog-card-body h3 a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .blog-card-body h3 a:hover {
+            color: #e63946;
+        }
+        .blog-card-excerpt {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .blog-card-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 0.8rem;
+            color: #999;
+        }
+        .blog-card-meta i {
+            margin-right: 4px;
+        }
+        .blog-card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #e63946;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: gap 0.3s;
+        }
+        .blog-card-link:hover {
+            gap: 10px;
+        }
+        .page-header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        .page-header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .page-header p {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .breadcrumb {
+            padding: 1rem 0;
+            font-size: 0.85rem;
+            color: #999;
+        }
+        .breadcrumb a {
+            color: #666;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            color: #e63946;
+        }
+        .breadcrumb span {
+            margin: 0 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-bar-track">
+        <span><i class="fas fa-truck"></i> Livraison possible sur toute la France</span>
+        <span><i class="fas fa-tag"></i> Vetements de marque au kilo des 2EUR/kg</span>
+        <span><i class="fas fa-box-open"></i> 1000 cuisines OSKAB neuves — jusqu'a -70%</span>
+        <span><i class="fas fa-shopping-cart"></i> Vente directe — prix casses toute l annee</span>
+        <span><i class="fas fa-truck"></i> Livraison possible sur toute la France</span>
+        <span><i class="fas fa-tag"></i> Vetements de marque au kilo des 2EUR/kg</span>
+        <span><i class="fas fa-box-open"></i> 1000 cuisines OSKAB neuves — jusqu'a -70%</span>
+        <span><i class="fas fa-shopping-cart"></i> Vente directe — prix casses toute l annee</span>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+    <div class="container">
+        <div class="header-main">
+            <a href="index.html" class="logo">
+                <i class="fas fa-warehouse"></i> DESTOCK<span>PRO</span>
+            </a>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Rechercher un produit, une marque, une gamme...">
+                <button aria-label="Rechercher"><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="header-actions">
+                <a href="tel:+33184609300" class="header-action">
+                    <i class="fas fa-phone"></i>
+                    <small>Appeler</small>
+                </a>
+                <a href="#" class="header-action">
+                    <i class="far fa-heart"></i>
+                    <small>Favoris</small>
+                </a>
+                <a href="panier.html" class="header-action" id="headerCartBtn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <small>Panier</small>
+                    <span class="cart-count" id="headerCartCount">0</span>
+                </a>
+            </div>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <nav class="nav-categories">
+            <a href="index.html" class="nav-cat"><i class="fas fa-home"></i> Accueil</a>
+            <a href="vetements.html" class="nav-cat"><i class="fas fa-tshirt"></i> Vetements au Kilo</a>
+            <a href="cuisines.html" class="nav-cat"><i class="fas fa-kitchen-set"></i> Cuisines OSKAB</a>
+            <a href="salles-de-bain.html" class="nav-cat"><i class="fas fa-bath"></i> Salles de Bain</a>
+            <a href="promotions.html" class="nav-cat"><i class="fas fa-percent"></i> Promotions</a>
+            <a href="promotions.html#contact" class="nav-cat"><i class="fas fa-headset"></i> Contact</a>
+            <a href="panier.html" class="nav-cat highlight" id="navCartBtn"><i class="fas fa-shopping-cart"></i> Panier (0)</a>
+        </nav>
+    </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-search">
+        <input type="text" placeholder="Rechercher...">
+    </div>
+    <a href="index.html" class="mobile-link"><i class="fas fa-home"></i> Accueil</a>
+    <a href="vetements.html" class="mobile-link"><i class="fas fa-tshirt"></i> Vetements au Kilo</a>
+    <a href="cuisines.html" class="mobile-link"><i class="fas fa-kitchen-set"></i> Cuisines OSKAB</a>
+    <a href="salles-de-bain.html" class="mobile-link"><i class="fas fa-bath"></i> Salles de Bain</a>
+    <a href="promotions.html" class="mobile-link"><i class="fas fa-percent"></i> Promotions</a>
+    <a href="promotions.html#contact" class="mobile-link"><i class="fas fa-headset"></i> Contact</a>
+</div>
+
+<!-- BREADCRUMB -->
+<div class="container">
+    <div class="breadcrumb">
+        <a href="index.html">Accueil</a> <span>/</span> Blog
+    </div>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+    <div class="container">
+        <h1>Le Blog DestockPro</h1>
+        <p>Guides pratiques, conseils d'achat et astuces pour profiter au maximum du destockage et nos offres.</p>
+    </div>
+</div>
+
+<!-- BLOG GRID -->
+<section class="section">
+    <div class="container">
+        <div class="blog-grid">
+
+            <!-- Article 1 -->
+            <div class="blog-card">
+                <div class="blog-card-img" style="background-image: url('images/blog/vetements-kilo.jpg'); background-size:cover; background-position:center;">
+                    <span class="blog-card-category">Guide</span>
+                </div>
+                <div class="blog-card-body">
+                    <h3><a href="blog/acheter-vetements-au-kilo.html">Comment acheter des vetements au kilo : le guide complet</a></h3>
+                    <p class="blog-card-excerpt">Tout savoir sur l'achat de vetements au poids : ou trouver du stock, comment acheter et nos conseils pour les revendeurs.</p>
+                    <div class="blog-card-meta">
+                        <span><i class="far fa-calendar"></i> 15 mars 2026</span>
+                        <span><i class="far fa-clock"></i> 7 min</span>
+                    </div>
+                    <a href="blog/acheter-vetements-au-kilo.html" class="blog-card-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Article 2 -->
+            <div class="blog-card">
+                <div class="blog-card-img" style="background-image: url('images/blog/guide-cuisines.jpg'); background-size:cover; background-position:center;">
+                    <span class="blog-card-category">Guide</span>
+                </div>
+                <div class="blog-card-body">
+                    <h3><a href="blog/guide-cuisines-oskab.html">Guide des cuisines OSKAB : 15 gammes comparees</a></h3>
+                    <p class="blog-card-excerpt">Decouvrez les 15 gammes de cuisines OSKAB disponibles dans notre entrepot. Comparatif complet pour choisir selon votre style et votre budget.</p>
+                    <div class="blog-card-meta">
+                        <span><i class="far fa-calendar"></i> 10 mars 2026</span>
+                        <span><i class="far fa-clock"></i> 9 min</span>
+                    </div>
+                    <a href="blog/guide-cuisines-oskab.html" class="blog-card-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Article 3 -->
+            <div class="blog-card">
+                <div class="blog-card-img" style="background-image: url('images/blog/revente-vinted.jpg'); background-size:cover; background-position:center;">
+                    <span class="blog-card-category">Conseil</span>
+                </div>
+                <div class="blog-card-body">
+                    <h3><a href="blog/revendre-vetements-vinted.html">Revendre sur Vinted : transformer un lot au kilo en profits</a></h3>
+                    <p class="blog-card-excerpt">Apprenez a acheter des vetements en gros au kilo puis a les revendre piece par piece sur Vinted pour generer des benefices.</p>
+                    <div class="blog-card-meta">
+                        <span><i class="far fa-calendar"></i> 5 mars 2026</span>
+                        <span><i class="far fa-clock"></i> 8 min</span>
+                    </div>
+                    <a href="blog/revendre-vetements-vinted.html" class="blog-card-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Article 4 -->
+            <div class="blog-card">
+                <div class="blog-card-img" style="background-image: url('images/blog/achat-en-ligne.jpg'); background-size:cover; background-position:center;">
+                    <span class="blog-card-category">Tutoriel</span>
+                </div>
+                <div class="blog-card-body">
+                    <h3><a href="blog/comment-acheter-destockpro.html">Comment acheter sur DestockPro : tutoriel pas a pas</a></h3>
+                    <p class="blog-card-excerpt">De la selection des produits a la validation de votre commande, suivez notre tutoriel complet pour acheter sur DestockPro.</p>
+                    <div class="blog-card-meta">
+                        <span><i class="far fa-calendar"></i> 28 fevrier 2026</span>
+                        <span><i class="far fa-clock"></i> 6 min</span>
+                    </div>
+                    <a href="blog/comment-acheter-destockpro.html" class="blog-card-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Article 5 -->
+            <div class="blog-card">
+                <div class="blog-card-img" style="background-image: url('images/blog/montage-cuisine.jpg'); background-size:cover; background-position:center;">
+                    <span class="blog-card-category">Tutoriel</span>
+                </div>
+                <div class="blog-card-body">
+                    <h3><a href="blog/monter-cuisine-kit-guide.html">Monter une cuisine en kit : guide pratique</a></h3>
+                    <p class="blog-card-excerpt">Outils necessaires, etapes de montage, erreurs courantes et quand faire appel a un professionnel. Le guide complet pour installer votre cuisine.</p>
+                    <div class="blog-card-meta">
+                        <span><i class="far fa-calendar"></i> 20 fevrier 2026</span>
+                        <span><i class="far fa-clock"></i> 10 min</span>
+                    </div>
+                    <a href="blog/monter-cuisine-kit-guide.html" class="blog-card-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="container">
+        <h2>Pret a faire de bonnes affaires ?</h2>
+        <p>Decouvrez notre catalogue complet et profitez de prix exceptionnels.</p>
+        <div class="cta-buttons">
+            <a href="cuisines.html" class="btn btn-white btn-lg"><i class="fas fa-shopping-bag"></i> Voir le catalogue</a>
+            <a href="promotions.html#contact" class="btn btn-outline btn-lg" style="color:#fff; border-color: rgba(255,255,255,0.4);"><i class="fas fa-phone"></i> Nous contacter</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-brand"><i class="fas fa-warehouse"></i> DESTOCK<span>PRO</span></div>
+                <p>Votre entrepot de destockage en ligne. Vetements de marque au kilo et cuisines OSKAB neuves a prix casses.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <a href="index.html">Accueil</a>
+                <a href="vetements.html">Vetements au Kilo</a>
+                <a href="cuisines.html">Cuisines OSKAB</a>
+                <a href="salles-de-bain.html">Salles de Bain OSKAB</a>
+                <a href="promotions.html">Promotions</a>
+            </div>
+            <div class="footer-col">
+                <h4>Informations</h4>
+                <a href="promotions.html#faq">FAQ</a>
+                <a href="promotions.html#contact">Contact</a>
+                <a href="cgv.html">Conditions generales</a>
+                <a href="mentions-legales.html">Mentions legales</a>
+                <a href="confidentialite.html">Confidentialite</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 18 Avenue du Clocher, 93600 Aulnay-sous-Bois</p>
+                <p><i class="fas fa-phone"></i> 01 84 60 93 00</p>
+                <p><i class="fas fa-envelope"></i> contact@destockpro.fr</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2026 DestockPro — Tous droits reserves</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DestockPro — Destockage Massif | Vetements au Kilo & Cuisines OSKAB -70%</title>
+    <meta name="description" content="Entrepot de destockage : vetements de marque au kilo et 1000 cuisines OSKAB neuves a prix casses. Vente directe a prix casses.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="DestockPro — Destockage Massif | Vetements au Kilo & Cuisines OSKAB -70%">
+    <meta property="og:description" content="Entrepot de destockage : vetements de marque au kilo et 1000 cuisines OSKAB neuves a prix casses. Vente directe a prix casses.">
+    <meta property="og:image" content="images/cuisines/slider-4.jpg">
+    <meta property="og:url" content="https://destockpro.fr">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="DestockPro">
+    <meta name="theme-color" content="#e02020">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Store",
+        "name": "DestockPro",
+        "description": "Entrepot de destockage : vetements de marque au kilo et 1000 cuisines OSKAB neuves a prix casses.",
+        "url": "https://destockpro.fr",
+        "image": "images/cuisines/slider-4.jpg"
+    }
+    </script>
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-bar-track">
+        <span><i class="fas fa-truck"></i> Livraison possible sur toute la France</span>
+        <span><i class="fas fa-tag"></i> Vetements de marque au kilo des 2EUR/kg</span>
+        <span><i class="fas fa-box-open"></i> 1000 cuisines OSKAB neuves — jusqu'a -70%</span>
+        <span><i class="fas fa-shopping-cart"></i> Vente directe — prix casses toute l annee</span>
+        <span><i class="fas fa-truck"></i> Livraison possible sur toute la France</span>
+        <span><i class="fas fa-tag"></i> Vetements de marque au kilo des 2EUR/kg</span>
+        <span><i class="fas fa-box-open"></i> 1000 cuisines OSKAB neuves — jusqu'a -70%</span>
+        <span><i class="fas fa-shopping-cart"></i> Vente directe — prix casses toute l annee</span>
+    </div>
+</div>
+
+<!-- MEMBER BAR -->
+<div class="member-bar">
+    <div class="container">
+        <span class="member-bar-text"><i class="fas fa-crown"></i> Rejoignez <span>+500 membres</span> et profitez de prix exclusifs</span>
+        <a href="compte.html" class="btn btn-primary btn-sm">Creer mon compte gratuit</a>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+    <div class="container">
+        <div class="header-main">
+            <a href="index.html" class="logo">
+                <i class="fas fa-warehouse"></i> DESTOCK<span>PRO</span>
+            </a>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Rechercher un produit, une marque, une gamme...">
+                <button aria-label="Rechercher"><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="header-actions">
+                <a href="tel:+33184609300" class="header-action">
+                    <i class="fas fa-phone"></i>
+                    <small>Appeler</small>
+                </a>
+                <a href="compte.html" class="header-action">
+                    <i class="fas fa-user"></i>
+                    <small>Compte</small>
+                </a>
+                <a href="#" class="header-action">
+                    <i class="far fa-heart"></i>
+                    <small>Favoris</small>
+                </a>
+                <a href="panier.html" class="header-action" id="headerCartBtn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <small>Panier</small>
+                    <span class="cart-count" id="headerCartCount">0</span>
+                </a>
+            </div>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <nav class="nav-categories">
+            <a href="index.html" class="nav-cat active"><i class="fas fa-home"></i> Accueil</a>
+            <a href="vetements.html" class="nav-cat"><i class="fas fa-tshirt"></i> Vetements au Kilo</a>
+            <a href="cuisines.html" class="nav-cat"><i class="fas fa-kitchen-set"></i> Cuisines OSKAB</a>
+            <a href="salles-de-bain.html" class="nav-cat"><i class="fas fa-bath"></i> Salles de Bain</a>
+            <a href="promotions.html" class="nav-cat"><i class="fas fa-percent"></i> Promotions</a>
+            <a href="promotions.html#contact" class="nav-cat"><i class="fas fa-headset"></i> Contact</a>
+            <a href="panier.html" class="nav-cat highlight" id="navCartBtn"><i class="fas fa-shopping-cart"></i> Panier (0)</a>
+        </nav>
+    </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-search">
+        <input type="text" placeholder="Rechercher...">
+    </div>
+    <a href="index.html" class="mobile-link active"><i class="fas fa-home"></i> Accueil</a>
+    <a href="vetements.html" class="mobile-link"><i class="fas fa-tshirt"></i> Vetements au Kilo</a>
+    <a href="cuisines.html" class="mobile-link"><i class="fas fa-kitchen-set"></i> Cuisines OSKAB</a>
+    <a href="salles-de-bain.html" class="mobile-link"><i class="fas fa-bath"></i> Salles de Bain</a>
+    <a href="promotions.html" class="mobile-link"><i class="fas fa-percent"></i> Promotions</a>
+    <a href="promotions.html#contact" class="mobile-link"><i class="fas fa-headset"></i> Contact</a>
+</div>
+
+<!-- HERO BANNER -->
+<section class="hero-banner">
+    <div class="hero-slide" id="heroSlide1">
+        <div class="hero-slide-bg" style="background-image: url('images/cuisines/slider-4.jpg');"></div>
+        <div class="hero-slide-content">
+            <div class="hero-tag">Liquidation totale</div>
+            <h1>1000 Cuisines OSKAB neuves a -70%</h1>
+            <p>Cuisines completes en kit, neuves et emballees. 15 gammes du moderne au classique. Prix entrepot.</p>
+            <div class="hero-buttons">
+                <a href="cuisines.html" class="btn btn-primary btn-lg">Voir les cuisines</a>
+                <a href="cuisines.html" class="btn btn-white btn-lg"><i class="fas fa-shopping-cart"></i> Acheter maintenant</a>
+            </div>
+        </div>
+    </div>
+    <div class="hero-dots">
+        <button class="hero-dot active"></button>
+        <button class="hero-dot"></button>
+        <button class="hero-dot"></button>
+    </div>
+</section>
+
+<!-- TRUST STRIP ENHANCED -->
+<section class="trust-strip-enhanced">
+    <div class="container">
+        <div class="trust-enhanced-item">
+            <div class="trust-icon-box"><i class="fas fa-shield-halved"></i></div>
+            <div><h4>Produits neufs</h4><p>100% authentiques avec etiquettes</p></div>
+        </div>
+        <div class="trust-enhanced-item">
+            <div class="trust-icon-box"><i class="fas fa-truck-fast"></i></div>
+            <div><h4>Livraison France</h4><p>Retrait entrepot ou livraison</p></div>
+        </div>
+        <div class="trust-enhanced-item">
+            <div class="trust-icon-box"><i class="fas fa-rotate-left"></i></div>
+            <div><h4>Satisfait ou rembourse</h4><p>14 jours pour changer d'avis</p></div>
+        </div>
+        <div class="trust-enhanced-item">
+            <div class="trust-icon-box"><i class="fas fa-lock"></i></div>
+            <div><h4>Paiement securise</h4><p>Vos donnees sont protegees</p></div>
+        </div>
+        <div class="trust-enhanced-item">
+            <div class="trust-icon-box"><i class="fas fa-headset"></i></div>
+            <div><h4>Service client</h4><p>Reponse sous 24h</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="section reveal">
+    <div class="container">
+        <div class="section-head">
+            <h2>Nos univers</h2>
+        </div>
+        <div class="cat-grid">
+            <a href="vetements.html" class="cat-card">
+                <div class="cat-card-bg" style="background-image: url('images/vetements/lot-femme.jpg'); background-size:cover; background-position:center;"></div>
+                <div class="cat-card-overlay"></div>
+                <span class="cat-card-count">6 lots</span>
+                <div class="cat-card-content">
+                    <h3>Vetements Femme</h3>
+                    <p>Des 2EUR/kg</p>
+                </div>
+            </a>
+            <a href="vetements.html" class="cat-card">
+                <div class="cat-card-bg" style="background-image: url('images/vetements/lot-homme.jpg'); background-size:cover; background-position:center;"></div>
+                <div class="cat-card-overlay"></div>
+                <span class="cat-card-count">5 lots</span>
+                <div class="cat-card-content">
+                    <h3>Vetements Homme</h3>
+                    <p>Des 2EUR/kg</p>
+                </div>
+            </a>
+            <a href="cuisines.html" class="cat-card">
+                <div class="cat-card-bg" style="background-image: url('images/cuisines/slider-4.jpg');"></div>
+                <div class="cat-card-overlay"></div>
+                <span class="cat-card-count">1000 pieces</span>
+                <div class="cat-card-content">
+                    <h3>Cuisines OSKAB</h3>
+                    <p>Jusqu'a -70%</p>
+                </div>
+            </a>
+            <a href="vetements.html" class="cat-card">
+                <div class="cat-card-bg" style="background-image: url('images/vetements/lot-manteaux.jpg'); background-size:cover; background-position:center;"></div>
+                <div class="cat-card-overlay"></div>
+                <span class="cat-card-count">3 lots</span>
+                <div class="cat-card-content">
+                    <h3>Manteaux & Vestes</h3>
+                    <p>Des 5EUR/kg</p>
+                </div>
+            </a>
+            <a href="salles-de-bain.html" class="cat-card">
+                <div class="cat-card-bg" style="background-image: url('images/sdb/sdb-1.jpeg'); background-size:cover; background-position:center;"></div>
+                <div class="cat-card-overlay"></div>
+                <span class="cat-card-count">200 pieces</span>
+                <div class="cat-card-content">
+                    <h3>Salles de Bain OSKAB</h3>
+                    <p>Jusqu'a -70%</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- VENTES FLASH - VETEMENTS -->
+<section class="section section-gray reveal">
+    <div class="container">
+        <div class="section-head">
+            <h2>Vetements au kilo — Arrivage massif</h2>
+            <a href="vetements.html" class="see-all">Tout voir <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="product-grid">
+            <!-- Produit 1 -->
+            <div class="product-card" data-category="femme">
+                <div class="product-img" style="padding-top: 80%;">
+                    <img src="images/vetements/lot-femme.jpg" alt="Lot 50kg vetements femme neufs robes tops pantalons destockage">
+                    <div class="product-badges">
+                        <span class="badge badge-red">Vente flash</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-sm" data-add-cart="vet-001"><i class="fas fa-cart-plus"></i> Ajouter</button>
+                        <button class="btn btn-white btn-sm" aria-label="Ajouter aux favoris" data-favorite="lot-femme-50kg"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-brand">Lot Vetements</span>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><span class="stars-count">(47)</span></div>
+                    <h3 class="product-name">Lot 50kg — Vetements Femme Mix Saisons</h3>
+                    <p class="product-desc">Robes, tops, pantalons, jupes. Marques milieu de gamme</p>
+                    <div class="product-meta">
+                        <span class="product-tag"><i class="fas fa-weight-hanging"></i> 50 kg</span>
+                        <span class="product-tag"><i class="fas fa-tag"></i> Neuf</span>
+                        <span class="product-tag">~200 pieces</span>
+                    </div>
+                    <div class="product-pricing">
+                        <span class="price-current">2EUR/kg</span>
+                        <span class="price-save">Lot 100EUR</span>
+                    </div>
+                    <div class="fomo-bar">
+                        <span class="fomo-viewers"><span class="fomo-dot"></span> 8 personnes regardent</span>
+                        <span class="fomo-stock"><i class="fas fa-fire"></i> Plus que 3 lots</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 2 -->
+            <div class="product-card" data-category="homme">
+                <div class="product-img" style="padding-top: 80%;">
+                    <img src="images/vetements/lot-homme.jpg" alt="Lot 50kg vetements homme neufs chemises jeans polos destockage">
+                    <div class="product-badges">
+                        <span class="badge badge-green">Nouveau</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-sm" data-add-cart="vet-002"><i class="fas fa-cart-plus"></i> Ajouter</button>
+                        <button class="btn btn-white btn-sm" aria-label="Ajouter aux favoris" data-favorite="lot-homme-50kg"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-brand">Lot Vetements</span>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><span class="stars-count">(47)</span></div>
+                    <h3 class="product-name">Lot 50kg — Vetements Homme Casual & Business</h3>
+                    <p class="product-desc">Chemises, polos, jeans, chinos, blazers</p>
+                    <div class="product-meta">
+                        <span class="product-tag"><i class="fas fa-weight-hanging"></i> 50 kg</span>
+                        <span class="product-tag"><i class="fas fa-tag"></i> Neuf</span>
+                        <span class="product-tag">~180 pieces</span>
+                    </div>
+                    <div class="product-pricing">
+                        <span class="price-current">2EUR/kg</span>
+                        <span class="price-save">Lot 100EUR</span>
+                    </div>
+                    <div class="fomo-bar">
+                        <span class="fomo-viewers"><span class="fomo-dot"></span> 5 personnes regardent</span>
+                        <span class="fomo-stock"><i class="fas fa-fire"></i> Plus que 4 lots</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 3 -->
+            <div class="product-card" data-category="enfant">
+                <div class="product-img" style="padding-top: 80%;">
+                    <img src="images/vetements/lot-enfant.jpg" alt="Lot 30kg vetements enfant neufs 0-14 ans destockage">
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-sm" data-add-cart="vet-003"><i class="fas fa-cart-plus"></i> Ajouter</button>
+                        <button class="btn btn-white btn-sm" aria-label="Ajouter aux favoris" data-favorite="lot-enfant-30kg"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-brand">Lot Vetements</span>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><span class="stars-count">(47)</span></div>
+                    <h3 class="product-name">Lot 30kg — Vetements Enfant 0 a 14 ans</h3>
+                    <p class="product-desc">Bodies, t-shirts, pantalons, robes, pyjamas</p>
+                    <div class="product-meta">
+                        <span class="product-tag"><i class="fas fa-weight-hanging"></i> 30 kg</span>
+                        <span class="product-tag"><i class="fas fa-tag"></i> Neuf</span>
+                        <span class="product-tag">~250 pieces</span>
+                    </div>
+                    <div class="product-pricing">
+                        <span class="price-current">3EUR/kg</span>
+                        <span class="price-save">Lot 90EUR</span>
+                    </div>
+                    <div class="fomo-bar">
+                        <span class="fomo-viewers"><span class="fomo-dot"></span> 3 personnes regardent</span>
+                        <span class="fomo-stock"><i class="fas fa-fire"></i> Plus que 6 lots</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 4 -->
+            <div class="product-card" data-category="manteaux">
+                <div class="product-img" style="padding-top: 80%;">
+                    <img src="images/vetements/lot-manteaux.jpg" alt="Lot 40kg manteaux et vestes hiver neufs doudounes parkas">
+                    <div class="product-badges">
+                        <span class="badge badge-orange">Populaire</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-sm" data-add-cart="vet-004"><i class="fas fa-cart-plus"></i> Ajouter</button>
+                        <button class="btn btn-white btn-sm" aria-label="Ajouter aux favoris" data-favorite="lot-manteaux-40kg"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-brand">Lot Vetements</span>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><span class="stars-count">(47)</span></div>
+                    <h3 class="product-name">Lot 40kg — Manteaux & Vestes Hiver</h3>
+                    <p class="product-desc">Doudounes, parkas, trenchs, manteaux laine</p>
+                    <div class="product-meta">
+                        <span class="product-tag"><i class="fas fa-weight-hanging"></i> 40 kg</span>
+                        <span class="product-tag"><i class="fas fa-tag"></i> Neuf</span>
+                        <span class="product-tag">~60 pieces</span>
+                    </div>
+                    <div class="product-pricing">
+                        <span class="price-current">5EUR/kg</span>
+                        <span class="price-save">Lot 200EUR</span>
+                    </div>
+                    <div class="fomo-bar">
+                        <span class="fomo-viewers"><span class="fomo-dot"></span> 12 personnes regardent</span>
+                        <span class="fomo-stock"><i class="fas fa-fire"></i> Plus que 2 lots</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROMO BANNER -->
+<section class="section-sm reveal">
+    <div class="container">
+        <div class="promo-banner">
+            <div>
+                <h3>Cuisines OSKAB — Jusqu'a -70% sur prix catalogue</h3>
+                <p>1000 cuisines completes en kit, neuves et emballees. 15 gammes disponibles.</p>
+            </div>
+            <a href="cuisines.html" class="btn btn-white btn-lg">Decouvrir</a>
+        </div>
+    </div>
+</section>
+
+<!-- CUISINES OSKAB -->
+<section class="section reveal">
+    <div class="container">
+        <div class="section-head">
+            <h2>Cuisines OSKAB — Best-sellers</h2>
+            <a href="cuisines.html" class="see-all">Les 15 gammes <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="product-grid">
+            <!-- Cuisine 1 -->
+            <div class="product-card" data-category="helia">
+                <div class="product-img">
+                    <img src="images/cuisines/slider-4.jpg" alt="Cuisine OSKAB HELIA Noir Mat moderne sans poignee destockage -70%">
+                    <div class="product-badges">
+                        <span class="badge badge-red">Best-seller</span>
+                    </div>
+                    <span class="badge-discount">-70%</span>
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-sm" data-add-cart="cui-001"><i class="fas fa-cart-plus"></i> Ajouter</button>
+                        <button class="btn btn-white btn-sm" aria-label="Ajouter aux favoris" data-favorite="cuisine-helia-noir"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-brand">OSKAB</span>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><span class="stars-count">(62)</span></div>
+                    <h3 class="product-name">HELIA Noir Mat</h3>
+                    <p class="product-desc">Cuisine moderne, facades noires mates sans poignee</p>
+                    <div class="product-pricing">
+                        <span class="price-current">1 350EUR</span>
+                        <span class="price-original">4 500EUR</span>
+                        <span class="price-save">-70%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cuisine 2 -->
+            <div class="product-card" data-category="ipoma">
+                <div class="product-img">
+                    <img src="images/cuisines/acc-realisations.jpg" alt="Cuisine OSKAB IPOMA Blanc Brillant laquee contemporaine">
+                    <div class="product-badges">
+                        <span class="badge badge-green">Nouveau</span>
+                    </div>
+                    <span class="badge-discount">-70%</span>
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-sm" data-add-cart="cui-002"><i class="fas fa-cart-plus"></i> Ajouter</button>
+                        <button class="btn btn-white btn-sm" aria-label="Ajouter aux favoris" data-favorite="cuisine-ipoma-blanc"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-brand">OSKAB</span>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><span class="stars-count">(38)</span></div>
+                    <h3 class="product-name">IPOMA Blanc Brillant</h3>
+                    <p class="product-desc">Cuisine contemporaine, finition laquee haute brillance</p>
+                    <div class="product-pricing">
+                        <span class="price-current">1 140EUR</span>
+                        <span class="price-original">3 800EUR</span>
+                        <span class="price-save">-70%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cuisine 3 -->
+            <div class="product-card" data-category="ginko">
+                <div class="product-img">
+                    <img src="images/cuisines/project-cuisine.jpeg" alt="Cuisine OSKAB GINKO Bois Naturel style scandinave chene">
+                    <span class="badge-discount">-70%</span>
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-sm" data-add-cart="cui-003"><i class="fas fa-cart-plus"></i> Ajouter</button>
+                        <button class="btn btn-white btn-sm" aria-label="Ajouter aux favoris" data-favorite="cuisine-ginko-bois"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-brand">OSKAB</span>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><span class="stars-count">(29)</span></div>
+                    <h3 class="product-name">GINKO Bois Naturel</h3>
+                    <p class="product-desc">Esprit scandinave, chene naturel, poignees integrees</p>
+                    <div class="product-pricing">
+                        <span class="price-current">1 560EUR</span>
+                        <span class="price-original">5 200EUR</span>
+                        <span class="price-save">-70%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cuisine 4 -->
+            <div class="product-card" data-category="bora">
+                <div class="product-img">
+                    <img src="images/cuisines/project-relooking.jpeg" alt="Cuisine OSKAB BORA Bleu Nuit design mat tendance">
+                    <div class="product-badges">
+                        <span class="badge badge-orange">Tendance</span>
+                    </div>
+                    <span class="badge-discount">-70%</span>
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-sm" data-add-cart="cui-004"><i class="fas fa-cart-plus"></i> Ajouter</button>
+                        <button class="btn btn-white btn-sm" aria-label="Ajouter aux favoris" data-favorite="cuisine-bora-bleu"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-brand">OSKAB</span>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><span class="stars-count">(45)</span></div>
+                    <h3 class="product-name">BORA Bleu Nuit</h3>
+                    <p class="product-desc">Cuisine design, couleur tendance, finition mate</p>
+                    <div class="product-pricing">
+                        <span class="price-current">1 470EUR</span>
+                        <span class="price-original">4 900EUR</span>
+                        <span class="price-save">-70%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="stock-counter reveal" style="margin-top:16px;">
+            <div class="stock-info"><span class="stock-text">Stock restant</span><span class="stock-number">847 / 1000</span></div>
+            <div class="stock-bar"><div class="stock-fill" style="width: 84.7%"></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- COMMENT CA MARCHE -->
+<section class="section section-gray reveal">
+    <div class="container">
+        <div class="section-head-center">
+            <h2>Comment acheter ?</h2>
+            <p>Achetez en 4 etapes simples sur notre boutique en ligne.</p>
+        </div>
+        <div class="steps-row">
+            <div class="step-card">
+                <div class="step-num">1</div>
+                <div class="step-icon"><i class="fas fa-search"></i></div>
+                <h3>Parcourez le catalogue</h3>
+                <p>Explorez nos lots de vetements au kilo et nos cuisines OSKAB a prix casses.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">2</div>
+                <div class="step-icon"><i class="fas fa-cart-plus"></i></div>
+                <h3>Ajoutez au panier</h3>
+                <p>Selectionnez les produits qui vous interessent et ajoutez-les a votre panier.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">3</div>
+                <div class="step-icon"><i class="fas fa-trophy"></i></div>
+                <h3>Validez votre commande</h3>
+                <p>Finalisez votre achat en toute securite. Paiement simple et rapide.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">4</div>
+                <div class="step-icon"><i class="fas fa-truck-fast"></i></div>
+                <h3>Recuperez vos achats</h3>
+                <p>Retrait a notre entrepot ou livraison sur devis partout en France.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CHIFFRES -->
+<section class="section-dark section-sm">
+    <div class="container">
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-value">1000+</div>
+                <div class="stat-label">Cuisines en stock</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">15</div>
+                <div class="stat-label">Gammes OSKAB</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">Tonnes</div>
+                <div class="stat-label">De vetements neufs</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">-70%</div>
+                <div class="stat-label">Sur prix catalogue</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- POUR QUI -->
+<section class="section reveal">
+    <div class="container">
+        <div class="section-head-center">
+            <h2>Qui sont nos acheteurs ?</h2>
+            <p>Professionnels et particuliers, tout le monde y trouve son compte.</p>
+        </div>
+        <div class="features-row">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-store"></i></div>
+                <h3>Revendeurs & Friperies</h3>
+                <p>Lots au kilo pour alimenter votre boutique avec des marques a forte marge.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-hard-hat"></i></div>
+                <h3>Cuisinistes & Artisans</h3>
+                <p>Cuisines OSKAB neuves a prix d'usine pour vos chantiers et clients.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-house-user"></i></div>
+                <h3>Particuliers</h3>
+                <p>Equipez votre maison ou renouvelez votre garde-robe a prix imbattable.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-boxes-stacked"></i></div>
+                <h3>Grossistes</h3>
+                <p>Lots volumineux disponibles. Offres sur mesure pour gros volumes.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GALERIE ENTREPOT -->
+<section class="section section-gray reveal">
+    <div class="container">
+        <div class="section-head">
+            <h2>Notre entrepot en images</h2>
+        </div>
+        <div class="gallery-grid">
+            <img src="images/depot/entrepot-oskab.jpg" alt="Entrepot DestockPro avec cuisines OSKAB sur palettes a Aulnay-sous-Bois" loading="lazy">
+            <img src="images/depot/stock-entrepot.jpg" alt="Stock cuisines sur palettes" loading="lazy">
+            <img src="images/depot/stock-2.jpg" alt="Meubles de cuisine emballes" loading="lazy">
+            <img src="images/cuisines/slider-2.jpg" alt="Cuisine blanche avec plan bois" loading="lazy">
+            <img src="images/cuisines/project-cuisine.jpeg" alt="Cuisine design bois et noir" loading="lazy">
+            <img src="images/cuisines/acc-realisations.jpg" alt="Realisation cuisine blanche" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<!-- TEMOIGNAGES CLIENTS -->
+<section class="section reveal">
+    <div class="container">
+        <div class="section-head-center">
+            <h2>Ils nous font confiance</h2>
+            <p>Plus de 500 clients satisfaits. Decouvrez leurs temoignages.</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-text">J'ai achete une cuisine HELIA Noir pour mon appartement. Qualite identique au neuf, emballage d'origine intact. Economie de plus de 3000 euros par rapport au prix catalogue.</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">ML</div>
+                    <div class="testimonial-info">
+                        <h4>Marie L.</h4>
+                        <p>Cuisines OSKAB — Paris</p>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">Je gere une friperie et j'achete regulierement des lots au kilo chez DestockPro. La qualite est constante, les marques sont bonnes, et le prix au kilo est imbattable. Mon meilleur fournisseur.</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">KD</div>
+                    <div class="testimonial-info">
+                        <h4>Karim D.</h4>
+                        <p>Vetements au Kilo — Lyon</p>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">Cuisiniste independant, j'ai equipe 3 chantiers avec des cuisines OSKAB achetees ici. Mes clients sont ravis de la qualite et moi de la marge. Je recommande vivement.</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">PB</div>
+                    <div class="testimonial-info">
+                        <h4>Philippe B.</h4>
+                        <p>Cuisines OSKAB — Bordeaux</p>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PARRAINAGE -->
+<section class="section-sm">
+    <div class="container">
+        <div class="referral-banner">
+            <div class="referral-icon"><i class="fas fa-gift"></i></div>
+            <div>
+                <div class="referral-reward">10EUR offerts</div>
+                <h3>Parrainez vos proches, gagnez des reductions</h3>
+                <p>Invitez un ami a decouvrir DestockPro. Vous recevez 10EUR de reduction et votre filleul aussi.</p>
+                <div class="referral-code-box">
+                    <span class="referral-code">DESTOCKPRO10</span>
+                    <button class="btn btn-white btn-sm" onclick="navigator.clipboard.writeText('DESTOCKPRO10'); this.textContent='Copie !'; setTimeout(()=>this.textContent='Copier',2000)"><i class="fas fa-copy"></i> Copier</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="container">
+        <h2>Pret a faire de bonnes affaires ?</h2>
+        <p>Decouvrez notre catalogue complet et profitez de prix exceptionnels sur des produits neufs de qualite.</p>
+        <div class="cta-buttons">
+            <a href="cuisines.html" class="btn btn-white btn-lg"><i class="fas fa-shopping-bag"></i> Voir le catalogue</a>
+            <a href="promotions.html#contact" class="btn btn-outline btn-lg" style="color:#fff; border-color: rgba(255,255,255,0.4);"><i class="fas fa-phone"></i> Nous contacter</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-brand"><i class="fas fa-warehouse"></i> DESTOCK<span>PRO</span></div>
+                <p>Votre entrepot de destockage en ligne. Vetements de marque au kilo et cuisines OSKAB neuves a prix casses.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <a href="index.html">Accueil</a>
+                <a href="vetements.html">Vetements au Kilo</a>
+                <a href="cuisines.html">Cuisines OSKAB</a>
+                <a href="salles-de-bain.html">Salles de Bain</a>
+                <a href="promotions.html">Promotions</a>
+                <a href="a-propos.html">A propos</a>
+                <a href="blog.html">Blog</a>
+            </div>
+            <div class="footer-col">
+                <h4>Informations</h4>
+                <a href="promotions.html#faq">FAQ</a>
+                <a href="promotions.html#contact">Contact</a>
+                <a href="cgv.html">CGV</a>
+                <a href="mentions-legales.html">Mentions legales</a>
+                <a href="confidentialite.html">Confidentialite</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 18 Avenue du Clocher, 93600 Aulnay-sous-Bois</p>
+                <p><i class="fas fa-phone"></i> 01 84 60 93 00</p>
+                <p><i class="fas fa-envelope"></i> contact@destockpro.fr</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2026 DestockPro — Tous droits reserves</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

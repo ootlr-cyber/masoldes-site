@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposition Nom de Domaine — M.A.SOLDES × Claude Agency</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+  :root {
+    --red: #e02020;
+    --dark: #0f0f1a;
+    --gray: #6b7280;
+    --light: #f8f9fa;
+    --border: #e5e7eb;
+    --gold: #f59e0b;
+    --green: #10b981;
+    --blue: #3b82f6;
+    --purple: #8b5cf6;
+    --orange: #f97316;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', -apple-system, sans-serif; background: #fff; color: #111; line-height: 1.6; }
+
+  /* ── COVER ── */
+  .cover {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 55%, #16213e 100%);
+    display: flex; flex-direction: column; justify-content: space-between;
+    padding: 60px; position: relative; overflow: hidden; page-break-after: always;
+  }
+  .cover::before {
+    content: ''; position: absolute; top: -200px; right: -200px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(224,32,32,0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .cover::after {
+    content: ''; position: absolute; bottom: -150px; left: -100px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(59,130,246,0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .cover-top { display: flex; justify-content: space-between; align-items: flex-start; position: relative; z-index: 1; }
+  .agency-logo { display: flex; align-items: center; gap: 12px; }
+  .agency-logo-icon { width: 44px; height: 44px; background: var(--red); border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+  .agency-logo-icon svg { width: 24px; height: 24px; fill: none; stroke: #fff; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .agency-name { font-size: 18px; font-weight: 700; color: #fff; }
+  .agency-name span { color: var(--red); }
+  .cover-date { color: rgba(255,255,255,0.35); font-size: 13px; text-align: right; }
+  .cover-main { position: relative; z-index: 1; text-align: center; padding: 20px 0; }
+  .cover-tag { display: inline-block; background: rgba(224,32,32,0.15); color: #ff7070; border: 1px solid rgba(224,32,32,0.3); padding: 6px 18px; border-radius: 100px; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 28px; }
+  .cover-title { font-size: clamp(38px, 5.5vw, 68px); font-weight: 900; color: #fff; letter-spacing: -2px; line-height: 1.1; margin-bottom: 16px; }
+  .cover-title .hl { background: linear-gradient(135deg, #e02020, #ff6b6b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .cover-sub { font-size: 19px; color: rgba(255,255,255,0.45); max-width: 500px; margin: 0 auto 44px; }
+  .cover-divider { width: 56px; height: 3px; background: var(--red); margin: 0 auto 44px; border-radius: 2px; }
+  .cover-client { display: inline-flex; align-items: center; gap: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 20px 32px; border-radius: 16px; }
+  .cover-client-icon { width: 48px; height: 48px; background: linear-gradient(135deg, #e02020, #ff6b6b); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; }
+  .cover-client-name { color: #fff; font-weight: 700; font-size: 18px; }
+  .cover-client-sub { color: rgba(255,255,255,0.35); font-size: 13px; }
+  .cover-bottom { display: flex; justify-content: space-between; align-items: flex-end; position: relative; z-index: 1; }
+  .cover-conf { color: rgba(255,255,255,0.2); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; }
+  .cover-pg { color: rgba(255,255,255,0.2); font-size: 13px; }
+
+  /* ── LAYOUT ── */
+  .section { padding: 72px 64px; max-width: 1040px; margin: 0 auto; }
+  .section-label { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+  .section-num { width: 32px; height: 32px; background: var(--red); color: #fff; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0; }
+  .section-cat { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gray); }
+  .section-title { font-size: 34px; font-weight: 800; letter-spacing: -1px; color: var(--dark); margin-bottom: 10px; line-height: 1.2; }
+  .section-title em { font-style: normal; color: var(--red); }
+  .section-intro { font-size: 16px; color: var(--gray); max-width: 620px; margin-bottom: 44px; line-height: 1.75; }
+  hr.divider { border: none; border-top: 1px solid var(--border); margin: 0 64px; }
+
+  /* ── BADGE ── */
+  .badge { display: inline-block; padding: 3px 9px; border-radius: 100px; font-size: 11px; font-weight: 600; letter-spacing: 0.2px; }
+  .bg-red { background: rgba(224,32,32,0.1); color: #c00; }
+  .bg-green { background: rgba(16,185,129,0.1); color: #047857; }
+  .bg-blue { background: rgba(59,130,246,0.1); color: #1d4ed8; }
+  .bg-gold { background: rgba(245,158,11,0.12); color: #92400e; }
+  .bg-purple { background: rgba(139,92,246,0.1); color: #6d28d9; }
+  .bg-orange { background: rgba(249,115,22,0.1); color: #c2410c; }
+  .bg-gray { background: #f1f3f5; color: #555; }
+
+  /* ── SCORE PILLS ── */
+  .score { display: inline-flex; align-items: center; gap: 5px; padding: 4px 11px; border-radius: 100px; font-size: 12px; font-weight: 700; }
+  .score-S { background: rgba(224,32,32,0.12); color: #b91c1c; }
+  .score-A { background: rgba(16,185,129,0.12); color: #065f46; }
+  .score-B { background: rgba(245,158,11,0.12); color: #92400e; }
+  .score-C { background: #f1f3f5; color: #555; }
+
+  /* ── CATEGORY HEADER ── */
+  .cat-header {
+    display: flex; align-items: center; gap: 14px;
+    padding: 14px 20px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    font-size: 13px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase;
+  }
+  .cat-header-red { background: rgba(224,32,32,0.07); color: var(--red); border: 1px solid rgba(224,32,32,0.15); }
+  .cat-header-blue { background: rgba(59,130,246,0.07); color: #1d4ed8; border: 1px solid rgba(59,130,246,0.15); }
+  .cat-header-green { background: rgba(16,185,129,0.07); color: #047857; border: 1px solid rgba(16,185,129,0.15); }
+  .cat-header-purple { background: rgba(139,92,246,0.07); color: #6d28d9; border: 1px solid rgba(139,92,246,0.15); }
+  .cat-header-gold { background: rgba(245,158,11,0.07); color: #92400e; border: 1px solid rgba(245,158,11,0.2); }
+  .cat-header-orange { background: rgba(249,115,22,0.07); color: #c2410c; border: 1px solid rgba(249,115,22,0.15); }
+
+  /* ── DOMAIN ROW ── */
+  .domain-rows { display: flex; flex-direction: column; gap: 10px; margin-bottom: 40px; }
+
+  .drow {
+    display: grid;
+    grid-template-columns: 36px 220px 1fr auto auto;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    background: #fff;
+    border: 1.5px solid var(--border);
+    border-radius: 14px;
+    transition: border-color 0.15s;
+  }
+  .drow:hover { border-color: #d1d5db; }
+  .drow.top { border-color: var(--red); background: linear-gradient(135deg, #fff8f8, #fff); }
+  .drow.strong { border-color: #d1fae5; background: #f0fdf4; }
+  .drow.available { background: #fff; }
+
+  .drow-rank { font-size: 12px; font-weight: 700; color: var(--gray); text-align: center; }
+  .drow.top .drow-rank { color: var(--red); }
+
+  .drow-domain { font-family: 'Courier New', monospace; font-size: 17px; font-weight: 700; color: var(--dark); }
+  .drow.top .drow-domain { color: var(--red); }
+  .drow.strong .drow-domain { color: #047857; }
+
+  .drow-desc { font-size: 13px; color: var(--gray); line-height: 1.4; }
+
+  .drow-badges { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+
+  .drow-score { text-align: right; flex-shrink: 0; }
+
+  /* ── STAR SCORE ── */
+  .stars { color: var(--gold); font-size: 13px; letter-spacing: 1px; }
+  .stars-empty { color: #d1d5db; }
+
+  /* ── TOP 5 CARDS ── */
+  .top5-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 48px; }
+
+  .top5-card {
+    border-radius: 20px;
+    padding: 28px;
+    border: 2px solid var(--border);
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  .top5-card.winner {
+    border-color: var(--red);
+    background: linear-gradient(145deg, #fff5f5, #fff);
+    grid-column: 1 / -1;
+  }
+  .top5-card.winner::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--red), #ff6b6b);
+  }
+
+  .top5-label { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gray); margin-bottom: 8px; }
+  .top5-card.winner .top5-label { color: var(--red); }
+
+  .top5-domain { font-family: 'Courier New', monospace; font-size: 28px; font-weight: 900; color: var(--dark); letter-spacing: -0.5px; margin-bottom: 8px; }
+  .top5-card.winner .top5-domain { font-size: 36px; color: var(--red); }
+
+  .top5-desc { font-size: 14px; color: var(--gray); line-height: 1.6; margin-bottom: 16px; }
+
+  .top5-meta { display: flex; justify-content: space-between; align-items: center; }
+  .top5-price { font-size: 18px; font-weight: 800; color: var(--dark); }
+  .top5-price span { font-size: 12px; font-weight: 400; color: var(--gray); }
+
+  /* ── COMPARISON TABLE ── */
+  .comp-table { width: 100%; border-collapse: collapse; border-radius: 16px; overflow: hidden; border: 1px solid var(--border); margin-bottom: 48px; }
+  .comp-table th { background: var(--dark); color: #fff; padding: 13px 18px; text-align: left; font-size: 12px; font-weight: 600; letter-spacing: 0.3px; white-space: nowrap; }
+  .comp-table td { padding: 14px 18px; font-size: 13px; color: #374151; border-bottom: 1px solid var(--border); background: #fff; }
+  .comp-table tr:last-child td { border-bottom: none; }
+  .comp-table tr.hl td { background: #fff8f8; font-weight: 600; color: var(--dark); }
+  .comp-table tr:nth-child(even):not(.hl) td { background: #fafafa; }
+
+  /* ── RECOMMENDATION BOX ── */
+  .rec-box {
+    background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+    border-radius: 24px; padding: 48px; color: #fff; margin-bottom: 48px;
+    position: relative; overflow: hidden;
+  }
+  .rec-box::before { content: ''; position: absolute; top: -120px; right: -120px; width: 350px; height: 350px; background: radial-gradient(circle, rgba(224,32,32,0.22), transparent 70%); }
+  .rec-box::after { content: ''; position: absolute; bottom: -80px; left: -80px; width: 250px; height: 250px; background: radial-gradient(circle, rgba(59,130,246,0.12), transparent 70%); }
+  .rec-label { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 12px; position: relative; z-index: 1; }
+  .rec-domain { font-size: 52px; font-weight: 900; letter-spacing: -2px; font-family: 'Courier New', monospace; color: #fff; margin-bottom: 8px; position: relative; z-index: 1; }
+  .rec-domain span { color: var(--red); }
+  .rec-why { font-size: 16px; color: rgba(255,255,255,0.55); max-width: 520px; line-height: 1.75; margin-bottom: 36px; position: relative; z-index: 1; }
+  .rec-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; position: relative; z-index: 1; }
+  .rec-stat { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 16px; }
+  .rec-stat-val { font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 4px; }
+  .rec-stat-lbl { font-size: 11px; color: rgba(255,255,255,0.35); }
+
+  /* ── STRATEGY ── */
+  .strategy-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-bottom: 48px; }
+  .strat-card { border: 2px solid var(--border); border-radius: 20px; padding: 28px 24px; text-align: center; background: #fff; }
+  .strat-card.main { border-color: var(--red); background: linear-gradient(145deg, #fff5f5, #fff); position: relative; }
+  .strat-card.main::before { content: 'PRINCIPAL'; position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: var(--red); color: #fff; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; padding: 4px 12px; border-radius: 100px; }
+  .strat-icon { font-size: 30px; margin-bottom: 12px; }
+  .strat-name { font-size: 14px; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
+  .strat-domain { font-family: 'Courier New', monospace; font-size: 20px; font-weight: 800; color: var(--dark); margin: 12px 0 4px; }
+  .strat-card.main .strat-domain { color: var(--red); }
+  .strat-price { font-size: 13px; color: var(--gray); margin-bottom: 16px; }
+  .strat-desc { font-size: 13px; color: #555; line-height: 1.5; }
+
+  /* ── STEPS ── */
+  .steps { display: flex; flex-direction: column; gap: 14px; margin-bottom: 48px; }
+  .step { display: flex; gap: 18px; padding: 22px; background: var(--light); border: 1px solid var(--border); border-radius: 14px; align-items: flex-start; }
+  .step-n { width: 34px; height: 34px; background: var(--red); color: #fff; border-radius: 9px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; flex-shrink: 0; }
+  .step-title { font-size: 15px; font-weight: 700; color: var(--dark); margin-bottom: 3px; }
+  .step-desc { font-size: 13px; color: var(--gray); line-height: 1.5; }
+  .step-tag { display: inline-block; margin-top: 7px; background: rgba(59,130,246,0.1); color: #1d4ed8; padding: 2px 10px; border-radius: 100px; font-size: 11px; font-weight: 600; }
+
+  /* ── CONTACT ── */
+  .contact-box { background: var(--light); border: 1px solid var(--border); border-radius: 20px; padding: 44px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-bottom: 56px; }
+  .contact-title { font-size: 26px; font-weight: 800; color: var(--dark); letter-spacing: -0.5px; margin-bottom: 10px; line-height: 1.2; }
+  .contact-title em { font-style: normal; color: var(--red); }
+  .contact-text { font-size: 14px; color: var(--gray); line-height: 1.7; margin-bottom: 20px; }
+  .btn { display: inline-block; background: var(--red); color: #fff; padding: 13px 26px; border-radius: 11px; font-size: 14px; font-weight: 700; text-decoration: none; }
+  .contact-rows { display: flex; flex-direction: column; gap: 12px; }
+  .contact-row { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--dark); }
+  .contact-icon { width: 34px; height: 34px; background: rgba(224,32,32,0.08); border-radius: 9px; display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
+
+  /* ── FOOTER ── */
+  .doc-footer { background: var(--dark); padding: 28px 64px; display: flex; justify-content: space-between; align-items: center; }
+  .footer-l { color: rgba(255,255,255,0.35); font-size: 13px; }
+  .footer-l strong { color: #fff; }
+  .footer-r { color: rgba(255,255,255,0.2); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; }
+
+  .page-break { page-break-before: always; }
+
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .cover { min-height: 100vh; }
+    .page-break { page-break-before: always; }
+  }
+  @media (max-width: 680px) {
+    .cover, .section { padding: 32px 20px; }
+    .drow { grid-template-columns: 28px 1fr; }
+    .drow-desc, .drow-badges { display: none; }
+    .top5-grid, .strategy-grid { grid-template-columns: 1fr; }
+    .top5-card.winner { grid-column: 1; }
+    .rec-stats { grid-template-columns: 1fr 1fr; }
+    .contact-box { grid-template-columns: 1fr; }
+    .doc-footer { flex-direction: column; gap: 8px; text-align: center; padding: 20px; }
+    hr.divider { margin: 0 20px; }
+    .comp-table { font-size: 11px; }
+    .comp-table th, .comp-table td { padding: 10px 10px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════ COVER ═══════════════════ -->
+<div class="cover">
+  <div class="cover-top">
+    <div class="agency-logo">
+      <div class="agency-logo-icon">
+        <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      </div>
+      <div class="agency-name">Claude<span>Agency</span></div>
+    </div>
+    <div class="cover-date">Proposition commerciale confidentielle<br>Mars 2026</div>
+  </div>
+
+  <div class="cover-main">
+    <div class="cover-tag">Stratégie Nom de Domaine</div>
+    <h1 class="cover-title">
+      <span class="hl">22 propositions</span><br>
+      de noms de domaine
+    </h1>
+    <p class="cover-sub">Analyse complète, scoring SEO, stratégie de marque et recommandation finale</p>
+    <div class="cover-divider"></div>
+    <div class="cover-client">
+      <div class="cover-client-icon">🏭</div>
+      <div>
+        <div class="cover-client-name">M.A.SOLDES</div>
+        <div class="cover-client-sub">SARL · 93600 Aulnay-sous-Bois · Destockage mode & habitat</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cover-bottom">
+    <div class="cover-conf">Confidentiel · Usage exclusif M.A.SOLDES</div>
+    <div class="cover-pg">1 / 5</div>
+  </div>
+</div>
+
+<!-- ═══════════════════ PAGE 2 — LISTING COMPLET ═══════════════════ -->
+<div class="section page-break">
+  <div class="section-label">
+    <div class="section-num">01</div>
+    <div class="section-cat">Les 22 propositions</div>
+  </div>
+  <h2 class="section-title">Listing complet des<br><em>noms disponibles</em></h2>
+  <p class="section-intro">22 noms classés par catégorie stratégique. Chaque nom a été évalué sur 5 critères : mémorisation, SEO, image, évolutivité et disponibilité estimée.</p>
+
+  <!-- CATÉGORIE 1 — DESTOCK GÉNÉRALISTE -->
+  <div class="cat-header cat-header-red">🔴 Catégorie 1 — Destockage généraliste <span style="margin-left:auto;opacity:.6;font-size:11px;font-weight:400;text-transform:none;letter-spacing:0">Tous produits · Recommandée</span></div>
+  <div class="domain-rows">
+
+    <div class="drow top">
+      <div class="drow-rank">⭐</div>
+      <div class="drow-domain">destockpro.fr</div>
+      <div class="drow-desc">Court, professionnel, mots-clés SEO top. Neutre, fonctionne pour tous vos produits. Évolutif.</div>
+      <div class="drow-badges"><span class="badge bg-red">Recommandé #1</span><span class="badge bg-green">SEO ✓✓✓</span><span class="badge bg-blue">11 car.</span></div>
+      <div class="drow-score"><span class="score score-S">⭐ 95/100</span></div>
+    </div>
+
+    <div class="drow">
+      <div class="drow-rank">2</div>
+      <div class="drow-domain">destockage-direct.fr</div>
+      <div class="drow-desc">Évoque la vente sans intermédiaire, directement depuis l'entrepôt. Clair et commercial.</div>
+      <div class="drow-badges"><span class="badge bg-green">SEO ✓✓✓</span><span class="badge bg-gray">Tiret</span></div>
+      <div class="drow-score"><span class="score score-A">82/100</span></div>
+    </div>
+
+    <div class="drow">
+      <div class="drow-rank">3</div>
+      <div class="drow-domain">lentrepot-destock.fr</div>
+      <div class="drow-desc">Associe le format entrepôt physique au destockage. Authentique, ancré dans la réalité du client.</div>
+      <div class="drow-badges"><span class="badge bg-green">Image entrepôt</span><span class="badge bg-gray">Tiret</span></div>
+      <div class="drow-score"><span class="score score-A">79/100</span></div>
+    </div>
+
+    <div class="drow">
+      <div class="drow-rank">4</div>
+      <div class="drow-domain">destockexpress.fr</div>
+      <div class="drow-desc">Connotation rapidité + destockage. Fonctionne très bien en publicité. Sans tiret.</div>
+      <div class="drow-badges"><span class="badge bg-green">SEO ✓✓</span><span class="badge bg-blue">14 car.</span></div>
+      <div class="drow-score"><span class="score score-A">77/100</span></div>
+    </div>
+
+    <div class="drow">
+      <div class="drow-rank">5</div>
+      <div class="drow-domain">granddestock.fr</div>
+      <div class="drow-desc">"Grand" renforce l'impression de gros volumes et de grandes affaires. Connoté promotionnel.</div>
+      <div class="drow-badges"><span class="badge bg-green">SEO ✓✓</span><span class="badge bg-blue">12 car.</span></div>
+      <div class="drow-score"><span class="score score-B">74/100</span></div>
+    </div>
+
+  </div>
+
+  <!-- CATÉGORIE 2 — NOM DE SOCIÉTÉ -->
+  <div class="cat-header cat-header-purple">🟣 Catégorie 2 — Identité légale (votre société)</div>
+  <div class="domain-rows">
+
+    <div class="drow strong">
+      <div class="drow-rank">6</div>
+      <div class="drow-domain">masoldes.fr</div>
+      <div class="drow-desc">Reprend votre raison sociale exacte. Cohérence légale totale (Kbis, factures, tampon).</div>
+      <div class="drow-badges"><span class="badge bg-purple">Kbis</span><span class="badge bg-green">Court · 8 car.</span></div>
+      <div class="drow-score"><span class="score score-A">85/100</span></div>
+    </div>
+
+    <div class="drow">
+      <div class="drow-rank">7</div>
+      <div class="drow-domain">ma-soldes.fr</div>
+      <div class="drow-desc">Variante avec tiret, lisibilité légèrement améliorée. À réserver si masoldes.fr est pris.</div>
+      <div class="drow-badges"><span class="badge bg-gray">Bouclier</span></div>
+      <div class="drow-score"><span class="score score-B">68/100</span></div>
+    </div>
+
+    <div class="drow">
+      <div class="drow-rank">8</div>
+      <div class="drow-domain">masoldes-aulnay.fr</div>
+      <div class="drow-desc">Ajoute la ville — utile pour le SEO local, rassure les clients Île-de-France.</div>
+      <div class="drow-badges"><span class="badge bg-blue">SEO local</span><span class="badge bg-gray">Long</span></div>
+      <div class="drow-score"><span class="score score-B">66/100</span></div>
+    </div>
+
+  </div>
+
+  <!-- CATÉGORIE 3 — MODE & VÊTEMENTS -->
+  <div class="cat-header cat-header-orange">🟠 Catégorie 3 — Mode & vêtements de marque</div>
+  <div class="domain-rows">
+
+    <div class="drow">
+      <div class="drow-rank">9</div>
+      <div class="drow-domain">marques-au-kilo.fr</div>
+      <div class="drow-desc">Exactement ce que vous vendez. Ultra descriptif, excellent pour Google sur cette requête.</div>
+      <div class="drow-badges"><span class="badge bg-orange">Niche mode</span><span class="badge bg-green">SEO ✓✓✓</span></div>
+      <div class="drow-score"><span class="score score-A">81/100</span></div>
+    </div>
+
+    <div class="drow">
+      <div class="drow-rank">10</div>
+      <div class="drow-domain">vetements-destock.fr</div>
+      <div class="drow-desc">Combine les 2 mots-clés principaux de la catégorie. Direct, efficace en SEO et en pub.</div>
+      <div class="drow-badges"><span class="badge bg-orange">Mode</span><span class="badge bg-green">SEO ✓✓</span><span class="badge bg-gray">Tiret</span></div>
+      <div class="drow-score"><span class="score score-A">78/100</span></div>
+    </div>
+
+    <div class="drow">
+      <div class="drow-rank">11</div>
+      <div class="drow-domain">stockmarques.fr</div>
+      <div class="drow-desc">Court, sans tiret, combine stock + marques. Mémorisable, professionnel.</div>
+      <div class="drow-badges"><span class="badge bg-orange">Mode</span><span class="badge bg-blue">12 car.</span></div>
+      <div class="drow-score"><span class="score score-A">76/100</span></div>
+    </div>
+
+    <div class="drow">
+      <div class="drow-rank">12</div>
+      <div class="drow-domain">lotstextiles.fr</div>
+      <div class="drow-desc">Terminologie B2B du secteur textile. Attire les revendeurs professionnels également.</div>
+      <div class="drow-badges"><span class="badge bg-purple">B2B</span><span class="badge bg-blue">12 car.</span></div>
+      <div class="drow-score"><span class="score score-B">71/100</span></div>
+    </div>
+
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════ PAGE 3 — SUITE LISTING ═══════════════════ -->
+<div class="section">
+
+  <!-- CATÉGORIE 4 — CUISINE & HABITAT -->
+  <div class="cat-header cat-header-blue">🔵 Catégorie 4 — Cuisine & habitat OSKAB</div>
+  <div class="domain-rows">
+
+    <div class="drow strong">
+      <div class="drow-rank">13</div>
+      <div class="drow-domain">cuisine-destock.fr</div>
+      <div class="drow-desc">Top requête Google pour votre activité cuisine. Très cherché par les particuliers en rénovation.</div>
+      <div class="drow-badges"><span class="badge bg-blue">Cuisine</span><span class="badge bg-green">SEO ✓✓✓</span><span class="badge bg-gray">Tiret</span></div>
+      <div class="drow-score"><span class="score score-A">84/100</span></div>
+    </div>
+
+    <div class="drow">
+      <div class="drow-rank">14</div>
+      <div class="drow-domain">cuisinesoldes.fr</div>
+      <div class="drow-desc">Sans tiret, mémorisable, clair. Combine cuisine + soldes pour un positionnement prix fort.</div>
+      <div class="drow-badges"><span class="badge bg-blue">Cuisine</span><span class="badge bg-green">SEO ✓✓</span><span class="badge bg-blue">14 car.</span></div>
+      <div class="drow-score"><span class="score score-A">80/100</span></div>
+    </div>
+
+    <div class="drow">
+      <div class="drow-rank">15</div>
+      <div class="drow-domain">oskabdestock.fr</div>
+      <div class="drow-desc">Utilise la notoriété de la marque OSKAB. Fort pour les clients qui cherchent spécifiquement OSKAB.</div>
+      <div class="drow-badges"><span class="badge bg-blue">Marque OSKAB</span><span class="badge bg-gold">Notoriété</span></div>
+      <div class="drow-score"><span class="score score-B">73/100</span></div>
+    </div>
+
+    <div class="drow">
+      <div class="drow-rank">16</div>
+      <div class="drow-domain">liquidation-cuisine.fr</div>
+      <div class="drow-desc">Très explicite. Fort volume de recherche sur "liquidation cuisine". Idéal pour Google Ads.</div>
+      <div class="drow-badges"><span class="badge bg-blue">Cuisine</span><span class="badge bg-green">SEO ✓✓✓</span><span class="badge bg-gray">Tiret · Long</span></div>
+      <div class="drow-score"><span class="score score-B">72/100</span></div>
+    </div>
+
+    <div class="drow">
+      <div class="drow-rank">17</div>
+      <div class="drow-domain">habitat-destock.fr</div>
+      <div class="drow-desc">Couvre cuisine + salles de bain + potentiel extension déco/ameublement. Évolutif.</div>
+      <div class="drow-badges"><span class="badge bg-blue">Habitat</span><span class="badge bg-green">Évolutif</span><span class="badge bg-gray">Tiret</span></div>
+      <div class="drow-score"><span class="score score-B">71/100</span></div>
+    </div>
+
+  </div>
+
+  <!-- CATÉGORIE 5 — MIXTE MODE + HABITAT -->
+  <div class="cat-header cat-header-green">🟢 Catégorie 5 — Multi-univers (mode + habitat)</div>
+  <div class="domain-rows">
+
+    <div class="drow">
+      <div class="drow-rank">18</div>
+      <div class="drow-domain">lestockparisien.fr</div>
+      <div class="drow-desc">Ancrage géographique Île-de-France fort. Crée un sentiment d'authenticité locale. Original.</div>
+      <div class="drow-badges"><span class="badge bg-green">Identité locale</span><span class="badge bg-gold">Original</span></div>
+      <div class="drow-score"><span class="score score-B">75/100</span></div>
+    </div>
+
+    <div class="drow">
+      <div class="drow-rank">19</div>
+      <div class="drow-domain">stockfactory.fr</div>
+      <div class="drow-desc">Connotation entrepôt industriel. Moderne, court, sans tiret. Bon pour une image haut de gamme décalé.</div>
+      <div class="drow-badges"><span class="badge bg-green">Premium</span><span class="badge bg-blue">12 car.</span></div>
+      <div class="drow-score"><span class="score score-B">74/100</span></div>
+    </div>
+
+    <div class="drow">
+      <div class="drow-rank">20</div>
+      <div class="drow-domain">bonaffaire.fr</div>
+      <div class="drow-desc">Positionnement "bonne affaire" très clair. Évoque immédiatement les prix bas. Très mémorisable.</div>
+      <div class="drow-badges"><span class="badge bg-gold">Prix bas</span><span class="badge bg-blue">10 car.</span></div>
+      <div class="drow-score"><span class="score score-B">72/100</span></div>
+    </div>
+
+  </div>
+
+  <!-- CATÉGORIE 6 — CRÉATIFS / PREMIUM -->
+  <div class="cat-header cat-header-gold">🟡 Catégorie 6 — Noms créatifs & premium</div>
+  <div class="domain-rows">
+
+    <div class="drow">
+      <div class="drow-rank">21</div>
+      <div class="drow-domain">overdose-soldes.fr</div>
+      <div class="drow-desc">Décalé, mémorisable, viral. Fonctionne bien sur les réseaux sociaux. Public jeune.</div>
+      <div class="drow-badges"><span class="badge bg-gold">Viral</span><span class="badge bg-orange">Réseaux sociaux</span></div>
+      <div class="drow-score"><span class="score score-B">69/100</span></div>
+    </div>
+
+    <div class="drow">
+      <div class="drow-rank">22</div>
+      <div class="drow-domain">stockinside.fr</div>
+      <div class="drow-desc">Anglicisme moderne, connotation "accès privilégié". Se démarque dans un secteur très générique.</div>
+      <div class="drow-badges"><span class="badge bg-gold">Premium</span><span class="badge bg-blue">11 car.</span></div>
+      <div class="drow-score"><span class="score score-B">67/100</span></div>
+    </div>
+
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════ PAGE 4 — TABLEAU + RECOMMANDATION ═══════════════════ -->
+<div class="section page-break">
+  <div class="section-label">
+    <div class="section-num">02</div>
+    <div class="section-cat">Top 5 comparatif</div>
+  </div>
+  <h2 class="section-title">Les 5 finalistes<br><em>en détail</em></h2>
+  <p class="section-intro">Parmi les 22 propositions, voici les 5 qui obtiennent les meilleurs scores sur l'ensemble des critères.</p>
+
+  <div class="top5-grid">
+
+    <div class="top5-card winner">
+      <div class="top5-label">🏆 Notre recommandation — Score S</div>
+      <div class="top5-domain">destockpro.fr</div>
+      <p class="top5-desc">Le meilleur équilibre du marché. Court, sans tiret, contient le mot-clé "destock" n°1 de votre secteur, et le suffixe "pro" renforce la crédibilité auprès des professionnels comme des particuliers. Neutre sur les 3 catégories de produits. Parfait pour déposer une marque à l'INPI.</p>
+      <div class="top5-meta">
+        <div>
+          <span class="badge bg-red">SEO ✓✓✓</span>&nbsp;
+          <span class="badge bg-blue">11 car. sans tiret</span>&nbsp;
+          <span class="badge bg-green">Marque déposable</span>&nbsp;
+          <span class="badge bg-gold">Évolutif</span>
+        </div>
+        <div class="top5-price">~12€ <span>/ an</span></div>
+      </div>
+    </div>
+
+    <div class="top5-card">
+      <div class="top5-label">🥈 Alternative A — Score A · 85/100</div>
+      <div class="top5-domain">masoldes.fr</div>
+      <p class="top5-desc">Reprend votre raison sociale exacte. Idéal si vous souhaitez une cohérence totale entre le site et vos documents légaux (factures, Kbis, tampon). Ultra court (8 caractères).</p>
+      <div class="top5-meta">
+        <div><span class="badge bg-purple">Cohérence Kbis</span>&nbsp;<span class="badge bg-green">8 car.</span></div>
+        <div class="top5-price">~12€ <span>/ an</span></div>
+      </div>
+    </div>
+
+    <div class="top5-card">
+      <div class="top5-label">🥉 Alternative B — Score A · 84/100</div>
+      <div class="top5-domain">cuisine-destock.fr</div>
+      <p class="top5-desc">Si les cuisines OSKAB sont votre activité principale en volume, ce domaine capture exactement les requêtes Google de vos clients. SEO immédiat et fort.</p>
+      <div class="top5-meta">
+        <div><span class="badge bg-blue">Cuisine SEO ✓✓✓</span></div>
+        <div class="top5-price">~12€ <span>/ an</span></div>
+      </div>
+    </div>
+
+    <div class="top5-card">
+      <div class="top5-label">4e — Score A · 82/100</div>
+      <div class="top5-domain">destockage-direct.fr</div>
+      <p class="top5-desc">Évoque directement la vente depuis l'entrepôt, sans intermédiaire. Très commercial, bon pour les campagnes publicitaires.</p>
+      <div class="top5-meta">
+        <div><span class="badge bg-green">SEO ✓✓✓</span></div>
+        <div class="top5-price">~12€ <span>/ an</span></div>
+      </div>
+    </div>
+
+    <div class="top5-card">
+      <div class="top5-label">5e — Score A · 81/100</div>
+      <div class="top5-domain">marques-au-kilo.fr</div>
+      <p class="top5-desc">Unique et ultra descriptif pour le segment vêtements. Si les vêtements au kilo sont votre différenciation principale, ce nom est imbattable en SEO sur cette niche.</p>
+      <div class="top5-meta">
+        <div><span class="badge bg-orange">Mode kilo ✓✓✓</span></div>
+        <div class="top5-price">~12€ <span>/ an</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- TABLEAU COMPARATIF -->
+  <h3 style="font-size:20px;font-weight:700;color:var(--dark);margin-bottom:16px;">Comparatif des 5 finalistes</h3>
+  <table class="comp-table">
+    <thead>
+      <tr>
+        <th>Domaine</th>
+        <th>Score</th>
+        <th>Longueur</th>
+        <th>SEO</th>
+        <th>Mémorisation</th>
+        <th>Multi-produits</th>
+        <th>Marque INPI</th>
+        <th>Prix/an</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="hl">
+        <td><strong>destockpro.fr</strong> ⭐</td>
+        <td><span class="score score-S">S · 95</span></td>
+        <td>11 car. ✓✓✓</td>
+        <td>✓✓✓ Excellent</td>
+        <td>✓✓✓ Très facile</td>
+        <td>✓✓✓ Parfait</td>
+        <td>✓ Oui</td>
+        <td>~12€</td>
+      </tr>
+      <tr>
+        <td>masoldes.fr</td>
+        <td><span class="score score-A">A · 85</span></td>
+        <td>8 car. ✓✓✓</td>
+        <td>✓ Moyen</td>
+        <td>✓✓✓ Ultra facile</td>
+        <td>✓✓✓ Parfait</td>
+        <td>✓ Oui</td>
+        <td>~12€</td>
+      </tr>
+      <tr>
+        <td>cuisine-destock.fr</td>
+        <td><span class="score score-A">A · 84</span></td>
+        <td>16 car. ✗</td>
+        <td>✓✓✓ Cuisine</td>
+        <td>✓✓ Moyen</td>
+        <td>✗ Cuisine seul.</td>
+        <td>— Difficile</td>
+        <td>~12€</td>
+      </tr>
+      <tr>
+        <td>destockage-direct.fr</td>
+        <td><span class="score score-A">A · 82</span></td>
+        <td>19 car. ✗</td>
+        <td>✓✓✓ Excellent</td>
+        <td>✓ Correct</td>
+        <td>✓✓✓ Parfait</td>
+        <td>— Difficile</td>
+        <td>~12€</td>
+      </tr>
+      <tr>
+        <td>marques-au-kilo.fr</td>
+        <td><span class="score score-A">A · 81</span></td>
+        <td>15 car. ✗</td>
+        <td>✓✓✓ Mode</td>
+        <td>✓✓ Bien</td>
+        <td>✗ Mode seul.</td>
+        <td>— Difficile</td>
+        <td>~12€</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════ PAGE 5 — STRATÉGIE + NEXT STEPS ═══════════════════ -->
+<div class="section page-break">
+  <div class="section-label">
+    <div class="section-num">03</div>
+    <div class="section-cat">Notre recommandation</div>
+  </div>
+  <h2 class="section-title">Verdict &<br><em>stratégie domaine</em></h2>
+  <p class="section-intro">Notre recommandation finale et la stratégie de protection de votre identité digitale.</p>
+
+  <div class="rec-box">
+    <div class="rec-label">Domaine principal recommandé</div>
+    <div class="rec-domain">destock<span>pro</span>.fr</div>
+    <p class="rec-why">Court, mémorisable, riche en mots-clés SEO, professionnel et 100% neutre sur vos 3 univers produits. Évolutif si vous ajoutez d'autres catégories. Déposable à l'INPI. Le meilleur ratio impact / prix du marché à ~12€/an.</p>
+    <div class="rec-stats">
+      <div class="rec-stat"><div class="rec-stat-val">95/100</div><div class="rec-stat-lbl">Score global</div></div>
+      <div class="rec-stat"><div class="rec-stat-val">11 car.</div><div class="rec-stat-lbl">Ultra court</div></div>
+      <div class="rec-stat"><div class="rec-stat-val">~12€</div><div class="rec-stat-lbl">Par an</div></div>
+      <div class="rec-stat"><div class="rec-stat-val">~4 sem.</div><div class="rec-stat-lbl">1res positions SEO</div></div>
+    </div>
+  </div>
+
+  <h3 style="font-size:20px;font-weight:700;color:var(--dark);margin-bottom:8px;">Stratégie des 3 domaines</h3>
+  <p style="font-size:14px;color:var(--gray);margin-bottom:24px;">Nous recommandons de réserver 3 domaines complémentaires pour une protection complète. Budget total : <strong>~39€/an</strong>.</p>
+
+  <div class="strategy-grid">
+    <div class="strat-card main">
+      <div class="strat-icon">🏆</div>
+      <div class="strat-name">Domaine principal</div>
+      <div class="strat-domain">destockpro.fr</div>
+      <div class="strat-price">~12€ / an · OVH</div>
+      <div class="strat-desc">Utilisé sur toutes vos communications, votre site, vos e-mails pro et vos publicités.</div>
+    </div>
+    <div class="strat-card">
+      <div class="strat-icon">🛡️</div>
+      <div class="strat-name">Domaine bouclier</div>
+      <div class="strat-domain">masoldes.fr</div>
+      <div class="strat-price">~12€ / an · Redirection auto</div>
+      <div class="strat-desc">Cohérence avec votre Kbis. Redirige vers destockpro.fr. Protège votre nom légal.</div>
+    </div>
+    <div class="strat-card">
+      <div class="strat-icon">🌐</div>
+      <div class="strat-name">Protection .com</div>
+      <div class="strat-domain">destockpro.com</div>
+      <div class="strat-price">~15€ / an · Redirection auto</div>
+      <div class="strat-desc">Évite qu'un concurrent achète le .com. Redirige vers destockpro.fr automatiquement.</div>
+    </div>
+  </div>
+
+  <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:14px;padding:22px;margin-bottom:40px;display:flex;gap:14px;align-items:flex-start;">
+    <div style="font-size:22px;flex-shrink:0">💡</div>
+    <div>
+      <div style="font-size:14px;font-weight:700;color:#065f46;margin-bottom:4px">Budget total : ~39€ / an pour une protection complète</div>
+      <div style="font-size:13px;color:#047857;line-height:1.6">3 domaines × ~13€ = tranquillité totale. C'est la même stratégie qu'utilisent Carrefour, Leclerc ou Amazon : le domaine principal + les variantes qui toutes redirigent vers lui. Aucun concurrent ne pourra profiter de votre notoriété.</div>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-bottom:14px">
+    <div class="section-num">04</div>
+    <div class="section-cat">Prochaines étapes</div>
+  </div>
+  <h3 style="font-size:22px;font-weight:700;color:var(--dark);margin-bottom:20px;">Ce qui se passe après votre validation</h3>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-n">1</div>
+      <div>
+        <div class="step-title">Vous validez votre nom préféré</div>
+        <div class="step-desc">Répondez à ce document en indiquant votre choix parmi les 22 propositions. Nous vérifions la disponibilité exacte en temps réel sur OVH et WHOIS.</div>
+        <span class="step-tag">Jour J · 5 min</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-n">2</div>
+      <div>
+        <div class="step-title">Réservation et configuration technique</div>
+        <div class="step-desc">Achat du domaine, configuration DNS, redirections HTTPS et certificat SSL automatique. Votre domaine sera actif et sécurisé.</div>
+        <span class="step-tag">Jour J · 2h</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-n">3</div>
+      <div>
+        <div class="step-title">Mise en ligne du site sur votre domaine</div>
+        <div class="step-desc">Déploiement sur Netlify (CDN mondial, HTTPS automatique). Votre site sera accessible partout en France et à l'international sous 24h.</div>
+        <span class="step-tag">Jour J+1</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-n">4</div>
+      <div>
+        <div class="step-title">E-mails professionnels @votredomaine.fr</div>
+        <div class="step-desc">Configuration de contact@, commandes@, admin@ via Google Workspace ou OVH Mail Pro. Finies les adresses Gmail — vous passez au niveau professionnel.</div>
+        <span class="step-tag">Jour J+2 · À partir de 2€/mois</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-n">5</div>
+      <div>
+        <div class="step-title">Soumission Google + 1res positions SEO</div>
+        <div class="step-desc">Déclaration du site à Google Search Console, soumission du sitemap.xml (déjà prêt). Premières positions attendues sur vos mots-clés cibles sous 4 à 8 semaines.</div>
+        <span class="step-tag">Semaine 1</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ CONTACT ═══════════════════ -->
+<div class="section" style="padding-top:0">
+  <div class="contact-box">
+    <div>
+      <h3 class="contact-title">Prêt à<br><em>choisir votre nom ?</em></h3>
+      <p class="contact-text">Répondez-nous simplement en indiquant le numéro de votre domaine préféré (ex : "Option 1 — destockpro.fr"). Nous nous chargeons de tout sous 24h.</p>
+      <a href="mailto:contact@claude-agency.fr" class="btn">Valider mon choix →</a>
+    </div>
+    <div class="contact-rows">
+      <div class="contact-row"><div class="contact-icon">📧</div>contact@claude-agency.fr</div>
+      <div class="contact-row"><div class="contact-icon">📞</div>Disponible sur rendez-vous</div>
+      <div class="contact-row"><div class="contact-icon">⏱️</div>Réponse sous 24h garantie</div>
+      <div class="contact-row"><div class="contact-icon">🔒</div>Document confidentiel — usage exclusif M.A.SOLDES</div>
+      <div class="contact-row"><div class="contact-icon">📅</div>Proposition valable 30 jours · Mars 2026</div>
+    </div>
+  </div>
+</div>
+
+<div class="doc-footer">
+  <div class="footer-l">Préparé par <strong>Claude Agency</strong> · Pour M.A.SOLDES SARL · Mars 2026</div>
+  <div class="footer-r">Confidentiel · Ne pas diffuser</div>
+</div>
+
+</body>
+</html>

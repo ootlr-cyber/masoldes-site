@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuisine HELIA Blanc Mat — 10 éléments | -68% | DestockPro</title>
+    <meta name="description" content="Cuisine complète HELIA Blanc Mat, 10 éléments, façades sans poignée. Prix catalogue 7 890€, notre prix 2 490€. Stock limité. Pose disponible.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #e63946;
+            --primary-dark: #c1121f;
+            --dark: #1d3557;
+            --accent: #457b9d;
+            --light: #f1faee;
+            --bg: #ffffff;
+            --text: #2b2d42;
+            --text-light: #6c757d;
+            --border: #e9ecef;
+            --success: #2d6a4f;
+            --warning: #e9c46a;
+            --shadow: 0 2px 15px rgba(0,0,0,0.08);
+            --shadow-hover: 0 8px 30px rgba(0,0,0,0.12);
+            --radius: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; height: auto; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
+
+        /* ===== PROMO BAR ===== */
+        .promo-bar { background: linear-gradient(90deg, var(--dark) 0%, #264653 100%); color: white; text-align: center; padding: 10px 20px; font-size: 13px; font-weight: 500; letter-spacing: 0.5px; }
+        .promo-bar strong { color: var(--warning); }
+        .promo-bar .countdown { display: inline-block; background: var(--primary); padding: 2px 10px; border-radius: 20px; margin-left: 10px; font-weight: 700; }
+
+        /* ===== HEADER ===== */
+        .header { background: white; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+        .header-top { display: flex; align-items: center; justify-content: space-between; padding: 15px 0; gap: 20px; }
+        .logo { font-size: 28px; font-weight: 900; color: var(--dark); letter-spacing: -1px; }
+        .logo span { color: var(--primary); }
+        .search-bar { flex: 1; max-width: 500px; position: relative; }
+        .search-bar input { width: 100%; padding: 12px 20px 12px 45px; border: 2px solid var(--border); border-radius: 50px; font-size: 14px; font-family: inherit; transition: var(--transition); }
+        .search-bar input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(69,123,157,0.15); }
+        .search-bar i { position: absolute; left: 18px; top: 50%; transform: translateY(-50%); color: var(--text-light); }
+        .header-actions { display: flex; align-items: center; gap: 20px; }
+        .header-actions a { display: flex; flex-direction: column; align-items: center; gap: 3px; font-size: 11px; color: var(--text-light); transition: var(--transition); }
+        .header-actions a:hover { color: var(--primary); }
+        .header-actions a i { font-size: 20px; }
+        .cart-badge { position: relative; }
+        .cart-badge::after { content: '3'; position: absolute; top: -8px; right: -8px; background: var(--primary); color: white; font-size: 10px; font-weight: 700; width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+
+        /* ===== NAV ===== */
+        .nav { background: var(--dark); }
+        .nav-list { display: flex; list-style: none; justify-content: center; gap: 0; }
+        .nav-list li a { display: block; padding: 14px 22px; color: white; font-size: 13px; font-weight: 500; letter-spacing: 0.3px; transition: var(--transition); border-bottom: 3px solid transparent; }
+        .nav-list li a:hover { background: rgba(255,255,255,0.08); border-bottom-color: var(--primary); }
+        .nav-hot { background: var(--primary) !important; font-weight: 700 !important; }
+
+        /* ===== BREADCRUMB ===== */
+        .breadcrumb { padding: 15px 0; font-size: 13px; color: var(--text-light); }
+        .breadcrumb a { color: var(--accent); }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb span { margin: 0 8px; }
+
+        /* ===== PRODUCT PAGE ===== */
+        .product-page { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; padding: 10px 0 60px; }
+
+        /* Gallery */
+        .product-gallery { position: sticky; top: 100px; align-self: start; }
+        .gallery-main {
+            width: 100%; aspect-ratio: 1; background: #f8f9fa; border-radius: var(--radius);
+            display: flex; align-items: center; justify-content: center;
+            border: 1px solid var(--border); position: relative; overflow: hidden; margin-bottom: 15px;
+        }
+        .gallery-main .placeholder { font-size: 120px; color: #dee2e6; }
+        .gallery-main .gallery-badges { position: absolute; top: 15px; left: 15px; display: flex; flex-direction: column; gap: 6px; }
+        .gallery-main .badge { padding: 6px 14px; border-radius: 6px; font-size: 13px; font-weight: 700; }
+        .badge-discount { background: var(--primary); color: white; }
+        .badge-last { background: var(--warning); color: var(--dark); }
+        .gallery-main .gallery-nav {
+            position: absolute; top: 50%; transform: translateY(-50%);
+            width: 40px; height: 40px; background: white; border: none; border-radius: 50%;
+            cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,0.1); display: flex;
+            align-items: center; justify-content: center; transition: var(--transition);
+        }
+        .gallery-main .gallery-nav:hover { background: var(--dark); color: white; }
+        .gallery-main .prev { left: 12px; }
+        .gallery-main .next { right: 12px; }
+        .gallery-zoom { position: absolute; bottom: 15px; right: 15px; width: 36px; height: 36px; background: white; border: none; border-radius: 8px; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center; color: var(--text-light); }
+        .gallery-thumbs { display: flex; gap: 10px; }
+        .gallery-thumb {
+            width: 80px; height: 80px; background: #f8f9fa; border-radius: 8px;
+            border: 2px solid var(--border); cursor: pointer; display: flex;
+            align-items: center; justify-content: center; transition: var(--transition);
+            font-size: 24px; color: #dee2e6;
+        }
+        .gallery-thumb:hover { border-color: var(--accent); }
+        .gallery-thumb.active { border-color: var(--dark); box-shadow: 0 0 0 2px rgba(29,53,87,0.15); }
+
+        /* Product Details */
+        .product-details { }
+        .pd-brand { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent); margin-bottom: 8px; }
+        .pd-name { font-size: 28px; font-weight: 800; color: var(--dark); line-height: 1.3; margin-bottom: 12px; letter-spacing: -0.5px; }
+        .pd-ref { font-size: 12px; color: var(--text-light); margin-bottom: 20px; }
+        .pd-ref span { margin-right: 15px; }
+
+        /* Ratings */
+        .pd-rating { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+        .stars { color: var(--warning); font-size: 15px; }
+        .rating-text { font-size: 13px; color: var(--text-light); }
+
+        /* Pricing */
+        .pd-pricing { background: var(--light); border-radius: var(--radius); padding: 25px; margin-bottom: 25px; border: 1px solid var(--border); }
+        .pd-pricing .promo-tag {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: var(--primary); color: white; padding: 5px 14px;
+            border-radius: 20px; font-size: 13px; font-weight: 700; margin-bottom: 12px;
+        }
+        .pd-pricing .old-price { font-size: 18px; color: var(--text-light); text-decoration: line-through; margin-bottom: 5px; }
+        .pd-pricing .old-price-label { font-size: 12px; color: var(--text-light); }
+        .pd-pricing .new-price { font-size: 42px; font-weight: 900; color: var(--primary); line-height: 1; margin-bottom: 5px; }
+        .pd-pricing .savings-info { font-size: 14px; color: var(--success); font-weight: 600; }
+        .pd-pricing .savings-info i { margin-right: 4px; }
+        .pd-pricing .payment-split {
+            margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border);
+            font-size: 13px; color: var(--text-light); display: flex; align-items: center; gap: 8px;
+        }
+        .pd-pricing .payment-split strong { color: var(--dark); }
+
+        /* Stock */
+        .pd-stock { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+        .stock-indicator {
+            display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600;
+        }
+        .stock-dot { width: 10px; height: 10px; border-radius: 50%; }
+        .stock-dot.orange { background: #e76f51; }
+        .stock-dot.green { background: #2d6a4f; }
+        .stock-dot.red { background: #c1121f; }
+        .stock-bar { flex: 1; height: 6px; background: #e9ecef; border-radius: 3px; overflow: hidden; max-width: 180px; }
+        .stock-bar-fill { height: 100%; border-radius: 3px; background: linear-gradient(90deg, var(--primary) 0%, #e76f51 100%); width: 15%; }
+        .stock-urgency { font-size: 12px; color: var(--primary); font-weight: 600; }
+
+        /* Options */
+        .pd-options { margin-bottom: 25px; }
+        .pd-option-label { font-size: 14px; font-weight: 600; margin-bottom: 10px; color: var(--dark); }
+        .pd-option-label span { font-weight: 400; color: var(--text-light); }
+        .config-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+        .config-chip {
+            padding: 10px 18px; border: 2px solid var(--border); border-radius: 8px;
+            font-size: 13px; font-weight: 500; cursor: pointer; transition: var(--transition);
+            background: white;
+        }
+        .config-chip:hover { border-color: var(--accent); }
+        .config-chip.active { border-color: var(--dark); background: var(--dark); color: white; }
+        .config-chip .chip-price { font-size: 11px; display: block; margin-top: 2px; opacity: 0.7; }
+
+        /* Quantity */
+        .pd-quantity { display: flex; align-items: center; gap: 15px; margin-bottom: 25px; }
+        .qty-control {
+            display: flex; align-items: center; border: 1px solid var(--border); border-radius: 8px;
+            overflow: hidden;
+        }
+        .qty-btn {
+            width: 40px; height: 40px; border: none; background: #f8f9fa; cursor: pointer;
+            font-size: 16px; font-weight: 700; color: var(--dark); transition: var(--transition);
+            display: flex; align-items: center; justify-content: center;
+        }
+        .qty-btn:hover { background: var(--dark); color: white; }
+        .qty-input {
+            width: 50px; height: 40px; border: none; text-align: center; font-size: 15px;
+            font-weight: 600; font-family: inherit; border-left: 1px solid var(--border);
+            border-right: 1px solid var(--border);
+        }
+
+        /* Actions */
+        .pd-actions { display: flex; gap: 12px; margin-bottom: 25px; }
+        .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: 8px; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer; transition: var(--transition); border: none; }
+        .btn-add-cart {
+            flex: 1; padding: 16px 28px; background: var(--primary); color: white;
+            border: none; border-radius: 10px; font-size: 16px; font-weight: 700;
+            font-family: inherit; cursor: pointer; transition: var(--transition);
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+        }
+        .btn-add-cart:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(230,57,70,0.35); }
+        .btn-fav {
+            width: 52px; height: 52px; border: 2px solid var(--border); background: white;
+            border-radius: 10px; cursor: pointer; display: flex; align-items: center;
+            justify-content: center; font-size: 20px; color: var(--text-light); transition: var(--transition);
+        }
+        .btn-fav:hover { border-color: var(--primary); color: var(--primary); }
+
+        /* Pose CTA inline */
+        .pd-pose-cta {
+            background: linear-gradient(135deg, rgba(69,123,157,0.08) 0%, rgba(29,53,87,0.05) 100%);
+            border: 1.5px solid rgba(69,123,157,0.25); border-radius: var(--radius);
+            padding: 20px; margin-bottom: 25px; display: flex; align-items: center; gap: 15px;
+        }
+        .pd-pose-cta i { font-size: 32px; color: var(--accent); }
+        .pd-pose-cta div { flex: 1; }
+        .pd-pose-cta h4 { font-size: 14px; font-weight: 700; color: var(--dark); margin-bottom: 2px; }
+        .pd-pose-cta p { font-size: 12px; color: var(--text-light); }
+        .pd-pose-cta a {
+            padding: 8px 16px; background: var(--accent); color: white; border-radius: 6px;
+            font-size: 12px; font-weight: 600; white-space: nowrap; transition: var(--transition);
+        }
+        .pd-pose-cta a:hover { background: var(--dark); }
+
+        /* Reassurance */
+        .pd-reassurance { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 25px; }
+        .reassurance-item {
+            display: flex; align-items: center; gap: 10px; padding: 12px;
+            background: #f8f9fa; border-radius: 8px; font-size: 12px;
+        }
+        .reassurance-item i { font-size: 18px; color: var(--accent); min-width: 20px; text-align: center; }
+        .reassurance-item strong { display: block; font-size: 13px; color: var(--dark); }
+
+        /* ===== PRODUCT TABS ===== */
+        .product-tabs { padding: 60px 0; border-top: 1px solid var(--border); }
+        .tabs-nav { display: flex; gap: 0; border-bottom: 2px solid var(--border); margin-bottom: 30px; }
+        .tab-btn {
+            padding: 14px 25px; font-size: 14px; font-weight: 600; color: var(--text-light);
+            border: none; background: none; cursor: pointer; position: relative;
+            font-family: inherit; transition: var(--transition);
+        }
+        .tab-btn:hover { color: var(--dark); }
+        .tab-btn.active { color: var(--dark); }
+        .tab-btn.active::after {
+            content: ''; position: absolute; bottom: -2px; left: 0; right: 0;
+            height: 3px; background: var(--primary); border-radius: 2px 2px 0 0;
+        }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
+        /* Description tab */
+        .description-content { max-width: 800px; }
+        .description-content h3 { font-size: 20px; font-weight: 700; color: var(--dark); margin-bottom: 15px; }
+        .description-content p { font-size: 14px; line-height: 1.8; color: var(--text); margin-bottom: 15px; }
+        .specs-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .specs-table tr { border-bottom: 1px solid var(--border); }
+        .specs-table td { padding: 12px 15px; font-size: 13px; }
+        .specs-table td:first-child { font-weight: 600; color: var(--dark); width: 200px; background: #f8f9fa; }
+
+        /* Included items */
+        .included-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 25px; }
+        .included-item {
+            background: #f8f9fa; border-radius: 8px; padding: 20px; text-align: center;
+            border: 1px solid var(--border);
+        }
+        .included-item i { font-size: 28px; color: var(--accent); margin-bottom: 8px; }
+        .included-item h4 { font-size: 13px; font-weight: 600; color: var(--dark); margin-bottom: 3px; }
+        .included-item p { font-size: 11px; color: var(--text-light); }
+
+        /* ===== CROSS-SELL ===== */
+        .cross-sell { padding: 60px 0; background: #f8f9fa; }
+        .section-header { text-align: center; margin-bottom: 40px; }
+        .section-header h2 { font-size: 28px; font-weight: 800; color: var(--dark); margin-bottom: 10px; }
+        .section-header p { font-size: 15px; color: var(--text-light); }
+        .section-header .line { width: 60px; height: 4px; background: var(--primary); margin: 15px auto 0; border-radius: 2px; }
+        .cross-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .cross-card {
+            background: white; border-radius: var(--radius); overflow: hidden;
+            border: 1px solid var(--border); transition: var(--transition);
+        }
+        .cross-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+        .cross-card-img {
+            height: 160px; background: #f8f9fa; display: flex; align-items: center;
+            justify-content: center; font-size: 40px; color: #dee2e6; position: relative;
+        }
+        .cross-card-img .badge { position: absolute; top: 8px; left: 8px; }
+        .cross-card-info { padding: 15px; }
+        .cross-card-info .brand { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); margin-bottom: 4px; }
+        .cross-card-info .name { font-size: 13px; font-weight: 600; color: var(--dark); margin-bottom: 8px; line-height: 1.3; }
+        .cross-card-info .pricing { display: flex; align-items: baseline; gap: 8px; }
+        .cross-card-info .pricing .old { font-size: 12px; color: var(--text-light); text-decoration: line-through; }
+        .cross-card-info .pricing .new { font-size: 18px; font-weight: 800; color: var(--primary); }
+
+        /* ===== NEWSLETTER ===== */
+        .newsletter { background: var(--dark); color: white; padding: 50px 0; text-align: center; }
+        .newsletter h2 { font-size: 28px; font-weight: 800; margin-bottom: 10px; }
+        .newsletter p { font-size: 15px; opacity: 0.7; margin-bottom: 25px; }
+        .newsletter-form { display: flex; max-width: 500px; margin: 0 auto; gap: 10px; }
+        .newsletter-form input { flex: 1; padding: 14px 20px; border: none; border-radius: 8px; font-size: 14px; font-family: inherit; }
+        .newsletter-form button { padding: 14px 28px; background: var(--primary); color: white; border: none; border-radius: 8px; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer; }
+
+        /* ===== FOOTER ===== */
+        .footer { background: #0d1b2a; color: rgba(255,255,255,0.7); padding: 60px 0 30px; }
+        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        .footer h4 { color: white; font-size: 15px; margin-bottom: 18px; font-weight: 600; }
+        .footer p, .footer a { font-size: 13px; line-height: 2; }
+        .footer a:hover { color: white; }
+        .footer-brand .logo { font-size: 24px; margin-bottom: 12px; }
+        .footer-brand p { max-width: 300px; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; font-size: 12px; }
+        .footer-payments { display: flex; gap: 10px; }
+        .footer-payments i { font-size: 28px; opacity: 0.5; }
+
+        /* ===== STICKY MOBILE BAR ===== */
+        .sticky-bar {
+            display: none; position: fixed; bottom: 0; left: 0; right: 0;
+            background: white; border-top: 1px solid var(--border); padding: 12px 20px;
+            z-index: 200; box-shadow: 0 -4px 15px rgba(0,0,0,0.08);
+        }
+        .sticky-bar-inner { display: flex; align-items: center; gap: 12px; }
+        .sticky-bar .sb-price { font-size: 22px; font-weight: 800; color: var(--primary); }
+        .sticky-bar .sb-old { font-size: 12px; color: var(--text-light); text-decoration: line-through; }
+        .sticky-bar .sb-btn {
+            flex: 1; padding: 12px; background: var(--primary); color: white;
+            border: none; border-radius: 8px; font-size: 14px; font-weight: 700;
+            font-family: inherit; cursor: pointer;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .product-page { grid-template-columns: 1fr 1fr; gap: 30px; }
+            .cross-grid { grid-template-columns: repeat(2, 1fr); }
+            .included-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .header-top { flex-wrap: wrap; }
+            .search-bar { order: 3; max-width: 100%; flex-basis: 100%; }
+            .nav-list { overflow-x: auto; justify-content: flex-start; }
+            .nav-list li a { padding: 12px 15px; white-space: nowrap; font-size: 12px; }
+            .product-page { grid-template-columns: 1fr; gap: 25px; }
+            .product-gallery { position: relative; top: 0; }
+            .pd-name { font-size: 22px; }
+            .pd-pricing .new-price { font-size: 32px; }
+            .pd-reassurance { grid-template-columns: 1fr; }
+            .cross-grid { grid-template-columns: repeat(2, 1fr); }
+            .sticky-bar { display: block; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .included-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 480px) {
+            .cross-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .newsletter-form { flex-direction: column; }
+            .gallery-thumbs { overflow-x: auto; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- PROMO BAR -->
+<div class="promo-bar">
+    <strong>LIQUIDATION OSKAB</strong> — Cuisines neuves de marque jusqu'à <strong>-70%</strong> du prix catalogue
+    <span class="countdown"><i class="fas fa-fire"></i> Stock limité</span>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="container">
+        <div class="header-top">
+            <a href="index.html" class="logo">Destock<span>Pro</span></a>
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Rechercher un produit, une gamme, une réf...">
+            </div>
+            <div class="header-actions">
+                <a href="pose.html"><i class="fas fa-tools"></i> Service Pose</a>
+                <a href="#"><i class="fas fa-user"></i> Compte</a>
+                <a href="#"><i class="fas fa-heart"></i> Favoris</a>
+                <a href="#" class="cart-badge"><i class="fas fa-shopping-cart"></i> Panier</a>
+            </div>
+        </div>
+    </div>
+    <nav class="nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="cuisines.html" class="nav-hot"><i class="fas fa-fire"></i> Cuisines OSKAB</a></li>
+                <li><a href="#">Salle de Bains</a></li>
+                <li><a href="#">Plans de Travail</a></li>
+                <li><a href="#">Robinetterie</a></li>
+                <li><a href="#">Accessoires</a></li>
+                <li><a href="#">Peinture & Isolation</a></li>
+                <li><a href="#">Fenêtres</a></li>
+                <li><a href="pose.html">Service de Pose</a></li>
+                <li><a href="#">Promotions</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!-- BREADCRUMB -->
+<div class="container">
+    <div class="breadcrumb">
+        <a href="index.html">Accueil</a> <span>›</span>
+        <a href="cuisines.html">Cuisines OSKAB</a> <span>›</span>
+        <a href="cuisines.html">Gamme HELIA</a> <span>›</span>
+        <strong>Cuisine HELIA Blanc Mat — 10 éléments</strong>
+    </div>
+</div>
+
+<!-- PRODUCT PAGE -->
+<div class="container">
+    <div class="product-page">
+
+        <!-- GALLERY -->
+        <div class="product-gallery">
+            <div class="gallery-main">
+                <div class="placeholder"><i class="fas fa-kitchen-set"></i></div>
+                <div class="gallery-badges">
+                    <span class="badge badge-discount">-68%</span>
+                    <span class="badge badge-last"><i class="fas fa-fire"></i> Dernières pièces</span>
+                </div>
+                <button class="gallery-nav prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="gallery-nav next"><i class="fas fa-chevron-right"></i></button>
+                <button class="gallery-zoom"><i class="fas fa-search-plus"></i></button>
+            </div>
+            <div class="gallery-thumbs">
+                <div class="gallery-thumb active"><i class="fas fa-kitchen-set"></i></div>
+                <div class="gallery-thumb"><i class="fas fa-door-open"></i></div>
+                <div class="gallery-thumb"><i class="fas fa-box-open"></i></div>
+                <div class="gallery-thumb"><i class="fas fa-sink"></i></div>
+                <div class="gallery-thumb"><i class="fas fa-ruler-combined"></i></div>
+                <div class="gallery-thumb"><i class="fas fa-image"></i></div>
+            </div>
+        </div>
+
+        <!-- DETAILS -->
+        <div class="product-details">
+            <div class="pd-brand">OSKAB — Gamme HELIA</div>
+            <h1 class="pd-name">Cuisine complète HELIA Blanc Mat — 10 éléments</h1>
+            <div class="pd-ref">
+                <span>Réf : HELIA-BLC-MAT-10</span>
+                <span>|</span>
+                <span>Gamme : HELIA</span>
+            </div>
+
+            <!-- Rating -->
+            <div class="pd-rating">
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i>
+                </div>
+                <span class="rating-text">4.6/5 — Basé sur les avis oskab.com</span>
+            </div>
+
+            <!-- Pricing -->
+            <div class="pd-pricing">
+                <div class="promo-tag"><i class="fas fa-bolt"></i> LIQUIDATION -68%</div>
+                <div class="old-price-label">Prix catalogue OSKAB</div>
+                <div class="old-price">7 890 €</div>
+                <div class="new-price">2 490 €</div>
+                <div class="savings-info"><i class="fas fa-piggy-bank"></i> Vous économisez 5 400 € sur cette cuisine</div>
+                <div class="payment-split">
+                    <i class="fas fa-credit-card"></i>
+                    ou <strong>3 × 830 €</strong> sans frais avec Alma
+                </div>
+            </div>
+
+            <!-- Stock -->
+            <div class="pd-stock">
+                <div class="stock-indicator">
+                    <span class="stock-dot orange"></span>
+                    <span style="color: #e76f51;">Plus que 4 en stock</span>
+                </div>
+                <div class="stock-bar"><div class="stock-bar-fill"></div></div>
+                <span class="stock-urgency"><i class="fas fa-clock"></i> 3 vendues cette semaine</span>
+            </div>
+
+            <!-- Configuration options -->
+            <div class="pd-options">
+                <div class="pd-option-label">Configuration <span>— 10 éléments sélectionnés</span></div>
+                <div class="config-chips">
+                    <div class="config-chip">6 éléments<span class="chip-price">1 490 €</span></div>
+                    <div class="config-chip">8 éléments<span class="chip-price">1 990 €</span></div>
+                    <div class="config-chip active">10 éléments<span class="chip-price">2 490 €</span></div>
+                    <div class="config-chip">12 éléments<span class="chip-price">2 890 €</span></div>
+                </div>
+
+                <div class="pd-option-label">Finition</div>
+                <div class="config-chips">
+                    <div class="config-chip active">Blanc Mat</div>
+                    <div class="config-chip">Blanc Brillant</div>
+                    <div class="config-chip">Ivoire Mat</div>
+                </div>
+            </div>
+
+            <!-- Quantity + Add to cart -->
+            <div class="pd-quantity">
+                <span style="font-size: 14px; font-weight: 600;">Quantité :</span>
+                <div class="qty-control">
+                    <button class="qty-btn">−</button>
+                    <input type="text" value="1" class="qty-input">
+                    <button class="qty-btn">+</button>
+                </div>
+            </div>
+
+            <div class="pd-actions">
+                <button class="btn-add-cart"><i class="fas fa-shopping-cart"></i> Ajouter au panier — 2 490 €</button>
+                <button class="btn-fav"><i class="far fa-heart"></i></button>
+            </div>
+
+            <!-- Pose CTA -->
+            <div class="pd-pose-cta">
+                <i class="fas fa-screwdriver-wrench"></i>
+                <div>
+                    <h4>Besoin d'un poseur pour cette cuisine ?</h4>
+                    <p>Estimation à partir de 890 € — Artisans certifiés dans votre zone</p>
+                </div>
+                <a href="pose.html">Devis gratuit</a>
+            </div>
+
+            <!-- Reassurance -->
+            <div class="pd-reassurance">
+                <div class="reassurance-item">
+                    <i class="fas fa-truck-fast"></i>
+                    <div><strong>Livraison France</strong>Retrait gratuit au dépôt</div>
+                </div>
+                <div class="reassurance-item">
+                    <i class="fas fa-shield-halved"></i>
+                    <div><strong>Paiement sécurisé</strong>Stripe — CB, Apple Pay</div>
+                </div>
+                <div class="reassurance-item">
+                    <i class="fas fa-rotate-left"></i>
+                    <div><strong>Retour 14 jours</strong>Satisfait ou remboursé</div>
+                </div>
+                <div class="reassurance-item">
+                    <i class="fas fa-certificate"></i>
+                    <div><strong>Garantie 15 ans</strong>Caissons garantis constructeur</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- PRODUCT TABS -->
+<section class="product-tabs">
+    <div class="container">
+        <div class="tabs-nav">
+            <button class="tab-btn active" onclick="switchTab('desc')">Description</button>
+            <button class="tab-btn" onclick="switchTab('specs')">Caractéristiques</button>
+            <button class="tab-btn" onclick="switchTab('included')">Éléments inclus</button>
+            <button class="tab-btn" onclick="switchTab('delivery')">Livraison & Retours</button>
+        </div>
+
+        <div class="tab-content active" id="tab-desc">
+            <div class="description-content">
+                <h3>Cuisine HELIA Blanc Mat — La ligne épurée par excellence</h3>
+                <p>Issue de la collection OSKAB, la cuisine HELIA Blanc Mat incarne l'élégance contemporaine avec ses façades sans poignée et son blanc mat soyeux. Conçue pour les intérieurs modernes, elle allie fonctionnalité et design minimaliste.</p>
+                <p>Cette cuisine complète de 10 éléments comprend tout le nécessaire pour équiper votre espace : meubles bas, meubles hauts et colonne. Tous les caissons sont équipés de charnières soft-close Blum pour un confort d'utilisation au quotidien.</p>
+                <p>Produit 100% neuf, dans son emballage d'origine. Issu du stock de liquidation judiciaire d'OSKAB (novembre 2024). Même qualité, même garantie — un prix imbattable.</p>
+            </div>
+        </div>
+
+        <div class="tab-content" id="tab-specs">
+            <table class="specs-table">
+                <tr><td>Gamme</td><td>HELIA</td></tr>
+                <tr><td>Couleur</td><td>Blanc Mat</td></tr>
+                <tr><td>Nombre d'éléments</td><td>10</td></tr>
+                <tr><td>Longueur totale</td><td>300 cm (configuration en I)</td></tr>
+                <tr><td>Finition façades</td><td>Mat sans poignée — Ouverture push-to-open</td></tr>
+                <tr><td>Caissons</td><td>Panneaux de particules mélaminés — Blanc</td></tr>
+                <tr><td>Charnières</td><td>Blum — Soft-close intégré</td></tr>
+                <tr><td>Épaisseur façades</td><td>18 mm</td></tr>
+                <tr><td>Profondeur bas</td><td>58 cm</td></tr>
+                <tr><td>Profondeur hauts</td><td>37 cm</td></tr>
+                <tr><td>Certification bois</td><td>FSC — Bois issu de forêts gérées durablement</td></tr>
+                <tr><td>Garantie caissons</td><td>15 ans constructeur</td></tr>
+                <tr><td>Fabrication</td><td>France (usine OSKAB — Lille)</td></tr>
+                <tr><td>État</td><td>Neuf — Emballage d'origine</td></tr>
+            </table>
+        </div>
+
+        <div class="tab-content" id="tab-included">
+            <div class="included-grid">
+                <div class="included-item">
+                    <i class="fas fa-box"></i>
+                    <h4>3 × Meuble bas</h4>
+                    <p>L60 × H70 × P58 cm — 2 portes chacun</p>
+                </div>
+                <div class="included-item">
+                    <i class="fas fa-box"></i>
+                    <h4>1 × Meuble bas sous-évier</h4>
+                    <p>L80 × H70 × P58 cm — 2 portes</p>
+                </div>
+                <div class="included-item">
+                    <i class="fas fa-box"></i>
+                    <h4>3 × Meuble haut</h4>
+                    <p>L60 × H70 × P37 cm — 1 porte chacun</p>
+                </div>
+                <div class="included-item">
+                    <i class="fas fa-box"></i>
+                    <h4>1 × Meuble haut hotte</h4>
+                    <p>L60 × H13 × P37 cm — Relevable</p>
+                </div>
+                <div class="included-item">
+                    <i class="fas fa-box"></i>
+                    <h4>1 × Colonne four</h4>
+                    <p>L60 × H217 × P58 cm — Niche + 2 portes</p>
+                </div>
+                <div class="included-item">
+                    <i class="fas fa-box"></i>
+                    <h4>1 × Colonne réfrigérateur</h4>
+                    <p>L60 × H217 × P58 cm — Niche intégration</p>
+                </div>
+            </div>
+            <p style="font-size: 13px; color: var(--text-light); margin-top: 20px; text-align: center;">
+                <i class="fas fa-info-circle" style="margin-right: 5px;"></i>
+                Plan de travail, électroménager et crédence vendus séparément — Voir nos compléments ci-dessous.
+            </p>
+        </div>
+
+        <div class="tab-content" id="tab-delivery">
+            <div class="description-content">
+                <h3>Modes de livraison</h3>
+                <p><strong>Retrait en dépôt (GRATUIT)</strong> — Venez récupérer votre commande directement à notre entrepôt. Sur rendez-vous, du lundi au samedi de 9h à 18h.</p>
+                <p><strong>Livraison standard France</strong> — À partir de 79€. Livraison au pied de l'immeuble ou en bas de chez vous par transporteur spécialisé. Délai : 5-10 jours ouvrés.</p>
+                <p><strong>Livraison premium à l'étage</strong> — À partir de 189€. Livraison dans la pièce de votre choix, déballage et reprise des emballages. Délai : 7-14 jours ouvrés.</p>
+
+                <h3 style="margin-top: 30px;">Politique de retour</h3>
+                <p>Vous disposez de 14 jours à compter de la réception pour retourner votre commande. Les produits doivent être dans leur état d'origine, non montés et dans leur emballage. Le retour est à la charge de l'acheteur. Remboursement sous 7 jours ouvrés après réception du retour.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CROSS-SELL -->
+<section class="cross-sell">
+    <div class="container">
+        <div class="section-header">
+            <h2>Complétez votre cuisine</h2>
+            <p>Les indispensables pour finaliser votre projet</p>
+            <div class="line"></div>
+        </div>
+        <div class="cross-grid">
+            <div class="cross-card">
+                <div class="cross-card-img">
+                    <i class="fas fa-ruler-combined"></i>
+                    <span class="badge badge-discount" style="position:absolute;top:8px;left:8px;">-62%</span>
+                </div>
+                <div class="cross-card-info">
+                    <div class="brand">PLANEKO</div>
+                    <div class="name">Plan de travail stratifié Blanc Brillant — L204 × P62cm</div>
+                    <div class="pricing"><span class="old">289 €</span> <span class="new">109 €</span></div>
+                </div>
+            </div>
+            <div class="cross-card">
+                <div class="cross-card-img">
+                    <i class="fas fa-faucet-drip"></i>
+                    <span class="badge badge-discount" style="position:absolute;top:8px;left:8px;">-55%</span>
+                </div>
+                <div class="cross-card-info">
+                    <div class="brand">OSKAB</div>
+                    <div class="name">Évier inox 1 bac + mitigeur assorti</div>
+                    <div class="pricing"><span class="old">349 €</span> <span class="new">157 €</span></div>
+                </div>
+            </div>
+            <div class="cross-card">
+                <div class="cross-card-img">
+                    <i class="fas fa-grip-lines"></i>
+                    <span class="badge badge-discount" style="position:absolute;top:8px;left:8px;">-58%</span>
+                </div>
+                <div class="cross-card-info">
+                    <div class="brand">PLANEKO</div>
+                    <div class="name">Crédence stratifiée assortie — L300 × H64cm</div>
+                    <div class="pricing"><span class="old">189 €</span> <span class="new">79 €</span></div>
+                </div>
+            </div>
+            <div class="cross-card">
+                <div class="cross-card-img">
+                    <i class="fas fa-lightbulb"></i>
+                    <span class="badge badge-discount" style="position:absolute;top:8px;left:8px;">-50%</span>
+                </div>
+                <div class="cross-card-info">
+                    <div class="brand">OSKAB</div>
+                    <div class="name">Réglette LED sous meuble haut — L60cm</div>
+                    <div class="pricing"><span class="old">49 €</span> <span class="new">25 €</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+    <div class="container">
+        <h2><i class="fas fa-bell" style="margin-right: 10px;"></i> Ne ratez aucune bonne affaire</h2>
+        <p>Recevez les nouveaux arrivages et les offres exclusives en avant-première</p>
+        <div class="newsletter-form">
+            <input type="email" placeholder="Votre adresse email">
+            <button>S'inscrire</button>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo">Destock<span>Pro</span></div>
+                <p>Spécialiste du destockage de cuisines et ameublement. Des produits neufs de marque à prix cassés, avec un service de pose professionnel.</p>
+            </div>
+            <div>
+                <h4>Nos univers</h4>
+                <a href="cuisines.html">Cuisines OSKAB</a><br>
+                <a href="#">Salle de Bains</a><br>
+                <a href="#">Plans de Travail</a><br>
+                <a href="#">Robinetterie & Éviers</a><br>
+                <a href="#">Accessoires Cuisine</a><br>
+                <a href="#">Peinture & Isolation</a>
+            </div>
+            <div>
+                <h4>Services</h4>
+                <a href="pose.html">Service de Pose</a><br>
+                <a href="#">Livraison</a><br>
+                <a href="#">Retrait en dépôt</a><br>
+                <a href="#">Paiement en 3x</a><br>
+                <a href="#">Guide d'achat</a>
+            </div>
+            <div>
+                <h4>Informations</h4>
+                <a href="#">Qui sommes-nous ?</a><br>
+                <a href="#">Contact</a><br>
+                <a href="#">FAQ</a><br>
+                <a href="#">CGV</a><br>
+                <a href="#">Mentions légales</a><br>
+                <a href="#">Politique de retour</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 DestockPro. Tous droits réservés.</span>
+            <div class="footer-payments">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-apple-pay"></i>
+                <i class="fab fa-google-pay"></i>
+                <i class="fab fa-cc-stripe"></i>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- STICKY MOBILE BAR -->
+<div class="sticky-bar">
+    <div class="sticky-bar-inner">
+        <div>
+            <div class="sb-old">7 890 €</div>
+            <div class="sb-price">2 490 €</div>
+        </div>
+        <button class="sb-btn"><i class="fas fa-shopping-cart"></i> Ajouter au panier</button>
+    </div>
+</div>
+
+<script>
+function switchTab(id) {
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + id).classList.add('active');
+    event.target.classList.add('active');
+}
+</script>
+
+</body>
+</html>

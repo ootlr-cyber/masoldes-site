@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Panier — DestockPro | Destockage Vetements au Kilo & Cuisines OSKAB</title>
+    <meta name="description" content="Consultez votre panier DestockPro. Vetements de marque au kilo et cuisines OSKAB neuves a prix casses. Finalisez votre commande en quelques clics.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Mon Panier — DestockPro | Destockage Vetements au Kilo & Cuisines OSKAB">
+    <meta property="og:description" content="Consultez votre panier DestockPro. Vetements de marque au kilo et cuisines OSKAB neuves a prix casses. Finalisez votre commande en quelques clics.">
+    <meta property="og:image" content="images/cuisines/slider-4.jpg">
+    <meta property="og:url" content="https://destockpro.fr/panier.html">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-bar-track">
+        <span><i class="fas fa-truck"></i> Livraison possible sur toute la France</span>
+        <span><i class="fas fa-tag"></i> Vetements de marque au kilo des 2EUR/kg</span>
+        <span><i class="fas fa-box-open"></i> 1000 cuisines OSKAB neuves — jusqu'a -70%</span>
+        <span><i class="fas fa-shopping-cart"></i> Vente directe — prix casses toute l annee</span>
+        <span><i class="fas fa-truck"></i> Livraison possible sur toute la France</span>
+        <span><i class="fas fa-tag"></i> Vetements de marque au kilo des 2EUR/kg</span>
+        <span><i class="fas fa-box-open"></i> 1000 cuisines OSKAB neuves — jusqu'a -70%</span>
+        <span><i class="fas fa-shopping-cart"></i> Vente directe — prix casses toute l annee</span>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+    <div class="container">
+        <div class="header-main">
+            <a href="index.html" class="logo">
+                <i class="fas fa-warehouse"></i> DESTOCK<span>PRO</span>
+            </a>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Rechercher un produit, une marque, une gamme...">
+                <button aria-label="Rechercher"><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="header-actions">
+                <a href="tel:+33184609300" class="header-action">
+                    <i class="fas fa-phone"></i>
+                    <small>Appeler</small>
+                </a>
+                <a href="#" class="header-action">
+                    <i class="far fa-heart"></i>
+                    <small>Favoris</small>
+                </a>
+                <a href="panier.html" class="header-action">
+                    <i class="fas fa-shopping-cart"></i>
+                    <small>Panier</small>
+                    <span class="cart-count" id="headerCartCount">0</span>
+                </a>
+            </div>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <nav class="nav-categories">
+            <a href="index.html" class="nav-cat"><i class="fas fa-home"></i> Accueil</a>
+            <a href="vetements.html" class="nav-cat"><i class="fas fa-tshirt"></i> Vetements au Kilo</a>
+            <a href="cuisines.html" class="nav-cat"><i class="fas fa-kitchen-set"></i> Cuisines OSKAB</a>
+            <a href="salles-de-bain.html" class="nav-cat"><i class="fas fa-bath"></i> Salles de Bain</a>
+            <a href="promotions.html" class="nav-cat"><i class="fas fa-percent"></i> Promotions</a>
+            <a href="promotions.html#contact" class="nav-cat"><i class="fas fa-headset"></i> Contact</a>
+            <a href="panier.html" class="nav-cat highlight active"><i class="fas fa-shopping-cart"></i> Panier (0)</a>
+        </nav>
+    </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-search">
+        <input type="text" placeholder="Rechercher...">
+    </div>
+    <a href="index.html" class="mobile-link"><i class="fas fa-home"></i> Accueil</a>
+    <a href="vetements.html" class="mobile-link"><i class="fas fa-tshirt"></i> Vetements au Kilo</a>
+    <a href="cuisines.html" class="mobile-link"><i class="fas fa-kitchen-set"></i> Cuisines OSKAB</a>
+    <a href="salles-de-bain.html" class="mobile-link"><i class="fas fa-bath"></i> Salles de Bain</a>
+    <a href="promotions.html" class="mobile-link"><i class="fas fa-percent"></i> Promotions</a>
+    <a href="panier.html" class="mobile-link active"><i class="fas fa-shopping-cart"></i> Panier</a>
+    <a href="promotions.html#contact" class="mobile-link"><i class="fas fa-headset"></i> Contact</a>
+</div>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Accueil</a> <i class="fas fa-chevron-right"></i> <span>Mon Panier</span>
+        </div>
+        <h1 class="page-title">Mon Panier</h1>
+        <p class="page-subtitle" id="cartPageSubtitle">0 article dans votre panier</p>
+    </div>
+</section>
+
+<!-- CART CONTENT -->
+<section class="section">
+    <div class="container" style="display:grid; grid-template-columns:1fr 380px; gap:32px; align-items:flex-start;">
+        <!-- Left: Cart items (JS renders here) -->
+        <div class="cart-page-body">
+            <!-- JS will render cart items or empty state here -->
+        </div>
+
+        <!-- Right: Order summary (JS toggles visibility) -->
+        <div class="cart-summary order-summary">
+            <h3>Recapitulatif</h3>
+            <div id="cartSummaryLines">
+                <!-- JS renders summary lines -->
+            </div>
+
+            <div class="promo-code">
+                <input type="text" placeholder="Code promo" id="promoInput">
+                <button class="btn btn-outline-dark btn-sm" id="promoBtn">Appliquer</button>
+            </div>
+
+            <div class="order-actions">
+                <a href="#checkout" class="btn btn-primary btn-lg" id="checkoutBtn"><i class="fas fa-lock"></i> Passer commande</a>
+                <a href="cuisines.html" class="btn btn-outline-dark">Continuer les achats</a>
+            </div>
+            <p class="order-note"><i class="fas fa-shield-halved"></i> Paiement 100% securise. Vos donnees sont protegees.</p>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- CHECKOUT SECTION -->
+        <div id="checkout" class="checkout-section" style="display:none;">
+            <h2 style="font-size:24px; font-weight:800; margin-bottom:24px;">Finaliser la commande</h2>
+
+            <form id="checkoutForm" class="contact-form" style="max-width:700px;">
+                <div class="checkout-section">
+                    <h3><i class="fas fa-user"></i> Informations personnelles</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="checkout-nom">Nom complet *</label>
+                            <input type="text" id="checkout-nom" required placeholder="Votre nom et prenom">
+                        </div>
+                        <div class="form-group">
+                            <label for="checkout-email">Email *</label>
+                            <input type="email" id="checkout-email" required placeholder="votre@email.com">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="checkout-tel">Telephone *</label>
+                            <input type="tel" id="checkout-tel" required placeholder="06 12 34 56 78">
+                        </div>
+                        <div class="form-group">
+                            <label for="checkout-societe">Societe (optionnel)</label>
+                            <input type="text" id="checkout-societe" placeholder="Nom de votre entreprise">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checkout-section">
+                    <h3><i class="fas fa-truck"></i> Mode de retrait</h3>
+                    <div style="display:flex; flex-direction:column; gap:10px;">
+                        <label style="display:flex; gap:10px; align-items:flex-start; padding:16px; border:1.5px solid var(--border); border-radius:var(--radius); cursor:pointer;">
+                            <input type="radio" name="delivery" value="pickup" checked style="margin-top:3px;">
+                            <div>
+                                <strong style="font-size:14px;">Retrait a l'entrepot — Gratuit</strong>
+                                <p style="font-size:12px; color:var(--text-secondary); margin-top:2px;">Venez chercher vos achats sur rendez-vous. Adresse communiquee par email.</p>
+                            </div>
+                        </label>
+                        <label style="display:flex; gap:10px; align-items:flex-start; padding:16px; border:1.5px solid var(--border); border-radius:var(--radius); cursor:pointer;">
+                            <input type="radio" name="delivery" value="shipping" style="margin-top:3px;">
+                            <div>
+                                <strong style="font-size:14px;">Livraison a domicile — Sur devis</strong>
+                                <p style="font-size:12px; color:var(--text-secondary); margin-top:2px;">Nous vous recontactons sous 24h avec un devis de livraison personnalise.</p>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="checkout-section" id="shippingAddress" style="display:none;">
+                    <h3><i class="fas fa-map-marker-alt"></i> Adresse de livraison</h3>
+                    <div class="form-group">
+                        <label for="checkout-adresse">Adresse *</label>
+                        <input type="text" id="checkout-adresse" placeholder="Numero et nom de rue">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="checkout-cp">Code postal *</label>
+                            <input type="text" id="checkout-cp" placeholder="75000">
+                        </div>
+                        <div class="form-group">
+                            <label for="checkout-ville">Ville *</label>
+                            <input type="text" id="checkout-ville" placeholder="Paris">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checkout-section">
+                    <h3><i class="fas fa-comment-dots"></i> Message (optionnel)</h3>
+                    <div class="form-group">
+                        <textarea id="checkout-message" placeholder="Precisions sur votre commande, questions, horaires de retrait souhaites..." style="min-height:80px;"></textarea>
+                    </div>
+                </div>
+
+                <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:12px;">
+                    <button type="submit" class="btn btn-primary btn-xl"><i class="fas fa-check"></i> Confirmer la commande</button>
+                    <a href="panier.html" class="btn btn-outline-dark btn-lg">Retour au panier</a>
+                </div>
+            </form>
+        </div>
+
+        <!-- SUCCESS MESSAGE -->
+        <div id="checkoutSuccess" style="display:none; text-align:center; padding:64px 0;">
+            <div style="width:80px; height:80px; background:var(--green-light); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 20px;">
+                <i class="fas fa-check" style="font-size:36px; color:var(--green);"></i>
+            </div>
+            <h2 style="font-size:28px; font-weight:800; margin-bottom:8px;">Commande confirmee !</h2>
+            <p style="font-size:16px; color:var(--text-secondary); max-width:500px; margin:0 auto 12px;">Merci pour votre commande. Notre equipe vous contactera sous 24h pour confirmer les details et organiser le retrait ou la livraison.</p>
+            <p style="font-size:14px; color:var(--text-light); margin-bottom:28px;">Un email de confirmation a ete envoye a votre adresse.</p>
+            <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+                <a href="index.html" class="btn btn-primary btn-lg">Retour a l'accueil</a>
+                <a href="cuisines.html" class="btn btn-outline btn-lg">Continuer les achats</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-brand"><i class="fas fa-warehouse"></i> DESTOCK<span>PRO</span></div>
+                <p>Votre entrepot de destockage en ligne. Vetements de marque au kilo et cuisines OSKAB neuves a prix casses.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <a href="index.html">Accueil</a>
+                <a href="vetements.html">Vetements au Kilo</a>
+                <a href="cuisines.html">Cuisines OSKAB</a>
+                <a href="salles-de-bain.html">Salles de Bain OSKAB</a>
+                <a href="promotions.html">Promotions</a>
+                <a href="panier.html">Panier</a>
+                <a href="a-propos.html">A propos</a>
+                <a href="blog.html">Blog</a>
+            </div>
+            <div class="footer-col">
+                <h4>Informations</h4>
+                <a href="promotions.html#faq">FAQ</a>
+                <a href="promotions.html#contact">Contact</a>
+                <a href="cgv.html">CGV</a>
+                <a href="mentions-legales.html">Mentions legales</a>
+                <a href="confidentialite.html">Confidentialite</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 18 Avenue du Clocher, 93600 Aulnay-sous-Bois</p>
+                <p><i class="fas fa-phone"></i> 01 84 60 93 00</p>
+                <p><i class="fas fa-envelope"></i> contact@destockpro.fr</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2026 DestockPro — Tous droits reserves</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

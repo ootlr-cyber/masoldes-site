@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "WebFetch(domain:web.archive.org)",
+      "Bash(curl -s -L \"https://web.archive.org/web/20241114090431/https://www.oskab.com/cuisine/modele-de-cuisine/379-lupi-blanc\")",
+      "Bash(curl -s -L \"https://web.archive.org/web/2024/https://www.oskab.com/cuisine/modele-de-cuisine/292-oka-noyer\" -o /tmp/oskab_oka_noyer.html)",
+      "Read(//tmp/**)",
+      "Bash(/usr/bin/curl -s \"https://web.archive.org/cdx/search/cdx?url=www.oskab.com/cuisine/modele-de-cuisine/291-oka-chene&output=text&fl=timestamp,statuscode&limit=10\")",
+      "Bash(/usr/bin/curl -s \"https://web.archive.org/cdx/search/cdx?url=www.oskab.com/cuisine/modele-de-cuisine/296-ivia-gris&output=text&fl=timestamp,statuscode&limit=10\")",
+      "Bash(/usr/bin/curl -s \"https://web.archive.org/cdx/search/cdx?url=www.oskab.com/cuisine/modele-de-cuisine/294-hosta-chene-naturel&output=text&fl=timestamp,statuscode&limit=10\")",
+      "Bash(/usr/bin/curl -s \"https://web.archive.org/cdx/search/cdx?url=www.oskab.com/cuisine/modele-de-cuisine/298-keria-ivoire&output=text&fl=timestamp,statuscode&limit=10\")",
+      "Bash(/usr/bin/curl -s \"https://web.archive.org/cdx/search/cdx?url=www.oskab.com/cuisine/modele-de-cuisine/300-filipen-ivoire&output=text&fl=timestamp,statuscode&limit=10\")",
+      "Bash(curl --version)",
+      "Bash(/usr/bin/curl -s \"https://web.archive.org/cdx/search/cdx?url=www.oskab.com/cuisine/modele-de-cuisine/346-helia-noir&output=text&fl=timestamp,statuscode&limit=5&filter=statuscode:200\")"
+    ]
+  }
+}
